@@ -1,0 +1,264 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "table_scorecard",
+  "position": {
+    "x": 24,
+    "y": 133,
+    "z": 0,
+    "height": 559,
+    "width": 1216,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "owner_clean"
+                }
+              },
+              "queryRef": "Delivery.owner_clean",
+              "nativeQueryRef": "owner_clean",
+              "displayName": "Inventory owner"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Inventory Score"
+                }
+              },
+              "queryRef": "Delivery.Inventory Score",
+              "nativeQueryRef": "Inventory Score",
+              "displayName": "Inventory score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Open Returns"
+                }
+              },
+              "queryRef": "Delivery.Open Returns",
+              "nativeQueryRef": "Open Returns",
+              "displayName": "Open lines"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Avg Aging Days"
+                }
+              },
+              "queryRef": "Delivery.Avg Aging Days",
+              "nativeQueryRef": "Avg Aging Days",
+              "displayName": "Avg age (days)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Tracking %"
+                }
+              },
+              "queryRef": "Delivery.Tracking %",
+              "nativeQueryRef": "Tracking %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Exception Count"
+                }
+              },
+              "queryRef": "Delivery.Exception Count",
+              "nativeQueryRef": "Exception Count",
+              "displayName": "Exceptions"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Expired Items"
+                }
+              },
+              "queryRef": "Delivery.Expired Items",
+              "nativeQueryRef": "Expired Items",
+              "displayName": "Expired lines"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Aging Score"
+                }
+              },
+              "queryRef": "Delivery.Aging Score",
+              "nativeQueryRef": "Aging Score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Tracking Score"
+                }
+              },
+              "queryRef": "Delivery.Tracking Score",
+              "nativeQueryRef": "Tracking Score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Exception Score"
+                }
+              },
+              "queryRef": "Delivery.Exception Score",
+              "nativeQueryRef": "Exception Score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Overdue Score"
+                }
+              },
+              "queryRef": "Delivery.Overdue Score",
+              "nativeQueryRef": "Overdue Score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Expiry Score"
+                }
+              },
+              "queryRef": "Delivery.Expiry Score",
+              "nativeQueryRef": "Expiry Score"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Delivery"
+                  }
+                },
+                "Property": "Inventory Score"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Score by Inventory owner'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Table of Inventory owners with their final score first, then open lines, aging, tracking, exceptions, expired lines and the five component scores'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

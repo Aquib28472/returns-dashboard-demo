@@ -1,0 +1,35 @@
+relationship 09ea5ba7-7a39-4f2a-89d4-b86331972d18
+	fromColumn: Delivery.ship_to_no
+	toColumn: CustomerMaster.customer_no
+
+relationship bc2548fb-9f3c-4f28-a608-3a7e4bf4d2c9
+	fromColumn: Cockpit.customer_no
+	toColumn: CustomerMaster.customer_no
+
+relationship 33c57344-181f-4392-a6c3-e319f5b54be4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Delivery.order_date
+	toColumn: DimDate.Date
+
+relationship be00feae-368d-477d-931e-75bc5d0ea5d3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Movement.posting_date
+	toColumn: DimDate.Date
+
+relationship 58da1017-7a6e-4014-bc40-708d18636793
+	joinOnDateBehavior: datePartOnly
+	fromColumn: CarrierStatus.event_date
+	toColumn: DimDate.Date
+
+relationship 0cad9072-267a-44c1-8de0-805e259a7730
+	isActive: false
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Delivery.resolved_expiry
+	toColumn: DimDate.Date
+
+relationship d3da111e-7241-4895-b475-1412a961dbc7
+	isActive: false
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Cockpit.expiry
+	toColumn: DimDate.Date
+

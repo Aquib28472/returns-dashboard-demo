@@ -1,0 +1,3 @@
+/// Returns reconciliation demo: open field-return lines matched to warehouse movements, field inventory and carrier tracking, with an action owner per line. Synthetic data loaded from CSV files.
+database
+	compatibilityLevel: 1700

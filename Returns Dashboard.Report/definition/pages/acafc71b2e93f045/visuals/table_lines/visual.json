@@ -1,0 +1,708 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "table_lines",
+  "position": {
+    "x": 24,
+    "y": 708,
+    "z": 0,
+    "height": 420,
+    "width": 1216,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "owner_clean"
+                }
+              },
+              "queryRef": "Delivery.owner_clean",
+              "nativeQueryRef": "owner_clean",
+              "displayName": "Inventory owner"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "sales_order"
+                }
+              },
+              "queryRef": "Delivery.sales_order",
+              "nativeQueryRef": "sales_order",
+              "displayName": "Sales order"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "so_line"
+                }
+              },
+              "queryRef": "Delivery.so_line",
+              "nativeQueryRef": "so_line",
+              "displayName": "Line"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "delivery_no"
+                }
+              },
+              "queryRef": "Delivery.delivery_no",
+              "nativeQueryRef": "delivery_no",
+              "displayName": "Delivery"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "delivery_line"
+                }
+              },
+              "queryRef": "Delivery.delivery_line",
+              "nativeQueryRef": "delivery_line",
+              "displayName": "Delivery line"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "ship_to"
+                }
+              },
+              "queryRef": "Delivery.ship_to",
+              "nativeQueryRef": "ship_to",
+              "displayName": "Customer"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "sku"
+                }
+              },
+              "queryRef": "Delivery.sku",
+              "nativeQueryRef": "sku",
+              "displayName": "SKU"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "category"
+                }
+              },
+              "queryRef": "Delivery.category",
+              "nativeQueryRef": "category",
+              "displayName": "Category"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "order_date"
+                }
+              },
+              "queryRef": "Delivery.order_date",
+              "nativeQueryRef": "order_date",
+              "displayName": "Order date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "date"
+                }
+              },
+              "queryRef": "Delivery.date",
+              "nativeQueryRef": "date",
+              "displayName": "Delivery created"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "tracking"
+                }
+              },
+              "queryRef": "Delivery.tracking",
+              "nativeQueryRef": "tracking",
+              "displayName": "Tracking"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "days_to_delivery"
+                }
+              },
+              "queryRef": "Delivery.days_to_delivery",
+              "nativeQueryRef": "days_to_delivery",
+              "displayName": "Days"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "line_outcome"
+                }
+              },
+              "queryRef": "Delivery.line_outcome",
+              "nativeQueryRef": "line_outcome",
+              "displayName": "Outcome"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Delivery"
+                  }
+                },
+                "Property": "days_to_delivery"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "120D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.owner_clean"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.sales_order"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "40D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.so_line"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.delivery_no"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "55D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.delivery_line"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "150D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.ship_to"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.sku"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "110D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.category"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "85D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.order_date"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.date"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "110D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.tracking"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "60D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.days_to_delivery"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "75D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.line_outcome"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Late and waiting lines for the selected cell, highest days first'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Table of the late and waiting lines behind the selected owner and month: sales order, line, delivery, customer, SKU, category, dates, tracking, days and outcome, highest days first'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0437b60429e356c11767",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "line_outcome"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "Delivery",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "line_outcome"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Late'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Waiting'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "420c4f00a4e8804dd7e6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "owner_clean"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "81aeca10530e0418cbb7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "sales_order"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b41a7ef4b3a12d696164",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "so_line"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "306d03269b7049e64001",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "delivery_no"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "34d2e8a510696916eea4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "delivery_line"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "010bf6372801cc8c4500",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "ship_to"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "28ad3d06c2e27cd2140d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "sku"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1ce547f47d900e11e007",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "category"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2778e5002246304d2dd1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "order_date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7d18c2a81c058b3de5c7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "55b3b65a027e24705b1d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "tracking"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e4dfe042700762453bb2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "days_to_delivery"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

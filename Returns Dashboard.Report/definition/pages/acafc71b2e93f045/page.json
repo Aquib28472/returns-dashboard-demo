@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "acafc71b2e93f045",
+  "displayName": "Inventory Performance by Month",
+  "width": 1280,
+  "height": 1150,
+  "displayOption": "FitToWidth",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "50bc834047f78d12ef83",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimDate"
+              }
+            },
+            "Property": "Year"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "DimDate",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 2,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "d"
+                        }
+                      },
+                      "Property": "Year"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "2026L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "matrix_owner_month",
+      "target": "table_owner_summary",
+      "type": "NoFilter"
+    },
+    {
+      "source": "table_lines",
+      "target": "matrix_owner_month",
+      "type": "NoFilter"
+    },
+    {
+      "source": "table_lines",
+      "target": "table_owner_summary",
+      "type": "NoFilter"
+    }
+  ]
+}

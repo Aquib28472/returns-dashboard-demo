@@ -1,0 +1,145 @@
+/// Carrier tracking event log (several rows per tracking id as the status evolves). Synthetic demo data.
+table CarrierStatus
+	lineageTag: 2fb3c723-8a9b-4a7d-bfee-de6faaddf316
+
+	column tracking_id
+		dataType: string
+		lineageTag: da53bcb5-2a27-4b6b-832e-4de2d5eb3735
+		summarizeBy: none
+		sourceColumn: tracking_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column reference
+		dataType: string
+		lineageTag: 61172a9b-2fba-49b2-8fb5-1507104c0e53
+		summarizeBy: none
+		sourceColumn: reference
+
+		annotation SummarizationSetBy = Automatic
+
+	column po
+		dataType: string
+		lineageTag: d92313e9-332f-4801-949a-c1de5fb0a892
+		summarizeBy: none
+		sourceColumn: po
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 14a0c969-af36-42fb-ab91-f0114e1b6d38
+		summarizeBy: none
+		sourceColumn: event_date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: d3a4ddda-264e-4617-9797-162a4b9e427e
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsible_party
+		dataType: string
+		lineageTag: 59412e86-95a7-4caf-b1a8-3f705e22067a
+		summarizeBy: none
+		sourceColumn: responsible_party
+
+		annotation SummarizationSetBy = Automatic
+
+	column overall_status
+		dataType: string
+		lineageTag: 989bce95-77cf-4f8e-8804-6ee24f206c8b
+		summarizeBy: none
+		sourceColumn: overall_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: 867b5395-62ce-49f8-89cd-012fa7b3d2a6
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column src_idx
+		dataType: int64
+		formatString: 0
+		lineageTag: d300e2a8-a87b-4c23-be39-11969e4696ab
+		summarizeBy: none
+		sourceColumn: src_idx
+
+		annotation SummarizationSetBy = Automatic
+
+	column tracking_key
+		dataType: string
+		lineageTag: 95248a9a-7382-4dcd-b458-3a9ae0acd6a2
+		summarizeBy: none
+		sourceColumn: tracking_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column so_key
+		dataType: string
+		lineageTag: 2a5c7876-171d-480d-ab4d-6cd644f5a800
+		summarizeBy: none
+		sourceColumn: so_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column status_text
+		dataType: string
+		lineageTag: fc7a464c-bcfd-44aa-8c6c-71e3cdda4cdf
+		summarizeBy: none
+		sourceColumn: status_text
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_latest
+		dataType: boolean
+		lineageTag: 6091f1bc-2e84-4add-8ed9-da4afc83e51d
+		summarizeBy: none
+		sourceColumn: is_latest
+
+		annotation SummarizationSetBy = Automatic
+
+	column latest_key
+		dataType: string
+		lineageTag: 3ee6d4ed-77ae-417b-a8f5-95d8f5ba6e97
+		summarizeBy: none
+		sourceColumn: latest_key
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CarrierStatus = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "carrier_status.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    #"Renamed Columns" = Table.TransformColumnTypes(Promoted, {{"tracking_id", type text}, {"reference", type text}, {"po", type text}, {"status", type text}, {"responsible_party", type text}, {"overall_status", type text}, {"location", type text}, {"event_date", type date}}),
+				    #"Added Src Idx" = Table.AddIndexColumn(#"Renamed Columns", "src_idx", 0, 1, Int64.Type),
+				    #"Added tracking_key" = Table.AddColumn(#"Added Src Idx", "tracking_key", each if [tracking_id] = null then null else (let t = Text.Trim(Text.From([tracking_id])) in if t = "" then null else t), type text),
+				    #"Added so_key" = Table.AddColumn(#"Added tracking_key", "so_key", each if [reference] = null then null else (let t = Text.Trim(Text.From([reference])) in if t = "" then null else t), type text),
+				    #"Added status_text" = Table.AddColumn(#"Added so_key", "status_text", each Text.Upper(Text.Trim(Text.From([overall_status] ?? [status] ?? ""))), type text),
+				    Keyed = Table.Buffer(#"Added status_text"),
+				    G1 = Table.Buffer(Table.Group(Table.SelectRows(Keyed, each [tracking_key] <> null), {"tracking_key"}, {{"max_date", each List.Max([event_date])}})),
+				    J1 = Table.NestedJoin(Keyed, {"tracking_key"}, G1, {"tracking_key"}, "g1", JoinKind.LeftOuter),
+				    E1 = Table.ExpandTableColumn(J1, "g1", {"max_date"}, {"max_date"}),
+				    AtMax = Table.Buffer(Table.SelectRows(E1, each [tracking_key] <> null and [event_date] = [max_date])),
+				    G2 = Table.Buffer(Table.Group(AtMax, {"tracking_key"}, {{"max_idx", each List.Max([src_idx]), Int64.Type}})),
+				    J2 = Table.NestedJoin(E1, {"tracking_key"}, G2, {"tracking_key"}, "g2", JoinKind.LeftOuter),
+				    E2 = Table.ExpandTableColumn(J2, "g2", {"max_idx"}, {"max_idx"}),
+				    #"Added is_latest" = Table.AddColumn(E2, "is_latest", each [tracking_key] <> null and [src_idx] = [max_idx], type logical),
+				    #"Added latest_key" = Table.AddColumn(#"Added is_latest", "latest_key", each if [is_latest] = true then [tracking_key] else null, type text),
+				    #"Removed Helpers" = Table.RemoveColumns(#"Added latest_key", {"max_date", "max_idx"})
+				in
+				    #"Removed Helpers"
+

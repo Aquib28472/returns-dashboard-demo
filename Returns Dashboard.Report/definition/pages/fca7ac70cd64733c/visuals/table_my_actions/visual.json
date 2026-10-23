@@ -1,0 +1,431 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "table_my_actions",
+  "position": {
+    "x": 24,
+    "y": 385,
+    "z": 0,
+    "height": 307,
+    "width": 1216,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "action_group"
+                }
+              },
+              "queryRef": "Delivery.action_group",
+              "nativeQueryRef": "action_group",
+              "displayName": "What to do"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "next_step"
+                }
+              },
+              "queryRef": "Delivery.next_step",
+              "nativeQueryRef": "next_step",
+              "displayName": "Next step"
+            },
+            {
+              "queryRef": "Delivery.aging_days",
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "aging_days"
+                }
+              },
+              "nativeQueryRef": "aging_days",
+              "displayName": "Age (days)"
+            },
+            {
+              "queryRef": "Delivery.sales_order",
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "sales_order"
+                }
+              },
+              "nativeQueryRef": "sales_order",
+              "displayName": "Sales order"
+            },
+            {
+              "queryRef": "Delivery.so_line",
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "so_line"
+                }
+              },
+              "nativeQueryRef": "so_line",
+              "displayName": "Line"
+            },
+            {
+              "queryRef": "Delivery.delivery_no",
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "delivery_no"
+                }
+              },
+              "nativeQueryRef": "delivery_no",
+              "displayName": "Delivery"
+            },
+            {
+              "queryRef": "Delivery.ship_to",
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "ship_to"
+                }
+              },
+              "nativeQueryRef": "ship_to",
+              "displayName": "Customer"
+            },
+            {
+              "queryRef": "Delivery.sku",
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "sku"
+                }
+              },
+              "nativeQueryRef": "sku",
+              "displayName": "SKU"
+            },
+            {
+              "queryRef": "Delivery.tracking",
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "tracking"
+                }
+              },
+              "nativeQueryRef": "tracking",
+              "displayName": "Tracking"
+            },
+            {
+              "queryRef": "Delivery.carrier_status",
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "carrier_status"
+                }
+              },
+              "nativeQueryRef": "carrier_status",
+              "displayName": "Carrier status"
+            },
+            {
+              "queryRef": "Delivery.mv_status",
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "mv_status"
+                }
+              },
+              "nativeQueryRef": "mv_status",
+              "displayName": "Movement"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Delivery"
+                  }
+                },
+                "Property": "action_group"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "280D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.next_step"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "110D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.action_group"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.aging_days"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "86D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.sales_order"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "40D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.so_line"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "85D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.delivery_no"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "114D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.ship_to"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.sku"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "110D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.tracking"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.carrier_status"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "85D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.mv_status"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'What to do next'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Worklist for the selected Inventory owner with the next step, order details, quantities, age, tracking and Carrier and movement status'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

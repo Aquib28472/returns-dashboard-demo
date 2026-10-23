@@ -1,0 +1,111 @@
+table DimDate
+	lineageTag: 4ac3c99f-806d-4408-934e-ca05d943c88a
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Long Date
+		lineageTag: 1deb5612-bb5f-4dd0-b318-69a62631e7d1
+		summarizeBy: none
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year = YEAR([Date])
+		dataType: int64
+		formatString: 0
+		lineageTag: daefe131-ad26-4942-92ce-7d5859fbb617
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNo = MONTH([Date])
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d62f16b-a853-4500-b1f3-f89771fb6f64
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month = FORMAT([Date], "MMMM")
+		dataType: string
+		lineageTag: a1ecb675-77c7-42ae-9ab6-ab3489571264
+		summarizeBy: none
+		sortByColumn: MonthNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year-Month = FORMAT([Date], "yyyy-MM")
+		dataType: string
+		lineageTag: 6873fa88-a5ba-47b6-a11c-f559d8e515c6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuarterNo = INT(([MonthNo] + 2) / 3)
+		dataType: int64
+		formatString: 0
+		lineageTag: bb775e3f-0a8c-4aa8-9884-05aaa7a0455f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter = "Qtr " & [QuarterNo]
+		dataType: string
+		lineageTag: 24cae407-544e-4617-b4b4-d921bf7dc916
+		summarizeBy: none
+		sortByColumn: QuarterNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day = DAY([Date])
+		dataType: int64
+		formatString: 0
+		lineageTag: cf8365ba-ac09-4e24-8bbc-480ddaf8fe8e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week Start' = [Date] - WEEKDAY([Date], 2) + 1
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ff5d63b6-3e93-4efe-88a0-c78f3c2ae12a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Is Past Month' = DimDate[Date] <= EOMONTH(TODAY(), 0)
+		dataType: boolean
+		lineageTag: 38e838bd-6830-4550-b752-121f6a4494f6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Date Hierarchy'
+		lineageTag: 4609366e-3854-4432-91a6-3cea84fe3ada
+
+		level Year
+			lineageTag: 0433a764-7496-4510-a9c5-9c6759bd18d2
+			column: Year
+
+		level Quarter
+			lineageTag: a389d715-17fb-490c-968f-710c57d4fc40
+			column: Quarter
+
+		level Month
+			lineageTag: 3a261f15-2b9c-4d87-93d9-37d5d0a223ad
+			column: Month
+
+		level Day
+			lineageTag: 07f31cf5-de0c-465d-b3e0-d4b25f9276bc
+			column: Day
+
+	partition DimDate = calculated
+		mode: import
+		source = CALENDAR(DATE(2020, 1, 1), DATE(2031, 12, 31))
+

@@ -1,0 +1,320 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "table_owner_summary",
+  "position": {
+    "x": 699.87382952841665,
+    "y": 229.42883815666639,
+    "z": 0,
+    "height": 462.333870830858,
+    "width": 564.302243344932,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "owner_clean"
+                }
+              },
+              "queryRef": "Delivery.owner_clean",
+              "nativeQueryRef": "owner_clean",
+              "displayName": "Inventory owner"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Returns Raised"
+                }
+              },
+              "queryRef": "Delivery.Returns Raised",
+              "nativeQueryRef": "Returns Raised",
+              "displayName": "Lines raised"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Avg Days to Delivery"
+                }
+              },
+              "queryRef": "Delivery.Avg Days to Delivery",
+              "nativeQueryRef": "Avg Days to Delivery",
+              "displayName": "Avg days to delivery"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Created Within Threshold %"
+                }
+              },
+              "queryRef": "Delivery.Created Within Threshold %",
+              "nativeQueryRef": "Created Within Threshold %",
+              "displayName": "Created within threshold"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Closed Without Delivery"
+                }
+              },
+              "queryRef": "Delivery.Closed Without Delivery",
+              "nativeQueryRef": "Closed Without Delivery",
+              "displayName": "Closed w/o delivery"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Delivery"
+                    }
+                  },
+                  "Property": "Still Open (Cohort)"
+                }
+              },
+              "queryRef": "Delivery.Still Open (Cohort)",
+              "nativeQueryRef": "Still Open (Cohort)",
+              "displayName": "Still open"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Delivery"
+                  }
+                },
+                "Property": "Returns Raised"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "130D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Delivery.owner_clean"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Delivery.Returns Raised"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Delivery.Avg Days to Delivery"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Delivery.Created Within Threshold %"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Delivery.Closed Without Delivery"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Delivery.Still Open (Cohort)"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Owner summary for the months shown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Table with one row per Inventory owner: lines raised, average days to delivery, share created within the threshold, closed without delivery and still open'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b0c078a1bca057054ec6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "owner_clean"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "69e439c2280e5d576957",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "Returns Raised"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "abdfe7d150503eaee20b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "Avg Days to Delivery"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "424bb78d09a46e039259",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "Created Within Threshold %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7bd4c80e7e9014301669",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "Closed Without Delivery"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8bdfc00381c5c8e41b0d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Delivery"
+              }
+            },
+            "Property": "Still Open (Cohort)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

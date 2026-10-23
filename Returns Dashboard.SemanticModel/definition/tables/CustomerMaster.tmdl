@@ -1,0 +1,70 @@
+/// Customer master: ship-to and sold-to numbers, names, addresses. Synthetic demo data.
+table CustomerMaster
+	lineageTag: 3832219f-fb25-4623-99e9-e8b395fd4c79
+
+	column customer_no
+		dataType: string
+		lineageTag: 1d43cd9f-fe9c-4317-9e26-ecc527c78f5b
+		sourceColumn: customer_no
+
+	column customer_name
+		dataType: string
+		lineageTag: c9fb5c1f-8a39-461b-91c0-5760c53daa57
+		sourceColumn: customer_name
+
+	column sold_to_no
+		dataType: string
+		lineageTag: 8f87f46f-7073-4e39-95b2-725191b68195
+		sourceColumn: sold_to_no
+
+	column sold_to_name
+		dataType: string
+		lineageTag: d3f9befe-1350-47a3-8d55-89f201f2bc2a
+		sourceColumn: sold_to_name
+
+	column sold_to_alt
+		dataType: string
+		lineageTag: 5ce23492-9a03-40ff-98cc-39540bb0749a
+		sourceColumn: sold_to_alt
+
+	column email
+		dataType: string
+		lineageTag: 1b08c11e-9e24-4e34-9779-c0bd3a51982e
+		sourceColumn: email
+
+	column address1
+		dataType: string
+		lineageTag: c59690cc-0b3e-4163-b59e-113b90954c5c
+		sourceColumn: address1
+
+	column city
+		dataType: string
+		lineageTag: 8f29df8d-1958-4e09-b76c-dcf67ff9bd1f
+		sourceColumn: city
+
+	column state
+		dataType: string
+		lineageTag: 3410e1bf-0e18-49d5-930f-9eb5b41c1b31
+		sourceColumn: state
+
+	column zip
+		dataType: string
+		lineageTag: 86d347b9-3e5e-4417-b9ff-228c40fc1a8c
+		sourceColumn: zip
+
+	column phone
+		dataType: string
+		lineageTag: 6a23d116-99c1-44e2-bae7-3a126390ccd2
+		sourceColumn: phone
+
+	partition CustomerMaster = m
+		mode: import
+		source = ```
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "customer_master.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    #"Renamed Columns" = Table.TransformColumnTypes(Promoted, {{"customer_no", type text}, {"customer_name", type text}, {"sold_to_no", type text}, {"sold_to_name", type text}, {"sold_to_alt", type text}, {"email", type text}, {"address1", type text}, {"city", type text}, {"state", type text}, {"zip", type text}, {"phone", type text}})
+				in
+				    #"Renamed Columns"
+				```
+

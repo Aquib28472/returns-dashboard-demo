@@ -1,0 +1,194 @@
+/// Warehouse movement events for return deliveries: return dispatched (RET) and warehouse receipt (WHR). Enriched with lot resolution and a movement status. Synthetic demo data.
+table Movement
+	lineageTag: 9dd1b83f-2958-484d-920c-e2f816d92fdd
+
+	column movement_type
+		dataType: string
+		lineageTag: 869b9d53-a71f-423e-80fa-88cf30ab5f12
+		summarizeBy: none
+		sourceColumn: movement_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column posting_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 170383a5-fbdb-4fae-b0b5-93e744ea5c13
+		summarizeBy: none
+		sourceColumn: posting_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column reference
+		dataType: string
+		lineageTag: 4d28c5bd-b5ad-488a-8aad-da581dbfa724
+		summarizeBy: none
+		sourceColumn: reference
+
+		annotation SummarizationSetBy = Automatic
+
+	column sku
+		dataType: string
+		lineageTag: 2b9b897b-3c00-4b2d-a390-9a6d5c0ec9de
+		summarizeBy: none
+		sourceColumn: sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: f1086e9a-aa83-4e1f-b3d7-3d66f553be90
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column matdoc_no
+		dataType: string
+		lineageTag: 648b7ce6-7295-425b-b968-038df1d77d9d
+		summarizeBy: none
+		sourceColumn: matdoc_no
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_order
+		dataType: string
+		lineageTag: 5d3fe294-1c02-4fb2-af17-112bce8bb7f3
+		summarizeBy: none
+		sourceColumn: sales_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column batch
+		dataType: string
+		lineageTag: 5053bbc7-1d9e-41ff-b068-dafd0655163f
+		summarizeBy: none
+		sourceColumn: batch
+
+		annotation SummarizationSetBy = Automatic
+
+	column plant
+		dataType: string
+		lineageTag: fec6ef1b-bcf8-43ec-8847-9d3733aab485
+		summarizeBy: none
+		sourceColumn: plant
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_division
+		dataType: string
+		lineageTag: aa8025c7-7517-4e27-b2fa-05e8d307be70
+		summarizeBy: none
+		sourceColumn: product_division
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantity
+		dataType: double
+		lineageTag: d5e3f038-e6c1-40de-8408-3e2ca8bafb2a
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolved_batch
+		dataType: string
+		lineageTag: 8a1e2c3d-4f5a-4b6c-9d7e-1a2b3c4d5e6f
+		summarizeBy: none
+		sourceColumn: resolved_batch
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolved_serial
+		dataType: string
+		lineageTag: 9b2f3d4e-5a6b-4c7d-8e9f-2a3b4c5d6e7a
+		summarizeBy: none
+		sourceColumn: resolved_serial
+
+		annotation SummarizationSetBy = Automatic
+
+	column lot_resolved
+		dataType: string
+		lineageTag: ac3f4e5f-6a7b-4c8d-9e0f-3a4b5c6d7e8b
+		summarizeBy: none
+		sourceColumn: lot_resolved
+
+		annotation SummarizationSetBy = Automatic
+
+	column movement_status
+		dataType: string
+		lineageTag: bd4a5f6a-7b8c-4d9e-af1a-4b5c6d7e8f9c
+		summarizeBy: none
+		sourceColumn: movement_status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Movement = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "movement.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    #"Renamed Columns" = Table.TransformColumnTypes(Promoted, {{"movement_type", type text}, {"reference", type text}, {"sku", type text}, {"description", type text}, {"matdoc_no", type text}, {"sales_order", type text}, {"batch", type text}, {"plant", type text}, {"product_division", type text}, {"quantity", type number}}),
+				    #"Typed Posting Date" = Table.Buffer(Table.TransformColumnTypes(#"Renamed Columns", {{"posting_date", type date}})),
+				
+				    DeliverySlim = Table.Buffer(Table.TransformColumnTypes(Table.SelectColumns(Delivery, {"delivery_no","sku","batch","date","serial"}), {{"date", type date}})),
+				    GroupedByBatch = Table.Buffer(
+				        Table.Group(Table.SelectRows(DeliverySlim, each [delivery_no] <> null and [batch] <> null), {"delivery_no","sku","batch"},
+				            {{"CandidatesExact", each Table.ToRecords(Table.SelectColumns(_, {"date","batch","serial"})), type list}})
+				    ),
+				    GroupedNoBatch = Table.Buffer(
+				        Table.Group(Table.SelectRows(DeliverySlim, each [delivery_no] <> null), {"delivery_no","sku"},
+				            {{"CandidatesNoBatch", each Table.ToRecords(Table.SelectColumns(_, {"date","batch","serial"})), type list},
+				             {"DistinctBatchCount", each List.Count(List.Distinct(Table.Column(_, "batch"))), Int64.Type}})
+				    ),
+				
+				    #"Merged Exact" = Table.NestedJoin(#"Typed Posting Date", {"reference","sku","batch"}, GroupedByBatch, {"delivery_no","sku","batch"}, "ExactMatch", JoinKind.LeftOuter),
+				    #"Expanded Exact" = Table.ExpandTableColumn(#"Merged Exact", "ExactMatch", {"CandidatesExact"}, {"CandidatesExact"}),
+				    #"Merged NoBatch" = Table.NestedJoin(#"Expanded Exact", {"reference","sku"}, GroupedNoBatch, {"delivery_no","sku"}, "NoBatchMatch", JoinKind.LeftOuter),
+				    #"Expanded NoBatch" = Table.ExpandTableColumn(#"Merged NoBatch", "NoBatchMatch", {"CandidatesNoBatch","DistinctBatchCount"}, {"CandidatesNoBatch","DistinctBatchCount"}),
+				
+				    PickClosest = (candidates as nullable list, postingDate as nullable date) as record =>
+				        let
+				            candList = if candidates = null then {} else candidates,
+				            validCandidates = List.Select(candList, each [date] <> null),
+				            pastOrEqual = if postingDate = null then {} else List.Select(validCandidates, each [date] <= postingDate),
+				            pool = if List.Count(pastOrEqual) > 0 then pastOrEqual else validCandidates,
+				            maxDate = if List.Count(pool) > 0 then List.Max(List.Transform(pool, each [date])) else null,
+				            chosen = if maxDate = null then null else List.First(List.Select(pool, each [date] = maxDate))
+				        in
+				            if chosen = null then [batch=null, serial=null, lot_resolved=false]
+				            else [batch=chosen[batch], serial=chosen[serial], lot_resolved=true],
+				
+				    #"Added Resolution" = Table.AddColumn(#"Expanded NoBatch", "Resolution", each
+				        let
+				            useExact = [batch] <> null and [CandidatesExact] <> null and List.Count([CandidatesExact]) > 0,
+				            useNoBatchAmbiguousOk = [batch] <> null and [CandidatesNoBatch] <> null and [DistinctBatchCount] <> null and [DistinctBatchCount] <= 1,
+				            useNoBatchDirect = [batch] = null and [CandidatesNoBatch] <> null
+				        in
+				            if useExact then PickClosest([CandidatesExact], [posting_date])
+				            else if useNoBatchAmbiguousOk then PickClosest([CandidatesNoBatch], [posting_date])
+				            else if useNoBatchDirect then PickClosest([CandidatesNoBatch], [posting_date])
+				            else [batch=null, serial=null, lot_resolved=false]),
+				    #"Expanded Resolution" = Table.ExpandRecordColumn(#"Added Resolution", "Resolution", {"batch","serial","lot_resolved"}, {"resolved_batch","resolved_serial","lot_resolved"}),
+				    #"Removed Join Helpers" = Table.RemoveColumns(#"Expanded Resolution", {"CandidatesExact","CandidatesNoBatch","DistinctBatchCount"}),
+				
+				    KeysWhr = Table.Buffer(Table.AddColumn(Table.Distinct(Table.SelectColumns(Table.SelectRows(#"Typed Posting Date", each [movement_type] = "WHR"), {"reference","sku","batch"})), "has_whr", each true, type logical)),
+				    #"Merged HasWhr" = Table.NestedJoin(#"Removed Join Helpers", {"reference","sku","batch"}, KeysWhr, {"reference","sku","batch"}, "HasWhrMatch", JoinKind.LeftOuter),
+				    #"Added HasWhr" = Table.ExpandTableColumn(#"Merged HasWhr", "HasWhrMatch", {"has_whr"}, {"has_whr"}),
+				
+				    #"Added Movement Status" = Table.AddColumn(#"Added HasWhr", "movement_status", each
+				        if [movement_type] = "RET" then (if [has_whr] = true then "Dropped-After-Inbound" else "Dropped-Never-Inbounded")
+				        else if [movement_type] = "WHR" then "Inbounded"
+				        else "No Movement",
+				        type text),
+				    #"Removed HasWhr Col" = Table.RemoveColumns(#"Added Movement Status", {"has_whr"})
+				in
+				    #"Removed HasWhr Col"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,25 @@
+model 'Returns Dashboard'
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_ProTooling = ["MCP-PBIModeling","DevMode"]
+
+annotation PBI_QueryOrder = ["Delivery","Cockpit","CustomerMaster","Movement","OwnerAlignment","CarrierStatus"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+ref table Delivery
+ref table Cockpit
+ref table CustomerMaster
+ref table Movement
+ref table OwnerAlignment
+ref table CarrierStatus
+ref table DimDate
+
+ref cultureInfo en-US
+

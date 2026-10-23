@@ -1,0 +1,158 @@
+/// Field inventory stock positions per branch, customer, batch and serial. Drives the expiry lookup and the in-field checks. Synthetic demo data.
+table Cockpit
+	lineageTag: f198eba2-4186-4f74-bcb8-e7a1eb327906
+
+	column branch
+		dataType: string
+		lineageTag: 56a4ccbf-46cf-40bc-adfd-9111afa8f4a1
+		summarizeBy: none
+		sourceColumn: branch
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_no
+		dataType: string
+		lineageTag: 3dc4f36b-13e9-4bbe-909e-145dce3b68d7
+		summarizeBy: none
+		sourceColumn: customer_no
+
+		annotation SummarizationSetBy = Automatic
+
+	column sku
+		dataType: string
+		lineageTag: 10c3689d-cda3-4a42-a3b0-8be9eca8be83
+		summarizeBy: none
+		sourceColumn: sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 76bd5bc6-8534-411a-8876-7473a5c623d2
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column batch
+		dataType: string
+		lineageTag: 190ddee3-c019-4d6f-9402-086202afbddd
+		summarizeBy: none
+		sourceColumn: batch
+
+		annotation SummarizationSetBy = Automatic
+
+	column vendor_batch
+		dataType: string
+		lineageTag: 469575f0-17f5-4c04-8e01-1088e33d7e96
+		summarizeBy: none
+		sourceColumn: vendor_batch
+
+		annotation SummarizationSetBy = Automatic
+
+	column serial
+		dataType: string
+		lineageTag: 4ccbac60-83bd-43a6-ad54-d5db20e08026
+		summarizeBy: none
+		sourceColumn: serial
+
+		annotation SummarizationSetBy = Automatic
+
+	column expiry
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4d8d6a2f-2343-49ea-91b9-eea937b52b4c
+		summarizeBy: none
+		sourceColumn: expiry
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_name
+		dataType: string
+		lineageTag: 162e9bb9-d89b-485a-abea-6aecb93bf7f3
+		summarizeBy: none
+		sourceColumn: customer_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_on_hand
+		dataType: double
+		lineageTag: 5cc51795-fd11-46bf-875a-2967cdb0602e
+		summarizeBy: sum
+		sourceColumn: qty_on_hand
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_restricted
+		dataType: double
+		lineageTag: b0ea77d1-a9d5-4e5b-84aa-b08a363a5d6a
+		summarizeBy: sum
+		sourceColumn: qty_restricted
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_in_transit
+		dataType: double
+		lineageTag: 2c7d7742-4aa6-45fa-9477-677c66f9caca
+		summarizeBy: sum
+		sourceColumn: qty_in_transit
+
+		annotation SummarizationSetBy = Automatic
+
+	column qty_total
+		dataType: double
+		lineageTag: ab7887e7-904b-4263-be8a-86391cadcd26
+		summarizeBy: sum
+		sourceColumn: qty_total
+
+		annotation SummarizationSetBy = Automatic
+
+	column ck_active = UPPER(TRIM(LEFT(Cockpit[branch], FIND("_", Cockpit[branch] & "_") - 1))) IN {"FLD1", "FLD2", "CON1", "FLD3", "CON2"}
+		dataType: boolean
+		lineageTag: 451d6d9d-b351-4f5e-a99e-df13b5860ea6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column ck_sku =
+			VAR raw = TRIM(Cockpit[sku])
+			RETURN IF(ISBLANK(Cockpit[sku]), "NONE", UPPER(IF(IFERROR(raw = FORMAT(VALUE(raw), REPT("0", LEN(raw))), FALSE), FORMAT(VALUE(raw), "0"), raw)))
+		dataType: string
+		lineageTag: f3e7fd30-43c9-4e44-b9d5-d405329a5547
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column ck_batch =
+			VAR raw = TRIM(Cockpit[batch])
+			RETURN IF(ISBLANK(Cockpit[batch]), "NONE", UPPER(IF(IFERROR(raw = FORMAT(VALUE(raw), REPT("0", LEN(raw))), FALSE), FORMAT(VALUE(raw), "0"), raw)))
+		dataType: string
+		lineageTag: 9376d46b-fab0-4841-8beb-ae3f89f4a1b9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column ck_cust =
+			VAR raw = TRIM(Cockpit[customer_no])
+			RETURN IF(ISBLANK(Cockpit[customer_no]), "NONE", UPPER(IF(IFERROR(raw = FORMAT(VALUE(raw), REPT("0", LEN(raw))), FALSE), FORMAT(VALUE(raw), "0"), raw)))
+		dataType: string
+		lineageTag: e0630a07-32d6-423d-91c3-c1d7d7e9efad
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Cockpit = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "cockpit.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    #"Renamed Columns" = Table.TransformColumnTypes(Promoted, {{"branch", type text}, {"customer_no", type text}, {"sku", type text}, {"description", type text}, {"batch", type text}, {"vendor_batch", type text}, {"serial", type text}, {"customer_name", type text}, {"expiry", type date}, {"qty_on_hand", type number}, {"qty_restricted", type number}, {"qty_in_transit", type number}, {"qty_total", type number}}),
+				    #"Typed Expiry" = Table.TransformColumnTypes(#"Renamed Columns", {{"expiry", type date}})
+				in
+				    #"Typed Expiry"
+
+	annotation PBI_ResultType = Table
+

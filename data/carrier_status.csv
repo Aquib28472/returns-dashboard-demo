@@ -1,0 +1,1391 @@
+tracking_id,reference,po,event_date,status,responsible_party,overall_status,location
+454244139794,5755231789,PO6228284,2026-07-30,Shipment information sent to carrier,,Label created,Springfield
+454244139794,5755231789,PO6228284,2026-07-31,Picked up,,Picked up,Ashland
+454244139794,5755231789,PO6228284,2026-08-01,In transit,,In transit,Fairview
+454244139794,5755231789,PO6228284,2026-08-02,On vehicle for delivery,,Out for delivery,Riverton
+454244139794,5755231789,PO6228284,2026-08-03,Delivered,,Delivered,Clinton
+960510560312,5043540512,PO2581255,2026-09-17,Shipment information sent to carrier,,Label created,Springfield
+960510560312,5043540512,PO2581255,2026-09-18,Picked up,,Picked up,Riverton
+960510560312,5043540512,PO2581255,2026-09-20,In transit,,In transit,Salem
+960510560312,5043540512,PO2581255,2026-09-22,On vehicle for delivery,,Out for delivery,Ashland
+960510560312,5043540512,PO2581255,2026-09-24,Delivered,Warehouse,Delivered,Ashland
+852289451771,5043540512,PO2581255,2026-09-17,Shipment information sent to carrier,,Label created,Georgetown
+852289451771,5043540512,PO2581255,2026-09-19,Picked up,,Picked up,Madison
+852289451771,5043540512,PO2581255,2026-09-20,In transit,,In transit,Clinton
+852289451771,5043540512,PO2581255,2026-09-21,On vehicle for delivery,,Out for delivery,Georgetown
+852289451771,5043540512,PO2581255,2026-09-22,Delivered,,Delivered,Springfield
+464192958021,5402625287,PO1937475,2026-08-07,Shipment information sent to carrier,,Label created,Clinton
+464192958021,5402625287,PO1937475,2026-08-09,Picked up,,Picked up,Riverton
+464192958021,5402625287,PO1937475,2026-08-11,In transit,,In transit,Riverton
+464192958021,5402625287,PO1937475,2026-08-12,On vehicle for delivery,,Out for delivery,Ashland
+464192958021,5402625287,PO1937475,2026-08-14,Delivered,,Delivered,Fairview
+413540260695,5208759252,PO4867581,2026-08-19,Shipment information sent to carrier,,Label created,Springfield
+413540260695,5208759252,PO4867581,2026-08-20,Picked up,,Picked up,Clinton
+413540260695,5208759252,PO4867581,2026-08-22,In transit,,In transit,Madison
+413540260695,5208759252,PO4867581,2026-08-24,On vehicle for delivery,,Out for delivery,Springfield
+413540260695,5208759252,PO4867581,2026-08-25,Delivered,,Delivered,Riverton
+641872265357,5886582764,PO3110791,2026-08-31,Shipment information sent to carrier,,Label created,Ashland
+641872265357,5886582764,PO3110791,2026-09-01,Picked up,,Picked up,Georgetown
+641872265357,5886582764,PO3110791,2026-09-02,In transit,,In transit,Georgetown
+641872265357,5886582764,PO3110791,2026-09-04,On vehicle for delivery,,Out for delivery,Madison
+641872265357,5886582764,PO3110791,2026-09-05,Delivered,,Delivered,Georgetown
+515837742486,5886582764,PO3110791,2026-09-01,Shipment information sent to carrier,,Label created,Madison
+515837742486,5886582764,PO3110791,2026-09-03,Picked up,,Picked up,Ashland
+515837742486,5886582764,PO3110791,2026-09-04,In transit,,In transit,Fairview
+515837742486,5886582764,PO3110791,2026-09-06,On vehicle for delivery,,Out for delivery,Ashland
+515837742486,5886582764,PO3110791,2026-09-07,Delivered,,Delivered,Georgetown
+295041334590,5806612835,PO6226216,2026-08-04,Shipment information sent to carrier,,Label created,Ashland
+295041334590,5806612835,PO6226216,2026-08-06,Picked up,,Picked up,Clinton
+295041334590,5806612835,PO6226216,2026-08-07,In transit,,In transit,Clinton
+295041334590,5806612835,PO6226216,2026-08-09,On vehicle for delivery,,Out for delivery,Fairview
+295041334590,5806612835,PO6226216,2026-08-11,Delivered,,Delivered,Georgetown
+626108557663,5267298084,PO7285611,2026-09-19,Shipment information sent to carrier,,Label created,Riverton
+626108557663,5267298084,PO7285611,2026-09-21,Picked up,,Picked up,Springfield
+626108557663,5267298084,PO7285611,2026-09-22,In transit,,In transit,Fairview
+626108557663,5267298084,PO7285611,2026-09-23,On vehicle for delivery,,Out for delivery,Ashland
+626108557663,5267298084,PO7285611,2026-09-24,Delivered,,Delivered,Fairview
+214873952356,5267298084,PO7285611,2026-09-21,Shipment information sent to carrier,,Label created,Riverton
+214873952356,5267298084,PO7285611,2026-09-22,Picked up,,Picked up,Madison
+214873952356,5267298084,PO7285611,2026-09-24,In transit,,In transit,Georgetown
+214873952356,5267298084,PO7285611,2026-09-26,On vehicle for delivery,,Out for delivery,Clinton
+214873952356,5267298084,PO7285611,2026-09-28,Delivered,Warehouse,Delivered,Georgetown
+974684386025,5247438790,PO2748129,2026-10-18,Shipment information sent to carrier,,Label created,Clinton
+974684386025,5247438790,PO2748129,2026-10-19,Picked up,,Picked up,Riverton
+974684386025,5247438790,PO2748129,2026-10-21,In transit,,In transit,Georgetown
+974684386025,5247438790,PO2748129,2026-10-23,On vehicle for delivery,,Out for delivery,Springfield
+974684386025,5247438790,PO2748129,2026-10-23,Delivered,,Delivered,Fairview
+185553517132,5247438790,PO2748129,2026-10-17,Shipment information sent to carrier,,Label created,Springfield
+185553517132,5247438790,PO2748129,2026-10-19,Picked up,,Picked up,Ashland
+185553517132,5247438790,PO2748129,2026-10-21,In transit,,In transit,Salem
+185553517132,5247438790,PO2748129,2026-10-22,On vehicle for delivery,,Out for delivery,Fairview
+185553517132,5247438790,PO2748129,2026-10-23,Delivered,Warehouse,Delivered,Ashland
+898698951941,5250425507,PO0997601,2026-07-30,Shipment information sent to carrier,,Label created,Fairview
+898698951941,5250425507,PO0997601,2026-08-01,Picked up,,Picked up,Clinton
+898698951941,5250425507,PO0997601,2026-08-02,In transit,,In transit,Fairview
+898698951941,5250425507,PO0997601,2026-08-04,On vehicle for delivery,,Out for delivery,Riverton
+898698951941,5250425507,PO0997601,2026-08-06,Delivered,Warehouse,Delivered,Salem
+556515303569,5250425507,PO0997601,2026-07-29,Shipment information sent to carrier,,Label created,Georgetown
+556515303569,5250425507,PO0997601,2026-07-31,Picked up,,Picked up,Springfield
+556515303569,5250425507,PO0997601,2026-08-01,In transit,,In transit,Madison
+556515303569,5250425507,PO0997601,2026-08-03,On vehicle for delivery,,Out for delivery,Fairview
+556515303569,5250425507,PO0997601,2026-08-05,Delivered,,Delivered,Madison
+921363976364,5987745146,PO4666899,2026-07-16,Shipment information sent to carrier,,Label created,Riverton
+921363976364,5987745146,PO4666899,2026-07-17,Picked up,,Picked up,Springfield
+921363976364,5987745146,PO4666899,2026-07-18,In transit,,In transit,Salem
+921363976364,5987745146,PO4666899,2026-07-19,On vehicle for delivery,,Out for delivery,Madison
+921363976364,5987745146,PO4666899,2026-07-20,Delivered,,Delivered,Georgetown
+585459596452,5987745146,PO4666899,2026-07-15,Shipment information sent to carrier,,Label created,Salem
+585459596452,5987745146,PO4666899,2026-07-16,Picked up,,Picked up,Clinton
+585459596452,5987745146,PO4666899,2026-07-17,In transit,,In transit,Ashland
+585459596452,5987745146,PO4666899,2026-07-19,On vehicle for delivery,,Out for delivery,Clinton
+585459596452,5987745146,PO4666899,2026-07-21,Delivered,,Delivered,Ashland
+972225419228,5034529465,PO3974746,2026-06-28,Shipment information sent to carrier,,Label created,Clinton
+972225419228,5034529465,PO3974746,2026-06-29,Picked up,,Picked up,Fairview
+972225419228,5034529465,PO3974746,2026-07-01,In transit,,In transit,Salem
+972225419228,5034529465,PO3974746,2026-07-02,On vehicle for delivery,,Out for delivery,Salem
+972225419228,5034529465,PO3974746,2026-07-04,Delivered,,Delivered,Georgetown
+988268781554,5239027832,PO0807673,2026-09-15,Shipment information sent to carrier,,Label created,Salem
+988268781554,5239027832,PO0807673,2026-09-16,Picked up,,Picked up,Riverton
+988268781554,5239027832,PO0807673,2026-09-18,In transit,,In transit,Clinton
+988268781554,5239027832,PO0807673,2026-09-20,On vehicle for delivery,,Out for delivery,Georgetown
+988268781554,5239027832,PO0807673,2026-09-22,Delivered,Warehouse,Delivered,Madison
+911168049793,5559654242,PO3951870,2026-07-03,Shipment information sent to carrier,,Label created,Ashland
+911168049793,5559654242,PO3951870,2026-07-04,Picked up,,Picked up,Riverton
+911168049793,5559654242,PO3951870,2026-07-05,In transit,,In transit,Clinton
+911168049793,5559654242,PO3951870,2026-07-06,On vehicle for delivery,,Out for delivery,Madison
+911168049793,5559654242,PO3951870,2026-07-07,Delivered,Warehouse,Delivered,Salem
+614564558288,5559654242,PO3951870,2026-07-05,Shipment information sent to carrier,,Label created,Springfield
+614564558288,5559654242,PO3951870,2026-07-07,Picked up,,Picked up,Ashland
+614564558288,5559654242,PO3951870,2026-07-08,In transit,,In transit,Georgetown
+614564558288,5559654242,PO3951870,2026-07-10,On vehicle for delivery,,Out for delivery,Riverton
+614564558288,5559654242,PO3951870,2026-07-11,Delivered,,Delivered,Fairview
+653902128230,5870529696,PO7409332,2026-10-03,Shipment information sent to carrier,,Label created,Riverton
+653902128230,5870529696,PO7409332,2026-10-05,Picked up,,Picked up,Fairview
+653902128230,5870529696,PO7409332,2026-10-07,In transit,,In transit,Riverton
+653902128230,5870529696,PO7409332,2026-10-09,On vehicle for delivery,,Out for delivery,Riverton
+653902128230,5870529696,PO7409332,2026-10-11,Delivered,,Delivered,Springfield
+332484613850,5142475326,PO6026393,2026-10-01,Shipment information sent to carrier,,Label created,Ashland
+332484613850,5142475326,PO6026393,2026-10-03,Picked up,,Picked up,Clinton
+332484613850,5142475326,PO6026393,2026-10-05,In transit,,In transit,Clinton
+303831122616,5798988745,PO0212795,2026-08-25,Shipment information sent to carrier,,Label created,Georgetown
+303831122616,5798988745,PO0212795,2026-08-27,Picked up,,Picked up,Salem
+303831122616,5798988745,PO0212795,2026-08-29,In transit,,In transit,Georgetown
+499909375337,5798988745,PO0212795,2026-08-27,Shipment information sent to carrier,,Label created,Riverton
+499909375337,5798988745,PO0212795,2026-08-29,Picked up,,Picked up,Madison
+499909375337,5798988745,PO0212795,2026-08-30,In transit,Carrier,In transit,Fairview
+603441650543,5806468092,PO2510043,2026-10-04,Shipment information sent to carrier,,Label created,Springfield
+603441650543,5806468092,PO2510043,2026-10-05,Picked up,,Picked up,Clinton
+603441650543,5806468092,PO2510043,2026-10-06,In transit,Carrier,In transit,Springfield
+303458617070,5806468092,PO2510043,2026-10-03,Shipment information sent to carrier,,Label created,Madison
+303458617070,5806468092,PO2510043,2026-10-05,Picked up,,Picked up,Ashland
+303458617070,5806468092,PO2510043,2026-10-06,In transit,Carrier,In transit,Riverton
+033454794633,5578022892,PO3399157,2026-09-14,Shipment information sent to carrier,,Label created,Clinton
+033454794633,5578022892,PO3399157,2026-09-16,Picked up,,Picked up,Ashland
+033454794633,5578022892,PO3399157,2026-09-17,In transit,,In transit,Ashland
+031499956962,5578022892,PO3399157,2026-09-14,Shipment information sent to carrier,,Label created,Riverton
+031499956962,5578022892,PO3399157,2026-09-16,Picked up,,Picked up,Madison
+031499956962,5578022892,PO3399157,2026-09-17,In transit,,In transit,Riverton
+661473702239,5895525101,PO0943672,2026-09-25,Shipment information sent to carrier,,Label created,Clinton
+661473702239,5895525101,PO0943672,2026-09-27,Picked up,,Picked up,Clinton
+661473702239,5895525101,PO0943672,2026-09-29,In transit,,In transit,Ashland
+362224079024,5567181596,PO8907526,2026-09-01,Shipment information sent to carrier,,Label created,Springfield
+362224079024,5567181596,PO8907526,2026-09-03,Picked up,,Picked up,Madison
+362224079024,5567181596,PO8907526,2026-09-04,In transit,,In transit,Clinton
+601954242073,5675718726,PO8227610,2026-10-05,Shipment information sent to carrier,,Label created,Ashland
+601954242073,5675718726,PO8227610,2026-10-07,Picked up,,Picked up,Ashland
+601954242073,5675718726,PO8227610,2026-10-08,In transit,,In transit,Georgetown
+429218647365,5185822680,PO3004281,2026-09-18,Shipment information sent to carrier,,Label created,Springfield
+429218647365,5185822680,PO3004281,2026-09-20,Picked up,,Picked up,Ashland
+429218647365,5185822680,PO3004281,2026-09-22,In transit,,In transit,Ashland
+360778138607,5653344712,PO4801262,2026-09-18,Shipment information sent to carrier,,Label created,Salem
+360778138607,5653344712,PO4801262,2026-09-20,Picked up,,Picked up,Springfield
+360778138607,5653344712,PO4801262,2026-09-22,In transit,Carrier,In transit,Ashland
+216978689893,5429322607,PO8896739,2026-09-21,Shipment information sent to carrier,,Label created,Springfield
+216978689893,5429322607,PO8896739,2026-09-22,Picked up,,Picked up,Clinton
+216978689893,5429322607,PO8896739,2026-09-23,In transit,,In transit,Salem
+354964893824,5429322607,PO8896739,2026-09-21,Shipment information sent to carrier,,Label created,Clinton
+354964893824,5429322607,PO8896739,2026-09-23,Picked up,,Picked up,Riverton
+354964893824,5429322607,PO8896739,2026-09-24,In transit,,In transit,Salem
+687566487526,5057711777,PO2481816,2026-09-11,Shipment information sent to carrier,,Label created,Fairview
+687566487526,5057711777,PO2481816,2026-09-12,Picked up,,Picked up,Fairview
+687566487526,5057711777,PO2481816,2026-09-13,In transit,Carrier,In transit,Ashland
+905058477124,5011169952,PO5688086,2026-10-17,Shipment information sent to carrier,,Label created,Georgetown
+905058477124,5011169952,PO5688086,2026-10-19,Picked up,,Picked up,Clinton
+905058477124,5011169952,PO5688086,2026-10-21,In transit,,In transit,Riverton
+445859803096,5011169952,PO5688086,2026-10-17,Shipment information sent to carrier,,Label created,Springfield
+445859803096,5011169952,PO5688086,2026-10-19,Picked up,,Picked up,Georgetown
+445859803096,5011169952,PO5688086,2026-10-20,In transit,,In transit,Madison
+562647176354,5982641624,PO3659973,2026-09-24,Shipment information sent to carrier,,Label created,Springfield
+562647176354,5982641624,PO3659973,2026-09-26,Picked up,,Picked up,Riverton
+562647176354,5982641624,PO3659973,2026-09-27,In transit,,In transit,Riverton
+069485797615,5908245969,PO6666170,2026-10-21,Shipment information sent to carrier,,Label created,Georgetown
+069485797615,5908245969,PO6666170,2026-10-22,Picked up,,Picked up,Ashland
+069485797615,5908245969,PO6666170,2026-10-23,In transit,Carrier,In transit,Riverton
+705904077355,5756863323,PO4577430,2026-10-05,Shipment information sent to carrier,,Label created,Riverton
+705904077355,5756863323,PO4577430,2026-10-06,Picked up,,Picked up,Madison
+705904077355,5756863323,PO4577430,2026-10-08,In transit,,In transit,Madison
+946742717962,5064878733,PO3797376,2026-09-30,Shipment information sent to carrier,,Label created,Salem
+946742717962,5064878733,PO3797376,2026-10-02,Picked up,,Picked up,Georgetown
+946742717962,5064878733,PO3797376,2026-10-04,In transit,,In transit,Springfield
+640402667526,5160509068,PO5771174,2026-09-05,Shipment information sent to carrier,,Label created,Clinton
+640402667526,5160509068,PO5771174,2026-09-06,Picked up,,Picked up,Ashland
+640402667526,5160509068,PO5771174,2026-09-07,In transit,,In transit,Ashland
+491585145694,5160509068,PO5771174,2026-09-04,Shipment information sent to carrier,,Label created,Georgetown
+491585145694,5160509068,PO5771174,2026-09-06,Picked up,,Picked up,Ashland
+491585145694,5160509068,PO5771174,2026-09-07,In transit,,In transit,Clinton
+018679695967,5334241384,PO7939425,2026-09-13,Shipment information sent to carrier,,Label created,Clinton
+018679695967,5334241384,PO7939425,2026-09-15,Picked up,,Picked up,Madison
+018679695967,5334241384,PO7939425,2026-09-16,In transit,,In transit,Salem
+436142137173,5334241384,PO7939425,2026-09-12,Shipment information sent to carrier,,Label created,Clinton
+436142137173,5334241384,PO7939425,2026-09-14,Picked up,,Picked up,Ashland
+436142137173,5334241384,PO7939425,2026-09-16,In transit,,In transit,Salem
+219850077953,5005832697,PO2074930,2026-08-29,Shipment information sent to carrier,,Label created,Madison
+219850077953,5005832697,PO2074930,2026-08-31,Picked up,,Picked up,Clinton
+219850077953,5005832697,PO2074930,2026-09-01,In transit,,In transit,Clinton
+998306260527,5867300718,PO4914519,2026-08-29,Shipment information sent to carrier,,Label created,Madison
+998306260527,5867300718,PO4914519,2026-08-31,Picked up,,Picked up,Fairview
+998306260527,5867300718,PO4914519,2026-09-02,In transit,Carrier,In transit,Georgetown
+921081146751,5867300718,PO4914519,2026-08-28,Shipment information sent to carrier,,Label created,Clinton
+921081146751,5867300718,PO4914519,2026-08-30,Picked up,,Picked up,Ashland
+921081146751,5867300718,PO4914519,2026-09-01,In transit,,In transit,Fairview
+304652563431,5581002064,PO2724946,2026-09-22,Shipment information sent to carrier,,Label created,Clinton
+304652563431,5581002064,PO2724946,2026-09-23,Picked up,,Picked up,Riverton
+304652563431,5581002064,PO2724946,2026-09-24,In transit,,In transit,Ashland
+729877379848,5094155493,PO9114377,2026-10-13,Shipment information sent to carrier,,Label created,Georgetown
+729877379848,5094155493,PO9114377,2026-10-14,Picked up,,Picked up,Ashland
+729877379848,5094155493,PO9114377,2026-10-15,In transit,,In transit,Fairview
+898665831666,5431604815,PO4335766,2026-09-29,Shipment information sent to carrier,,Label created,Georgetown
+898665831666,5431604815,PO4335766,2026-10-01,Picked up,,Picked up,Fairview
+898665831666,5431604815,PO4335766,2026-10-03,In transit,,In transit,Georgetown
+299215242968,5258897595,PO1896553,2026-10-02,Shipment information sent to carrier,,Label created,Georgetown
+299215242968,5258897595,PO1896553,2026-10-03,Picked up,,Picked up,Riverton
+299215242968,5258897595,PO1896553,2026-10-04,In transit,,In transit,Ashland
+147310036631,5809864612,PO6217694,2026-09-25,Shipment information sent to carrier,,Label created,Riverton
+147310036631,5809864612,PO6217694,2026-09-27,Picked up,,Picked up,Salem
+147310036631,5809864612,PO6217694,2026-09-28,In transit,Carrier,In transit,Springfield
+724079960017,5247466063,PO5123934,2026-09-13,Shipment information sent to carrier,,Label created,Springfield
+724079960017,5247466063,PO5123934,2026-09-15,Picked up,,Picked up,Riverton
+724079960017,5247466063,PO5123934,2026-09-17,In transit,Carrier,In transit,Riverton
+236821827665,5704881760,PO2507073,2026-10-03,Shipment information sent to carrier,,Label created,Springfield
+236821827665,5704881760,PO2507073,2026-10-04,Picked up,,Picked up,Fairview
+236821827665,5704881760,PO2507073,2026-10-05,In transit,,In transit,Riverton
+582484446501,5075912841,PO6055184,2026-09-12,Shipment information sent to carrier,,Label created,Fairview
+582484446501,5075912841,PO6055184,2026-09-14,Picked up,,Picked up,Clinton
+582484446501,5075912841,PO6055184,2026-09-15,In transit,Carrier,In transit,Salem
+293340252159,5075912841,PO6055184,2026-09-11,Shipment information sent to carrier,,Label created,Madison
+293340252159,5075912841,PO6055184,2026-09-13,Picked up,,Picked up,Salem
+293340252159,5075912841,PO6055184,2026-09-15,In transit,Carrier,In transit,Fairview
+337047121189,5694149559,PO3540065,2026-09-05,Shipment information sent to carrier,,Label created,Riverton
+337047121189,5694149559,PO3540065,2026-09-07,Picked up,,Picked up,Fairview
+337047121189,5694149559,PO3540065,2026-09-09,In transit,,In transit,Springfield
+926432739993,5742646655,PO6877188,2026-09-01,Shipment information sent to carrier,,Label created,Salem
+926432739993,5742646655,PO6877188,2026-09-03,Picked up,,Picked up,Salem
+926432739993,5742646655,PO6877188,2026-09-05,In transit,,In transit,Madison
+984458476807,5742646655,PO6877188,2026-08-31,Shipment information sent to carrier,,Label created,Fairview
+984458476807,5742646655,PO6877188,2026-09-01,Picked up,,Picked up,Ashland
+984458476807,5742646655,PO6877188,2026-09-03,In transit,,In transit,Ashland
+814272681949,5265356949,PO0792089,2026-08-26,Shipment information sent to carrier,,Label created,Georgetown
+814272681949,5265356949,PO0792089,2026-08-27,Picked up,,Picked up,Salem
+814272681949,5265356949,PO0792089,2026-08-28,In transit,,In transit,Madison
+165010674859,5265356949,PO0792089,2026-08-26,Shipment information sent to carrier,,Label created,Riverton
+165010674859,5265356949,PO0792089,2026-08-28,Picked up,,Picked up,Ashland
+165010674859,5265356949,PO0792089,2026-08-30,In transit,,In transit,Madison
+669815171826,5729913904,PO6664442,2026-09-26,Shipment information sent to carrier,,Label created,Riverton
+669815171826,5729913904,PO6664442,2026-09-28,Picked up,,Picked up,Salem
+669815171826,5729913904,PO6664442,2026-09-29,In transit,Carrier,In transit,Madison
+241887393845,5729913904,PO6664442,2026-09-28,Shipment information sent to carrier,,Label created,Riverton
+241887393845,5729913904,PO6664442,2026-09-29,Picked up,,Picked up,Fairview
+241887393845,5729913904,PO6664442,2026-10-01,In transit,,In transit,Salem
+503066423460,5721255427,PO6763092,2026-09-18,Shipment information sent to carrier,,Label created,Springfield
+503066423460,5721255427,PO6763092,2026-09-19,Picked up,,Picked up,Salem
+503066423460,5721255427,PO6763092,2026-09-21,In transit,Carrier,In transit,Clinton
+567050923267,5731441182,PO8484382,2026-09-17,Shipment information sent to carrier,,Label created,Fairview
+567050923267,5731441182,PO8484382,2026-09-18,Picked up,,Picked up,Riverton
+567050923267,5731441182,PO8484382,2026-09-19,In transit,,In transit,Fairview
+688587773345,5731441182,PO8484382,2026-09-15,Shipment information sent to carrier,,Label created,Georgetown
+688587773345,5731441182,PO8484382,2026-09-16,Picked up,,Picked up,Riverton
+688587773345,5731441182,PO8484382,2026-09-18,In transit,,In transit,Springfield
+495974434845,5098476297,PO7875834,2026-09-16,Shipment information sent to carrier,,Label created,Madison
+083136226682,5098476297,PO7875834,2026-09-17,Shipment information sent to carrier,,Label created,Springfield
+134389987307,5937868060,PO9871217,2026-09-06,Shipment information sent to carrier,,Label created,Springfield
+037443723782,5398272447,PO3013169,2026-10-17,Shipment information sent to carrier,,Label created,Fairview
+148580733291,5902060121,PO4603046,2026-09-06,Shipment information sent to carrier,Rep,Label created,Riverton
+732266313848,5902060121,PO4603046,2026-09-08,Shipment information sent to carrier,Rep,Label created,Riverton
+284834316671,5878043234,PO9961473,2026-08-29,Shipment information sent to carrier,,Label created,Springfield
+696813860265,5445576572,PO0948649,2026-10-17,Shipment information sent to carrier,,Label created,Ashland
+417791507028,5445576572,PO0948649,2026-10-18,Shipment information sent to carrier,Rep,Label created,Georgetown
+751390336734,5818253751,PO4274489,2026-10-12,Shipment information sent to carrier,Rep,Label created,Fairview
+924360525983,5377170807,PO4807464,2026-09-22,Shipment information sent to carrier,,Label created,Clinton
+641311645212,5955071955,PO8548087,2026-09-20,Shipment information sent to carrier,,Label created,Madison
+390732810690,5170553858,PO4483663,2026-10-09,Shipment information sent to carrier,,Label created,Salem
+850341377145,5224764985,PO3958654,2026-10-02,Shipment information sent to carrier,,Label created,Fairview
+240597825362,5224764985,PO3958654,2026-10-01,Shipment information sent to carrier,,Label created,Fairview
+977292871050,5027270801,PO1406175,2026-07-30,Shipment information sent to carrier,,Label created,Georgetown
+407300916711,5027270801,PO1406175,2026-07-29,Shipment information sent to carrier,Rep,Label created,Riverton
+591447051429,5819098861,PO0628771,2026-08-16,Shipment information sent to carrier,Rep,Label created,Clinton
+091943099480,5819098861,PO0628771,2026-08-15,Shipment information sent to carrier,,Label created,Salem
+356388704049,5318760190,PO8712648,2026-07-26,Shipment information sent to carrier,Rep,Label created,Riverton
+426218486551,5318760190,PO8712648,2026-07-26,Shipment information sent to carrier,,Label created,Georgetown
+217819584447,5019130627,PO2510130,2026-10-22,Shipment information sent to carrier,,Label created,Madison
+434328401511,5019130627,PO2510130,2026-10-21,Shipment information sent to carrier,,Label created,Madison
+334637200942,5212907978,PO2904488,2026-08-12,Shipment information sent to carrier,,Label created,Madison
+981599908584,5212907978,PO2904488,2026-08-12,Shipment information sent to carrier,,Label created,Salem
+375256369163,5675827807,PO6003948,2026-10-01,Shipment information sent to carrier,,Label created,Fairview
+126914049670,5332590458,PO4667123,2026-07-30,Shipment information sent to carrier,,Label created,Salem
+815901999930,5332590458,PO4667123,2026-08-01,Shipment information sent to carrier,,Label created,Springfield
+041409136835,5930825915,PO3671386,2026-08-16,Shipment information sent to carrier,Rep,Label created,Georgetown
+016554536068,5930825915,PO3671386,2026-08-16,Shipment information sent to carrier,,Label created,Georgetown
+796462336016,5678353627,PO1672599,2026-09-29,Shipment information sent to carrier,,Label created,Fairview
+611839447722,5678353627,PO1672599,2026-09-28,Shipment information sent to carrier,Rep,Label created,Riverton
+688099453001,5942963037,PO6470520,2026-08-01,Shipment information sent to carrier,,Label created,Madison
+240351288910,5942963037,PO6470520,2026-08-03,Shipment information sent to carrier,Rep,Label created,Clinton
+697253682636,5445272514,PO7715109,2026-08-15,Shipment information sent to carrier,,Label created,Salem
+120233082115,5952781645,PO0723042,2026-08-27,Shipment information sent to carrier,,Label created,Clinton
+325005165900,5669601346,PO0323533,2026-10-10,Shipment information sent to carrier,,Label created,Springfield
+931995640415,5669601346,PO0323533,2026-10-10,Shipment information sent to carrier,Rep,Label created,Clinton
+770915176177,5928153174,PO0100974,2026-05-05,Shipment information sent to carrier,,Label created,Riverton
+770915176177,5928153174,PO0100974,2026-05-07,Picked up,,Picked up,Georgetown
+770915176177,5928153174,PO0100974,2026-05-08,In transit,Carrier,In transit,Riverton
+498245491649,5822843073,PO3712291,2026-07-17,Shipment information sent to carrier,,Label created,Madison
+498245491649,5822843073,PO3712291,2026-07-18,Picked up,,Picked up,Riverton
+498245491649,5822843073,PO3712291,2026-07-20,In transit,,In transit,Salem
+046102560489,5822843073,PO3712291,2026-07-18,Shipment information sent to carrier,,Label created,Springfield
+046102560489,5822843073,PO3712291,2026-07-20,Picked up,,Picked up,Riverton
+046102560489,5822843073,PO3712291,2026-07-22,In transit,,In transit,Georgetown
+136243392628,5316989778,PO2262401,2026-07-06,Shipment information sent to carrier,,Label created,Salem
+136243392628,5316989778,PO2262401,2026-07-07,Picked up,,Picked up,Ashland
+136243392628,5316989778,PO2262401,2026-07-08,In transit,,In transit,Georgetown
+327877157561,5316989778,PO2262401,2026-07-07,Shipment information sent to carrier,,Label created,Springfield
+327877157561,5316989778,PO2262401,2026-07-09,Picked up,,Picked up,Georgetown
+327877157561,5316989778,PO2262401,2026-07-11,In transit,,In transit,Georgetown
+524293663157,5806443483,PO6340894,2026-08-23,Shipment information sent to carrier,,Label created,Clinton
+524293663157,5806443483,PO6340894,2026-08-24,Picked up,,Picked up,Georgetown
+524293663157,5806443483,PO6340894,2026-08-26,In transit,,In transit,Fairview
+455537328770,5806443483,PO6340894,2026-08-23,Shipment information sent to carrier,,Label created,Georgetown
+455537328770,5806443483,PO6340894,2026-08-25,Picked up,,Picked up,Springfield
+455537328770,5806443483,PO6340894,2026-08-26,In transit,,In transit,Riverton
+282647227200,5591507593,PO3938495,2026-09-19,Shipment information sent to carrier,,Label created,Riverton
+282647227200,5591507593,PO3938495,2026-09-20,Picked up,,Picked up,Ashland
+282647227200,5591507593,PO3938495,2026-09-21,In transit,,In transit,Ashland
+072622341245,5180408809,PO0046552,2026-07-16,Shipment information sent to carrier,,Label created,Salem
+072622341245,5180408809,PO0046552,2026-07-17,Picked up,,Picked up,Salem
+072622341245,5180408809,PO0046552,2026-07-18,In transit,Carrier,In transit,Clinton
+245128281656,5106603980,PO9442470,2026-07-08,Shipment information sent to carrier,,Label created,Springfield
+245128281656,5106603980,PO9442470,2026-07-09,Picked up,,Picked up,Fairview
+245128281656,5106603980,PO9442470,2026-07-10,In transit,,In transit,Salem
+939530923869,5106603980,PO9442470,2026-07-07,Shipment information sent to carrier,,Label created,Salem
+939530923869,5106603980,PO9442470,2026-07-09,Picked up,,Picked up,Georgetown
+939530923869,5106603980,PO9442470,2026-07-10,In transit,,In transit,Ashland
+876897159767,5398999655,PO9816480,2026-10-11,Shipment information sent to carrier,,Label created,Madison
+876897159767,5398999655,PO9816480,2026-10-12,Picked up,,Picked up,Springfield
+876897159767,5398999655,PO9816480,2026-10-14,In transit,,In transit,Madison
+777887708670,5398999655,PO9816480,2026-10-10,Shipment information sent to carrier,,Label created,Madison
+777887708670,5398999655,PO9816480,2026-10-11,Picked up,,Picked up,Springfield
+777887708670,5398999655,PO9816480,2026-10-12,In transit,,In transit,Madison
+336186727898,5652438786,PO9140892,2026-07-19,Shipment information sent to carrier,,Label created,Springfield
+336186727898,5652438786,PO9140892,2026-07-20,Picked up,,Picked up,Riverton
+336186727898,5652438786,PO9140892,2026-07-21,In transit,,In transit,Ashland
+236192389357,5508039679,PO4404452,2026-05-18,Shipment information sent to carrier,,Label created,Fairview
+236192389357,5508039679,PO4404452,2026-05-19,Picked up,,Picked up,Salem
+236192389357,5508039679,PO4404452,2026-05-21,In transit,,In transit,Georgetown
+293097775015,5020945263,PO0662742,2026-05-10,Shipment information sent to carrier,,Label created,Springfield
+293097775015,5020945263,PO0662742,2026-05-12,Picked up,,Picked up,Riverton
+293097775015,5020945263,PO0662742,2026-05-13,In transit,,In transit,Riverton
+503639943948,5020945263,PO0662742,2026-05-10,Shipment information sent to carrier,,Label created,Riverton
+503639943948,5020945263,PO0662742,2026-05-11,Picked up,,Picked up,Georgetown
+503639943948,5020945263,PO0662742,2026-05-12,In transit,,In transit,Georgetown
+794460230334,5064155254,PO2361521,2026-05-10,Shipment information sent to carrier,,Label created,Fairview
+794460230334,5064155254,PO2361521,2026-05-11,Picked up,,Picked up,Riverton
+794460230334,5064155254,PO2361521,2026-05-12,In transit,,In transit,Madison
+338856196492,5064155254,PO2361521,2026-05-11,Shipment information sent to carrier,,Label created,Riverton
+338856196492,5064155254,PO2361521,2026-05-12,Picked up,,Picked up,Clinton
+338856196492,5064155254,PO2361521,2026-05-13,In transit,Carrier,In transit,Georgetown
+165308051181,5202012929,PO9658025,2026-09-21,Shipment information sent to carrier,,Label created,Salem
+165308051181,5202012929,PO9658025,2026-09-22,Picked up,,Picked up,Georgetown
+165308051181,5202012929,PO9658025,2026-09-23,In transit,Carrier,In transit,Georgetown
+902487504035,5704658515,PO0310115,2026-09-23,Shipment information sent to carrier,,Label created,Fairview
+902487504035,5704658515,PO0310115,2026-09-24,Picked up,,Picked up,Madison
+902487504035,5704658515,PO0310115,2026-09-25,In transit,,In transit,Clinton
+815580701085,5704658515,PO0310115,2026-09-24,Shipment information sent to carrier,,Label created,Salem
+815580701085,5704658515,PO0310115,2026-09-25,Picked up,,Picked up,Georgetown
+815580701085,5704658515,PO0310115,2026-09-26,In transit,,In transit,Madison
+396988774748,5075731237,PO1659307,2026-10-09,Shipment information sent to carrier,,Label created,Fairview
+396988774748,5075731237,PO1659307,2026-10-11,Picked up,,Picked up,Georgetown
+396988774748,5075731237,PO1659307,2026-10-12,In transit,,In transit,Springfield
+987620958363,5075731237,PO1659307,2026-10-09,Shipment information sent to carrier,,Label created,Georgetown
+987620958363,5075731237,PO1659307,2026-10-11,Picked up,,Picked up,Ashland
+987620958363,5075731237,PO1659307,2026-10-13,In transit,,In transit,Madison
+753782880175,5190167062,PO0108226,2026-09-14,Shipment information sent to carrier,,Label created,Springfield
+753782880175,5190167062,PO0108226,2026-09-16,Picked up,,Picked up,Salem
+753782880175,5190167062,PO0108226,2026-09-17,In transit,,In transit,Clinton
+796141229066,5190167062,PO0108226,2026-09-14,Shipment information sent to carrier,,Label created,Salem
+796141229066,5190167062,PO0108226,2026-09-16,Picked up,,Picked up,Georgetown
+796141229066,5190167062,PO0108226,2026-09-18,In transit,,In transit,Clinton
+640621974953,5170707474,PO6188974,2026-04-18,Shipment information sent to carrier,,Label created,Ashland
+640621974953,5170707474,PO6188974,2026-04-19,Picked up,,Picked up,Ashland
+640621974953,5170707474,PO6188974,2026-04-20,In transit,Carrier,In transit,Georgetown
+536523690477,5170707474,PO6188974,2026-04-18,Shipment information sent to carrier,,Label created,Georgetown
+536523690477,5170707474,PO6188974,2026-04-19,Picked up,,Picked up,Ashland
+536523690477,5170707474,PO6188974,2026-04-21,In transit,Carrier,In transit,Georgetown
+621632917663,5032025920,PO5687548,2026-05-03,Shipment information sent to carrier,,Label created,Riverton
+621632917663,5032025920,PO5687548,2026-05-05,Picked up,,Picked up,Madison
+621632917663,5032025920,PO5687548,2026-05-07,In transit,,In transit,Salem
+426456570046,5558216371,PO5762646,2026-04-17,Shipment information sent to carrier,,Label created,Madison
+426456570046,5558216371,PO5762646,2026-04-18,Picked up,,Picked up,Georgetown
+426456570046,5558216371,PO5762646,2026-04-20,In transit,,In transit,Ashland
+505597575467,5558216371,PO5762646,2026-04-17,Shipment information sent to carrier,,Label created,Georgetown
+505597575467,5558216371,PO5762646,2026-04-18,Picked up,,Picked up,Fairview
+505597575467,5558216371,PO5762646,2026-04-20,In transit,Carrier,In transit,Salem
+526057369092,5963053954,PO2178157,2026-05-08,Shipment information sent to carrier,,Label created,Clinton
+526057369092,5963053954,PO2178157,2026-05-09,Picked up,,Picked up,Georgetown
+526057369092,5963053954,PO2178157,2026-05-11,In transit,,In transit,Madison
+426320716967,5963053954,PO2178157,2026-05-06,Shipment information sent to carrier,,Label created,Salem
+426320716967,5963053954,PO2178157,2026-05-08,Picked up,,Picked up,Salem
+426320716967,5963053954,PO2178157,2026-05-09,In transit,,In transit,Springfield
+366377231419,5730305665,PO3570549,2026-05-12,Shipment information sent to carrier,,Label created,Madison
+366377231419,5730305665,PO3570549,2026-05-14,Picked up,,Picked up,Springfield
+366377231419,5730305665,PO3570549,2026-05-15,In transit,Carrier,In transit,Salem
+831220585844,5280001041,PO6194949,2026-05-06,Shipment information sent to carrier,,Label created,Salem
+831220585844,5280001041,PO6194949,2026-05-07,Picked up,,Picked up,Springfield
+831220585844,5280001041,PO6194949,2026-05-08,In transit,Carrier,In transit,Georgetown
+198379042460,5280001041,PO6194949,2026-05-06,Shipment information sent to carrier,,Label created,Clinton
+198379042460,5280001041,PO6194949,2026-05-07,Picked up,,Picked up,Georgetown
+198379042460,5280001041,PO6194949,2026-05-08,In transit,,In transit,Clinton
+609742180614,5263962821,PO9236794,2026-09-11,Shipment information sent to carrier,,Label created,Georgetown
+609742180614,5263962821,PO9236794,2026-09-13,Picked up,,Picked up,Riverton
+609742180614,5263962821,PO9236794,2026-09-14,In transit,Carrier,In transit,Ashland
+634944014817,5702607050,PO7520558,2026-08-04,Shipment information sent to carrier,,Label created,Madison
+634944014817,5702607050,PO7520558,2026-08-06,Picked up,,Picked up,Riverton
+634944014817,5702607050,PO7520558,2026-08-08,In transit,,In transit,Springfield
+153108839227,5702607050,PO7520558,2026-08-02,Shipment information sent to carrier,,Label created,Madison
+153108839227,5702607050,PO7520558,2026-08-03,Picked up,,Picked up,Springfield
+153108839227,5702607050,PO7520558,2026-08-05,In transit,,In transit,Clinton
+156177340356,5636785668,PO5511483,2026-09-21,Shipment information sent to carrier,,Label created,Clinton
+156177340356,5636785668,PO5511483,2026-09-22,Picked up,,Picked up,Riverton
+156177340356,5636785668,PO5511483,2026-09-23,In transit,,In transit,Clinton
+731956921366,5546390827,PO2497383,2026-07-17,Shipment information sent to carrier,,Label created,Georgetown
+731956921366,5546390827,PO2497383,2026-07-18,Picked up,,Picked up,Georgetown
+731956921366,5546390827,PO2497383,2026-07-19,In transit,,In transit,Ashland
+467815487528,5853693432,PO3795049,2026-06-25,Shipment information sent to carrier,,Label created,Springfield
+467815487528,5853693432,PO3795049,2026-06-27,Picked up,,Picked up,Fairview
+467815487528,5853693432,PO3795049,2026-06-29,In transit,,In transit,Clinton
+749786568231,5853693432,PO3795049,2026-06-25,Shipment information sent to carrier,,Label created,Salem
+749786568231,5853693432,PO3795049,2026-06-27,Picked up,,Picked up,Riverton
+749786568231,5853693432,PO3795049,2026-06-29,In transit,,In transit,Clinton
+864275721225,5194429192,PO4955431,2026-05-15,Shipment information sent to carrier,,Label created,Ashland
+864275721225,5194429192,PO4955431,2026-05-16,Picked up,,Picked up,Riverton
+864275721225,5194429192,PO4955431,2026-05-18,In transit,,In transit,Salem
+242250035610,5194429192,PO4955431,2026-05-15,Shipment information sent to carrier,,Label created,Ashland
+242250035610,5194429192,PO4955431,2026-05-17,Picked up,,Picked up,Fairview
+242250035610,5194429192,PO4955431,2026-05-19,In transit,,In transit,Georgetown
+167696671259,5638179036,PO2792429,2026-06-25,Shipment information sent to carrier,,Label created,Georgetown
+167696671259,5638179036,PO2792429,2026-06-26,Picked up,,Picked up,Riverton
+167696671259,5638179036,PO2792429,2026-06-28,In transit,,In transit,Riverton
+725817526806,5677018180,PO3369592,2026-04-10,Shipment information sent to carrier,,Label created,Georgetown
+725817526806,5677018180,PO3369592,2026-04-11,Picked up,,Picked up,Georgetown
+725817526806,5677018180,PO3369592,2026-04-12,In transit,,In transit,Georgetown
+908638092206,5203259730,PO4431160,2026-09-05,Shipment information sent to carrier,,Label created,Salem
+908638092206,5203259730,PO4431160,2026-09-06,Picked up,,Picked up,Georgetown
+908638092206,5203259730,PO4431160,2026-09-08,In transit,,In transit,Madison
+108977924343,5169324504,PO3676339,2026-10-03,Shipment information sent to carrier,,Label created,Clinton
+108977924343,5169324504,PO3676339,2026-10-04,Picked up,,Picked up,Georgetown
+108977924343,5169324504,PO3676339,2026-10-06,In transit,,In transit,Ashland
+214319779170,5169324504,PO3676339,2026-10-03,Shipment information sent to carrier,,Label created,Fairview
+214319779170,5169324504,PO3676339,2026-10-04,Picked up,,Picked up,Madison
+214319779170,5169324504,PO3676339,2026-10-05,In transit,Carrier,In transit,Riverton
+616474134228,5275258075,PO8755832,2026-05-19,Shipment information sent to carrier,,Label created,Ashland
+616474134228,5275258075,PO8755832,2026-05-21,Picked up,,Picked up,Springfield
+616474134228,5275258075,PO8755832,2026-05-23,In transit,,In transit,Fairview
+058094974923,5275258075,PO8755832,2026-05-19,Shipment information sent to carrier,,Label created,Ashland
+058094974923,5275258075,PO8755832,2026-05-20,Picked up,,Picked up,Fairview
+058094974923,5275258075,PO8755832,2026-05-21,In transit,,In transit,Ashland
+938436897398,5607264964,PO3803332,2026-08-27,Shipment information sent to carrier,,Label created,Madison
+938436897398,5607264964,PO3803332,2026-08-29,Picked up,,Picked up,Clinton
+938436897398,5607264964,PO3803332,2026-08-30,In transit,,In transit,Springfield
+416000297576,5607264964,PO3803332,2026-08-27,Shipment information sent to carrier,,Label created,Riverton
+416000297576,5607264964,PO3803332,2026-08-28,Picked up,,Picked up,Georgetown
+416000297576,5607264964,PO3803332,2026-08-30,In transit,Carrier,In transit,Clinton
+665544070634,5777963445,PO6014797,2026-07-21,Shipment information sent to carrier,,Label created,Ashland
+665544070634,5777963445,PO6014797,2026-07-23,Picked up,,Picked up,Georgetown
+665544070634,5777963445,PO6014797,2026-07-25,In transit,,In transit,Fairview
+591391034722,5805671376,PO0309915,2026-06-04,Shipment information sent to carrier,,Label created,Georgetown
+591391034722,5805671376,PO0309915,2026-06-06,Picked up,,Picked up,Georgetown
+591391034722,5805671376,PO0309915,2026-06-07,In transit,,In transit,Madison
+063588949322,5805671376,PO0309915,2026-06-04,Shipment information sent to carrier,,Label created,Fairview
+063588949322,5805671376,PO0309915,2026-06-05,Picked up,,Picked up,Georgetown
+063588949322,5805671376,PO0309915,2026-06-07,In transit,,In transit,Clinton
+248602634180,5659580019,PO0493870,2026-08-09,Shipment information sent to carrier,,Label created,Salem
+248602634180,5659580019,PO0493870,2026-08-11,Picked up,,Picked up,Ashland
+248602634180,5659580019,PO0493870,2026-08-13,In transit,,In transit,Salem
+851091652423,5659580019,PO0493870,2026-08-09,Shipment information sent to carrier,,Label created,Fairview
+851091652423,5659580019,PO0493870,2026-08-11,Picked up,,Picked up,Georgetown
+851091652423,5659580019,PO0493870,2026-08-13,In transit,,In transit,Salem
+787951852881,5064480412,PO2590169,2026-06-20,Shipment information sent to carrier,,Label created,Salem
+787951852881,5064480412,PO2590169,2026-06-21,Picked up,,Picked up,Madison
+787951852881,5064480412,PO2590169,2026-06-23,In transit,Carrier,In transit,Clinton
+903907700159,5064480412,PO2590169,2026-06-20,Shipment information sent to carrier,,Label created,Springfield
+903907700159,5064480412,PO2590169,2026-06-22,Picked up,,Picked up,Clinton
+903907700159,5064480412,PO2590169,2026-06-23,In transit,Carrier,In transit,Fairview
+313267326727,5167974010,PO0840994,2026-05-24,Shipment information sent to carrier,,Label created,Fairview
+313267326727,5167974010,PO0840994,2026-05-25,Picked up,,Picked up,Madison
+313267326727,5167974010,PO0840994,2026-05-27,In transit,,In transit,Springfield
+313267326727,5167974010,PO0840994,2026-05-29,On vehicle for delivery,,Out for delivery,Salem
+313267326727,5167974010,PO0840994,2026-05-30,Delivered,Warehouse,Delivered,Springfield
+975661876634,5167974010,PO0840994,2026-05-25,Shipment information sent to carrier,,Label created,Salem
+975661876634,5167974010,PO0840994,2026-05-26,Picked up,,Picked up,Clinton
+975661876634,5167974010,PO0840994,2026-05-27,In transit,,In transit,Fairview
+975661876634,5167974010,PO0840994,2026-05-28,On vehicle for delivery,,Out for delivery,Clinton
+975661876634,5167974010,PO0840994,2026-05-30,Delivered,,Delivered,Madison
+152200899151,5752566420,PO0280273,2026-07-26,Shipment information sent to carrier,,Label created,Riverton
+152200899151,5752566420,PO0280273,2026-07-27,Picked up,,Picked up,Riverton
+152200899151,5752566420,PO0280273,2026-07-28,In transit,,In transit,Georgetown
+152200899151,5752566420,PO0280273,2026-07-30,On vehicle for delivery,,Out for delivery,Clinton
+152200899151,5752566420,PO0280273,2026-07-31,Delivered,Warehouse,Delivered,Georgetown
+202840003088,5752566420,PO0280273,2026-07-25,Shipment information sent to carrier,,Label created,Springfield
+202840003088,5752566420,PO0280273,2026-07-27,Picked up,,Picked up,Salem
+202840003088,5752566420,PO0280273,2026-07-28,In transit,,In transit,Clinton
+202840003088,5752566420,PO0280273,2026-07-30,On vehicle for delivery,,Out for delivery,Clinton
+202840003088,5752566420,PO0280273,2026-08-01,Delivered,,Delivered,Georgetown
+206076412099,5717000288,PO8938137,2026-07-24,Shipment information sent to carrier,,Label created,Salem
+206076412099,5717000288,PO8938137,2026-07-25,Picked up,,Picked up,Madison
+206076412099,5717000288,PO8938137,2026-07-27,In transit,,In transit,Clinton
+206076412099,5717000288,PO8938137,2026-07-28,On vehicle for delivery,,Out for delivery,Springfield
+206076412099,5717000288,PO8938137,2026-07-30,Delivered,,Delivered,Springfield
+442872489718,5717000288,PO8938137,2026-07-23,Shipment information sent to carrier,,Label created,Fairview
+442872489718,5717000288,PO8938137,2026-07-25,Picked up,,Picked up,Springfield
+442872489718,5717000288,PO8938137,2026-07-27,In transit,,In transit,Ashland
+442872489718,5717000288,PO8938137,2026-07-29,On vehicle for delivery,,Out for delivery,Ashland
+442872489718,5717000288,PO8938137,2026-07-31,Delivered,,Delivered,Georgetown
+803459582567,5095986810,PO7508239,2026-04-17,Shipment information sent to carrier,,Label created,Springfield
+803459582567,5095986810,PO7508239,2026-04-18,Picked up,,Picked up,Springfield
+803459582567,5095986810,PO7508239,2026-04-19,In transit,,In transit,Madison
+803459582567,5095986810,PO7508239,2026-04-21,On vehicle for delivery,,Out for delivery,Springfield
+803459582567,5095986810,PO7508239,2026-04-23,Delivered,,Delivered,Riverton
+538998016886,5095986810,PO7508239,2026-04-16,Shipment information sent to carrier,,Label created,Fairview
+538998016886,5095986810,PO7508239,2026-04-18,Picked up,,Picked up,Madison
+538998016886,5095986810,PO7508239,2026-04-20,In transit,,In transit,Georgetown
+538998016886,5095986810,PO7508239,2026-04-22,On vehicle for delivery,,Out for delivery,Riverton
+538998016886,5095986810,PO7508239,2026-04-23,Delivered,,Delivered,Ashland
+631642914568,5002263081,PO2265428,2026-10-05,Shipment information sent to carrier,,Label created,Springfield
+631642914568,5002263081,PO2265428,2026-10-07,Picked up,,Picked up,Clinton
+631642914568,5002263081,PO2265428,2026-10-08,In transit,,In transit,Clinton
+631642914568,5002263081,PO2265428,2026-10-09,On vehicle for delivery,,Out for delivery,Fairview
+631642914568,5002263081,PO2265428,2026-10-10,Delivered,,Delivered,Riverton
+893281726526,5002263081,PO2265428,2026-10-03,Shipment information sent to carrier,,Label created,Clinton
+893281726526,5002263081,PO2265428,2026-10-05,Picked up,,Picked up,Salem
+893281726526,5002263081,PO2265428,2026-10-07,In transit,,In transit,Ashland
+893281726526,5002263081,PO2265428,2026-10-09,On vehicle for delivery,,Out for delivery,Ashland
+893281726526,5002263081,PO2265428,2026-10-10,Delivered,Warehouse,Delivered,Ashland
+259748175516,5650900194,PO2675918,2026-06-24,Shipment information sent to carrier,,Label created,Georgetown
+259748175516,5650900194,PO2675918,2026-06-25,Picked up,,Picked up,Fairview
+259748175516,5650900194,PO2675918,2026-06-27,In transit,,In transit,Clinton
+259748175516,5650900194,PO2675918,2026-06-28,On vehicle for delivery,,Out for delivery,Ashland
+259748175516,5650900194,PO2675918,2026-06-29,Delivered,Warehouse,Delivered,Madison
+545174567149,5650900194,PO2675918,2026-06-22,Shipment information sent to carrier,,Label created,Georgetown
+545174567149,5650900194,PO2675918,2026-06-23,Picked up,,Picked up,Riverton
+545174567149,5650900194,PO2675918,2026-06-25,In transit,,In transit,Georgetown
+545174567149,5650900194,PO2675918,2026-06-27,On vehicle for delivery,,Out for delivery,Ashland
+545174567149,5650900194,PO2675918,2026-06-28,Delivered,,Delivered,Georgetown
+968132123001,5477835882,PO1599887,2026-09-23,Shipment information sent to carrier,,Label created,Clinton
+968132123001,5477835882,PO1599887,2026-09-24,Picked up,,Picked up,Fairview
+968132123001,5477835882,PO1599887,2026-09-26,In transit,,In transit,Ashland
+968132123001,5477835882,PO1599887,2026-09-27,On vehicle for delivery,,Out for delivery,Ashland
+968132123001,5477835882,PO1599887,2026-09-28,Delivered,,Delivered,Georgetown
+732718348951,5462810827,PO3710157,2026-06-08,Shipment information sent to carrier,,Label created,Ashland
+732718348951,5462810827,PO3710157,2026-06-10,Picked up,,Picked up,Ashland
+732718348951,5462810827,PO3710157,2026-06-11,In transit,,In transit,Springfield
+732718348951,5462810827,PO3710157,2026-06-13,On vehicle for delivery,,Out for delivery,Clinton
+732718348951,5462810827,PO3710157,2026-06-14,Delivered,Warehouse,Delivered,Madison
+393889581045,5372380350,PO1701655,2026-06-30,Shipment information sent to carrier,,Label created,Georgetown
+393889581045,5372380350,PO1701655,2026-07-02,Picked up,,Picked up,Georgetown
+393889581045,5372380350,PO1701655,2026-07-04,In transit,,In transit,Riverton
+393889581045,5372380350,PO1701655,2026-07-05,On vehicle for delivery,,Out for delivery,Madison
+393889581045,5372380350,PO1701655,2026-07-07,Delivered,,Delivered,Fairview
+843845508458,5372380350,PO1701655,2026-06-30,Shipment information sent to carrier,,Label created,Ashland
+843845508458,5372380350,PO1701655,2026-07-02,Picked up,,Picked up,Madison
+843845508458,5372380350,PO1701655,2026-07-04,In transit,,In transit,Riverton
+843845508458,5372380350,PO1701655,2026-07-05,On vehicle for delivery,,Out for delivery,Madison
+843845508458,5372380350,PO1701655,2026-07-07,Delivered,,Delivered,Ashland
+500384020325,5806230188,PO7767387,2026-05-20,Shipment information sent to carrier,,Label created,Springfield
+500384020325,5806230188,PO7767387,2026-05-22,Picked up,,Picked up,Georgetown
+500384020325,5806230188,PO7767387,2026-05-23,In transit,,In transit,Ashland
+500384020325,5806230188,PO7767387,2026-05-25,On vehicle for delivery,,Out for delivery,Clinton
+500384020325,5806230188,PO7767387,2026-05-27,Delivered,,Delivered,Springfield
+217695686755,5806230188,PO7767387,2026-05-18,Shipment information sent to carrier,,Label created,Fairview
+217695686755,5806230188,PO7767387,2026-05-20,Picked up,,Picked up,Georgetown
+217695686755,5806230188,PO7767387,2026-05-22,In transit,,In transit,Springfield
+217695686755,5806230188,PO7767387,2026-05-23,On vehicle for delivery,,Out for delivery,Springfield
+217695686755,5806230188,PO7767387,2026-05-24,Delivered,,Delivered,Clinton
+340852046204,5552370178,PO4848901,2026-08-06,Shipment information sent to carrier,,Label created,Georgetown
+340852046204,5552370178,PO4848901,2026-08-07,Picked up,,Picked up,Georgetown
+340852046204,5552370178,PO4848901,2026-08-08,In transit,,In transit,Georgetown
+340852046204,5552370178,PO4848901,2026-08-09,On vehicle for delivery,,Out for delivery,Georgetown
+340852046204,5552370178,PO4848901,2026-08-10,Delivered,Warehouse,Delivered,Georgetown
+361648432748,5552370178,PO4848901,2026-08-06,Shipment information sent to carrier,,Label created,Madison
+361648432748,5552370178,PO4848901,2026-08-07,Picked up,,Picked up,Salem
+361648432748,5552370178,PO4848901,2026-08-09,In transit,,In transit,Springfield
+361648432748,5552370178,PO4848901,2026-08-11,On vehicle for delivery,,Out for delivery,Salem
+361648432748,5552370178,PO4848901,2026-08-12,Delivered,,Delivered,Springfield
+754028578323,5819223687,PO2614344,2026-05-24,Shipment information sent to carrier,,Label created,Ashland
+754028578323,5819223687,PO2614344,2026-05-25,Picked up,,Picked up,Fairview
+754028578323,5819223687,PO2614344,2026-05-27,In transit,,In transit,Springfield
+754028578323,5819223687,PO2614344,2026-05-28,On vehicle for delivery,,Out for delivery,Madison
+754028578323,5819223687,PO2614344,2026-05-29,Delivered,,Delivered,Madison
+384764972215,5819223687,PO2614344,2026-05-24,Shipment information sent to carrier,,Label created,Madison
+384764972215,5819223687,PO2614344,2026-05-26,Picked up,,Picked up,Salem
+384764972215,5819223687,PO2614344,2026-05-27,In transit,,In transit,Georgetown
+384764972215,5819223687,PO2614344,2026-05-28,On vehicle for delivery,,Out for delivery,Clinton
+384764972215,5819223687,PO2614344,2026-05-30,Delivered,Warehouse,Delivered,Madison
+817743052218,5203670185,PO7094759,2026-04-29,Shipment information sent to carrier,,Label created,Clinton
+817743052218,5203670185,PO7094759,2026-04-30,Picked up,,Picked up,Fairview
+817743052218,5203670185,PO7094759,2026-05-01,In transit,,In transit,Riverton
+817743052218,5203670185,PO7094759,2026-05-03,On vehicle for delivery,,Out for delivery,Clinton
+817743052218,5203670185,PO7094759,2026-05-05,Delivered,,Delivered,Riverton
+795181954761,5985352463,PO6632008,2026-05-08,Shipment information sent to carrier,,Label created,Clinton
+795181954761,5985352463,PO6632008,2026-05-09,Picked up,,Picked up,Georgetown
+795181954761,5985352463,PO6632008,2026-05-11,In transit,,In transit,Ashland
+795181954761,5985352463,PO6632008,2026-05-13,On vehicle for delivery,,Out for delivery,Riverton
+795181954761,5985352463,PO6632008,2026-05-14,Delivered,,Delivered,Clinton
+867915335920,5985352463,PO6632008,2026-05-07,Shipment information sent to carrier,,Label created,Clinton
+867915335920,5985352463,PO6632008,2026-05-08,Picked up,,Picked up,Fairview
+867915335920,5985352463,PO6632008,2026-05-10,In transit,,In transit,Georgetown
+867915335920,5985352463,PO6632008,2026-05-12,On vehicle for delivery,,Out for delivery,Fairview
+867915335920,5985352463,PO6632008,2026-05-14,Delivered,Warehouse,Delivered,Salem
+738347112254,5672815338,PO6164162,2026-04-13,Shipment information sent to carrier,,Label created,Georgetown
+738347112254,5672815338,PO6164162,2026-04-15,Picked up,,Picked up,Madison
+738347112254,5672815338,PO6164162,2026-04-17,In transit,,In transit,Fairview
+738347112254,5672815338,PO6164162,2026-04-19,On vehicle for delivery,,Out for delivery,Clinton
+738347112254,5672815338,PO6164162,2026-04-20,Delivered,,Delivered,Clinton
+119129686221,5672815338,PO6164162,2026-04-13,Shipment information sent to carrier,,Label created,Clinton
+119129686221,5672815338,PO6164162,2026-04-15,Picked up,,Picked up,Ashland
+119129686221,5672815338,PO6164162,2026-04-16,In transit,,In transit,Fairview
+119129686221,5672815338,PO6164162,2026-04-17,On vehicle for delivery,,Out for delivery,Riverton
+119129686221,5672815338,PO6164162,2026-04-19,Delivered,,Delivered,Georgetown
+321374951615,5288147325,PO8329224,2026-06-03,Shipment information sent to carrier,,Label created,Georgetown
+321374951615,5288147325,PO8329224,2026-06-05,Picked up,,Picked up,Ashland
+321374951615,5288147325,PO8329224,2026-06-07,In transit,,In transit,Madison
+321374951615,5288147325,PO8329224,2026-06-09,On vehicle for delivery,,Out for delivery,Madison
+321374951615,5288147325,PO8329224,2026-06-10,Delivered,,Delivered,Georgetown
+332165023141,5288147325,PO8329224,2026-06-03,Shipment information sent to carrier,,Label created,Salem
+332165023141,5288147325,PO8329224,2026-06-05,Picked up,,Picked up,Riverton
+332165023141,5288147325,PO8329224,2026-06-06,In transit,,In transit,Fairview
+332165023141,5288147325,PO8329224,2026-06-08,On vehicle for delivery,,Out for delivery,Salem
+332165023141,5288147325,PO8329224,2026-06-09,Delivered,,Delivered,Ashland
+219593452550,5342555999,PO9023580,2026-04-09,Shipment information sent to carrier,,Label created,Fairview
+219593452550,5342555999,PO9023580,2026-04-10,Picked up,,Picked up,Georgetown
+219593452550,5342555999,PO9023580,2026-04-12,In transit,,In transit,Madison
+219593452550,5342555999,PO9023580,2026-04-13,On vehicle for delivery,,Out for delivery,Riverton
+219593452550,5342555999,PO9023580,2026-04-15,Delivered,Warehouse,Delivered,Salem
+019007680903,5342555999,PO9023580,2026-04-07,Shipment information sent to carrier,,Label created,Riverton
+019007680903,5342555999,PO9023580,2026-04-08,Picked up,,Picked up,Salem
+019007680903,5342555999,PO9023580,2026-04-09,In transit,,In transit,Georgetown
+019007680903,5342555999,PO9023580,2026-04-11,On vehicle for delivery,,Out for delivery,Georgetown
+019007680903,5342555999,PO9023580,2026-04-12,Delivered,,Delivered,Clinton
+339091922659,5825435226,PO8256296,2026-07-22,Shipment information sent to carrier,,Label created,Ashland
+339091922659,5825435226,PO8256296,2026-07-24,Picked up,,Picked up,Springfield
+339091922659,5825435226,PO8256296,2026-07-25,In transit,,In transit,Clinton
+339091922659,5825435226,PO8256296,2026-07-27,On vehicle for delivery,,Out for delivery,Salem
+339091922659,5825435226,PO8256296,2026-07-28,Delivered,,Delivered,Riverton
+482475981552,5825435226,PO8256296,2026-07-22,Shipment information sent to carrier,,Label created,Fairview
+482475981552,5825435226,PO8256296,2026-07-24,Picked up,,Picked up,Springfield
+482475981552,5825435226,PO8256296,2026-07-26,In transit,,In transit,Georgetown
+482475981552,5825435226,PO8256296,2026-07-28,On vehicle for delivery,,Out for delivery,Ashland
+482475981552,5825435226,PO8256296,2026-07-30,Delivered,Warehouse,Delivered,Ashland
+373665862066,5378584836,PO6389248,2026-06-01,Shipment information sent to carrier,,Label created,Salem
+373665862066,5378584836,PO6389248,2026-06-03,Picked up,,Picked up,Georgetown
+373665862066,5378584836,PO6389248,2026-06-04,In transit,,In transit,Fairview
+373665862066,5378584836,PO6389248,2026-06-06,On vehicle for delivery,,Out for delivery,Georgetown
+373665862066,5378584836,PO6389248,2026-06-08,Delivered,,Delivered,Ashland
+068673000763,5378584836,PO6389248,2026-06-01,Shipment information sent to carrier,,Label created,Madison
+068673000763,5378584836,PO6389248,2026-06-03,Picked up,,Picked up,Springfield
+068673000763,5378584836,PO6389248,2026-06-04,In transit,,In transit,Georgetown
+068673000763,5378584836,PO6389248,2026-06-06,On vehicle for delivery,,Out for delivery,Springfield
+068673000763,5378584836,PO6389248,2026-06-07,Delivered,,Delivered,Fairview
+032644248995,5985394482,PO5145508,2026-09-26,Shipment information sent to carrier,,Label created,Fairview
+032644248995,5985394482,PO5145508,2026-09-28,Picked up,,Picked up,Clinton
+032644248995,5985394482,PO5145508,2026-09-30,In transit,,In transit,Salem
+032644248995,5985394482,PO5145508,2026-10-02,On vehicle for delivery,,Out for delivery,Fairview
+032644248995,5985394482,PO5145508,2026-10-03,Delivered,Warehouse,Delivered,Ashland
+292248822555,5985394482,PO5145508,2026-09-28,Shipment information sent to carrier,,Label created,Madison
+292248822555,5985394482,PO5145508,2026-09-29,Picked up,,Picked up,Madison
+292248822555,5985394482,PO5145508,2026-09-30,In transit,,In transit,Ashland
+292248822555,5985394482,PO5145508,2026-10-01,On vehicle for delivery,,Out for delivery,Riverton
+292248822555,5985394482,PO5145508,2026-10-03,Delivered,Warehouse,Delivered,Georgetown
+638114908212,5933641033,PO4417672,2026-08-01,Shipment information sent to carrier,,Label created,Riverton
+638114908212,5933641033,PO4417672,2026-08-02,Picked up,,Picked up,Madison
+638114908212,5933641033,PO4417672,2026-08-03,In transit,,In transit,Madison
+638114908212,5933641033,PO4417672,2026-08-05,On vehicle for delivery,,Out for delivery,Madison
+638114908212,5933641033,PO4417672,2026-08-07,Delivered,,Delivered,Georgetown
+197257256519,5933641033,PO4417672,2026-08-02,Shipment information sent to carrier,,Label created,Madison
+197257256519,5933641033,PO4417672,2026-08-04,Picked up,,Picked up,Fairview
+197257256519,5933641033,PO4417672,2026-08-05,In transit,,In transit,Fairview
+197257256519,5933641033,PO4417672,2026-08-07,On vehicle for delivery,,Out for delivery,Georgetown
+197257256519,5933641033,PO4417672,2026-08-09,Delivered,,Delivered,Riverton
+817633089105,5869126049,PO6451665,2026-09-30,Shipment information sent to carrier,,Label created,Georgetown
+817633089105,5869126049,PO6451665,2026-10-02,Picked up,,Picked up,Riverton
+817633089105,5869126049,PO6451665,2026-10-04,In transit,,In transit,Springfield
+817633089105,5869126049,PO6451665,2026-10-05,On vehicle for delivery,,Out for delivery,Georgetown
+817633089105,5869126049,PO6451665,2026-10-07,Delivered,Warehouse,Delivered,Madison
+386126508262,5158474511,PO2898663,2026-09-21,Shipment information sent to carrier,,Label created,Salem
+386126508262,5158474511,PO2898663,2026-09-23,Picked up,,Picked up,Springfield
+386126508262,5158474511,PO2898663,2026-09-25,In transit,Carrier,In transit,Clinton
+109363878296,5511207288,PO6667970,2026-06-13,Shipment information sent to carrier,,Label created,Madison
+109363878296,5511207288,PO6667970,2026-06-14,Picked up,,Picked up,Riverton
+109363878296,5511207288,PO6667970,2026-06-15,In transit,Carrier,In transit,Riverton
+531540017175,5117731311,PO7463014,2026-07-10,Shipment information sent to carrier,,Label created,Springfield
+531540017175,5117731311,PO7463014,2026-07-12,Picked up,,Picked up,Madison
+531540017175,5117731311,PO7463014,2026-07-13,In transit,,In transit,Springfield
+620947222314,5429938450,PO7305471,2026-06-09,Shipment information sent to carrier,,Label created,Riverton
+620947222314,5429938450,PO7305471,2026-06-11,Picked up,,Picked up,Salem
+620947222314,5429938450,PO7305471,2026-06-12,In transit,Carrier,In transit,Fairview
+394542365207,5429938450,PO7305471,2026-06-11,Shipment information sent to carrier,,Label created,Georgetown
+394542365207,5429938450,PO7305471,2026-06-13,Picked up,,Picked up,Georgetown
+394542365207,5429938450,PO7305471,2026-06-15,In transit,,In transit,Clinton
+222122330149,5743993452,PO1004913,2026-07-07,Shipment information sent to carrier,,Label created,Salem
+222122330149,5743993452,PO1004913,2026-07-09,Picked up,,Picked up,Fairview
+222122330149,5743993452,PO1004913,2026-07-10,In transit,,In transit,Ashland
+156746069804,5743993452,PO1004913,2026-07-08,Shipment information sent to carrier,,Label created,Springfield
+156746069804,5743993452,PO1004913,2026-07-09,Picked up,,Picked up,Fairview
+156746069804,5743993452,PO1004913,2026-07-10,In transit,Carrier,In transit,Salem
+944811011541,5129436814,PO4012425,2026-06-25,Shipment information sent to carrier,,Label created,Georgetown
+944811011541,5129436814,PO4012425,2026-06-27,Picked up,,Picked up,Ashland
+944811011541,5129436814,PO4012425,2026-06-29,In transit,,In transit,Madison
+643848402917,5656629229,PO3603381,2026-08-12,Shipment information sent to carrier,,Label created,Riverton
+643848402917,5656629229,PO3603381,2026-08-14,Picked up,,Picked up,Riverton
+643848402917,5656629229,PO3603381,2026-08-15,In transit,,In transit,Clinton
+724869564211,5656629229,PO3603381,2026-08-13,Shipment information sent to carrier,,Label created,Springfield
+724869564211,5656629229,PO3603381,2026-08-15,Picked up,,Picked up,Springfield
+724869564211,5656629229,PO3603381,2026-08-17,In transit,,In transit,Ashland
+615070264167,5056324600,PO1703950,2026-05-03,Shipment information sent to carrier,,Label created,Fairview
+615070264167,5056324600,PO1703950,2026-05-05,Picked up,,Picked up,Madison
+615070264167,5056324600,PO1703950,2026-05-06,In transit,,In transit,Madison
+754443855341,5162863971,PO9764494,2026-08-12,Shipment information sent to carrier,,Label created,Riverton
+754443855341,5162863971,PO9764494,2026-08-14,Picked up,,Picked up,Fairview
+754443855341,5162863971,PO9764494,2026-08-16,In transit,,In transit,Georgetown
+754443855341,5162863971,PO9764494,2026-08-18,On vehicle for delivery,,Out for delivery,Madison
+754443855341,5162863971,PO9764494,2026-08-20,Delivered,Warehouse,Delivered,Georgetown
+175813769741,5545778112,PO4197268,2026-07-22,Shipment information sent to carrier,,Label created,Salem
+175813769741,5545778112,PO4197268,2026-07-24,Picked up,,Picked up,Madison
+175813769741,5545778112,PO4197268,2026-07-26,In transit,,In transit,Springfield
+175813769741,5545778112,PO4197268,2026-07-27,On vehicle for delivery,,Out for delivery,Fairview
+175813769741,5545778112,PO4197268,2026-07-29,Delivered,,Delivered,Springfield
+290277536310,5545778112,PO4197268,2026-07-22,Shipment information sent to carrier,,Label created,Springfield
+290277536310,5545778112,PO4197268,2026-07-23,Picked up,,Picked up,Fairview
+290277536310,5545778112,PO4197268,2026-07-25,In transit,,In transit,Ashland
+290277536310,5545778112,PO4197268,2026-07-27,On vehicle for delivery,,Out for delivery,Salem
+290277536310,5545778112,PO4197268,2026-07-29,Delivered,,Delivered,Springfield
+297328664726,5921339518,PO4712142,2026-10-16,Shipment information sent to carrier,,Label created,Clinton
+297328664726,5921339518,PO4712142,2026-10-17,Picked up,,Picked up,Georgetown
+297328664726,5921339518,PO4712142,2026-10-19,In transit,,In transit,Clinton
+297328664726,5921339518,PO4712142,2026-10-21,On vehicle for delivery,,Out for delivery,Fairview
+297328664726,5921339518,PO4712142,2026-10-23,Delivered,,Delivered,Clinton
+115901456157,5769808459,PO8734302,2026-10-19,Shipment information sent to carrier,,Label created,Madison
+115901456157,5769808459,PO8734302,2026-10-21,Picked up,,Picked up,Salem
+115901456157,5769808459,PO8734302,2026-10-23,In transit,,In transit,Georgetown
+115901456157,5769808459,PO8734302,2026-10-23,On vehicle for delivery,,Out for delivery,Clinton
+115901456157,5769808459,PO8734302,2026-10-23,Delivered,,Delivered,Ashland
+515726724509,5769808459,PO8734302,2026-10-20,Shipment information sent to carrier,,Label created,Georgetown
+515726724509,5769808459,PO8734302,2026-10-22,Picked up,,Picked up,Madison
+515726724509,5769808459,PO8734302,2026-10-23,In transit,,In transit,Clinton
+515726724509,5769808459,PO8734302,2026-10-23,On vehicle for delivery,,Out for delivery,Madison
+515726724509,5769808459,PO8734302,2026-10-23,Delivered,Warehouse,Delivered,Springfield
+805174902493,5071935248,PO6684768,2026-05-29,Shipment information sent to carrier,,Label created,Fairview
+805174902493,5071935248,PO6684768,2026-05-30,Picked up,,Picked up,Salem
+805174902493,5071935248,PO6684768,2026-06-01,In transit,,In transit,Salem
+805174902493,5071935248,PO6684768,2026-06-03,On vehicle for delivery,,Out for delivery,Springfield
+805174902493,5071935248,PO6684768,2026-06-04,Delivered,,Delivered,Clinton
+549072856496,5395060319,PO4165790,2026-05-18,Shipment information sent to carrier,,Label created,Georgetown
+549072856496,5395060319,PO4165790,2026-05-19,Picked up,,Picked up,Salem
+549072856496,5395060319,PO4165790,2026-05-21,In transit,,In transit,Springfield
+549072856496,5395060319,PO4165790,2026-05-23,On vehicle for delivery,,Out for delivery,Springfield
+549072856496,5395060319,PO4165790,2026-05-24,Delivered,,Delivered,Fairview
+125345080048,5395060319,PO4165790,2026-05-19,Shipment information sent to carrier,,Label created,Ashland
+125345080048,5395060319,PO4165790,2026-05-20,Picked up,,Picked up,Salem
+125345080048,5395060319,PO4165790,2026-05-21,In transit,,In transit,Fairview
+125345080048,5395060319,PO4165790,2026-05-22,On vehicle for delivery,,Out for delivery,Riverton
+125345080048,5395060319,PO4165790,2026-05-24,Delivered,Warehouse,Delivered,Georgetown
+761580974463,5980674925,PO5759169,2026-09-19,Shipment information sent to carrier,,Label created,Fairview
+761580974463,5980674925,PO5759169,2026-09-21,Picked up,,Picked up,Georgetown
+761580974463,5980674925,PO5759169,2026-09-23,In transit,,In transit,Georgetown
+761580974463,5980674925,PO5759169,2026-09-24,On vehicle for delivery,,Out for delivery,Clinton
+761580974463,5980674925,PO5759169,2026-09-26,Delivered,,Delivered,Clinton
+212015501305,5980674925,PO5759169,2026-09-19,Shipment information sent to carrier,,Label created,Salem
+212015501305,5980674925,PO5759169,2026-09-21,Picked up,,Picked up,Springfield
+212015501305,5980674925,PO5759169,2026-09-22,In transit,,In transit,Riverton
+212015501305,5980674925,PO5759169,2026-09-24,On vehicle for delivery,,Out for delivery,Ashland
+212015501305,5980674925,PO5759169,2026-09-26,Delivered,,Delivered,Georgetown
+285632597942,5014651258,PO2477311,2026-06-17,Shipment information sent to carrier,,Label created,Salem
+285632597942,5014651258,PO2477311,2026-06-18,Picked up,,Picked up,Springfield
+285632597942,5014651258,PO2477311,2026-06-19,In transit,,In transit,Springfield
+285632597942,5014651258,PO2477311,2026-06-21,On vehicle for delivery,,Out for delivery,Fairview
+285632597942,5014651258,PO2477311,2026-06-22,Delivered,,Delivered,Salem
+060732404804,5393995615,PO5133184,2026-05-05,Shipment information sent to carrier,,Label created,Springfield
+060732404804,5393995615,PO5133184,2026-05-06,Picked up,,Picked up,Riverton
+060732404804,5393995615,PO5133184,2026-05-07,In transit,,In transit,Georgetown
+060732404804,5393995615,PO5133184,2026-05-09,On vehicle for delivery,,Out for delivery,Clinton
+060732404804,5393995615,PO5133184,2026-05-10,Delivered,Warehouse,Delivered,Clinton
+082944177481,5083425795,PO1267861,2026-06-22,Shipment information sent to carrier,,Label created,Clinton
+082944177481,5083425795,PO1267861,2026-06-23,Picked up,,Picked up,Ashland
+082944177481,5083425795,PO1267861,2026-06-25,In transit,,In transit,Fairview
+082944177481,5083425795,PO1267861,2026-06-27,On vehicle for delivery,,Out for delivery,Fairview
+082944177481,5083425795,PO1267861,2026-06-28,Delivered,,Delivered,Madison
+270178968488,5904998782,PO4137757,2026-07-16,Shipment information sent to carrier,,Label created,Georgetown
+270178968488,5904998782,PO4137757,2026-07-17,Picked up,,Picked up,Madison
+270178968488,5904998782,PO4137757,2026-07-18,In transit,,In transit,Ashland
+270178968488,5904998782,PO4137757,2026-07-20,On vehicle for delivery,,Out for delivery,Fairview
+270178968488,5904998782,PO4137757,2026-07-22,Delivered,,Delivered,Salem
+704349226900,5904998782,PO4137757,2026-07-14,Shipment information sent to carrier,,Label created,Springfield
+704349226900,5904998782,PO4137757,2026-07-15,Picked up,,Picked up,Madison
+704349226900,5904998782,PO4137757,2026-07-17,In transit,,In transit,Salem
+704349226900,5904998782,PO4137757,2026-07-19,On vehicle for delivery,,Out for delivery,Fairview
+704349226900,5904998782,PO4137757,2026-07-20,Delivered,,Delivered,Ashland
+161810423164,5921155701,PO1245133,2026-07-22,Shipment information sent to carrier,,Label created,Fairview
+161810423164,5921155701,PO1245133,2026-07-24,Picked up,,Picked up,Madison
+161810423164,5921155701,PO1245133,2026-07-26,In transit,,In transit,Riverton
+161810423164,5921155701,PO1245133,2026-07-27,On vehicle for delivery,,Out for delivery,Georgetown
+161810423164,5921155701,PO1245133,2026-07-29,Delivered,Warehouse,Delivered,Fairview
+627748930180,5921155701,PO1245133,2026-07-21,Shipment information sent to carrier,,Label created,Fairview
+627748930180,5921155701,PO1245133,2026-07-22,Picked up,,Picked up,Georgetown
+627748930180,5921155701,PO1245133,2026-07-24,In transit,,In transit,Madison
+627748930180,5921155701,PO1245133,2026-07-25,On vehicle for delivery,,Out for delivery,Fairview
+627748930180,5921155701,PO1245133,2026-07-27,Delivered,,Delivered,Georgetown
+602484000078,5137711461,PO0324254,2026-06-28,Shipment information sent to carrier,,Label created,Fairview
+602484000078,5137711461,PO0324254,2026-06-29,Picked up,,Picked up,Madison
+602484000078,5137711461,PO0324254,2026-07-01,In transit,,In transit,Madison
+602484000078,5137711461,PO0324254,2026-07-03,On vehicle for delivery,,Out for delivery,Riverton
+602484000078,5137711461,PO0324254,2026-07-04,Delivered,Warehouse,Delivered,Fairview
+033157222086,5883571104,PO0793009,2026-10-09,Shipment information sent to carrier,,Label created,Fairview
+033157222086,5883571104,PO0793009,2026-10-11,Picked up,,Picked up,Springfield
+033157222086,5883571104,PO0793009,2026-10-13,In transit,,In transit,Fairview
+033157222086,5883571104,PO0793009,2026-10-14,On vehicle for delivery,,Out for delivery,Riverton
+033157222086,5883571104,PO0793009,2026-10-15,Delivered,,Delivered,Ashland
+742255063689,5883571104,PO0793009,2026-10-09,Shipment information sent to carrier,,Label created,Salem
+742255063689,5883571104,PO0793009,2026-10-10,Picked up,,Picked up,Madison
+742255063689,5883571104,PO0793009,2026-10-12,In transit,,In transit,Georgetown
+742255063689,5883571104,PO0793009,2026-10-14,On vehicle for delivery,,Out for delivery,Madison
+742255063689,5883571104,PO0793009,2026-10-15,Delivered,Warehouse,Delivered,Salem
+221830528351,5631986519,PO8518356,2026-09-20,Shipment information sent to carrier,,Label created,Madison
+221830528351,5631986519,PO8518356,2026-09-21,Picked up,,Picked up,Salem
+221830528351,5631986519,PO8518356,2026-09-22,In transit,,In transit,Georgetown
+221830528351,5631986519,PO8518356,2026-09-24,On vehicle for delivery,,Out for delivery,Madison
+221830528351,5631986519,PO8518356,2026-09-26,Delivered,,Delivered,Riverton
+160545024249,5631986519,PO8518356,2026-09-19,Shipment information sent to carrier,,Label created,Madison
+160545024249,5631986519,PO8518356,2026-09-21,Picked up,,Picked up,Clinton
+160545024249,5631986519,PO8518356,2026-09-22,In transit,,In transit,Georgetown
+160545024249,5631986519,PO8518356,2026-09-24,On vehicle for delivery,,Out for delivery,Salem
+160545024249,5631986519,PO8518356,2026-09-26,Delivered,,Delivered,Georgetown
+434575492552,5311297648,PO3146175,2026-09-09,Shipment information sent to carrier,,Label created,Springfield
+434575492552,5311297648,PO3146175,2026-09-10,Picked up,,Picked up,Salem
+434575492552,5311297648,PO3146175,2026-09-11,In transit,,In transit,Riverton
+434575492552,5311297648,PO3146175,2026-09-13,On vehicle for delivery,,Out for delivery,Riverton
+434575492552,5311297648,PO3146175,2026-09-15,Delivered,Warehouse,Delivered,Ashland
+976287904731,5311297648,PO3146175,2026-09-11,Shipment information sent to carrier,,Label created,Salem
+976287904731,5311297648,PO3146175,2026-09-12,Picked up,,Picked up,Springfield
+976287904731,5311297648,PO3146175,2026-09-13,In transit,,In transit,Georgetown
+976287904731,5311297648,PO3146175,2026-09-15,On vehicle for delivery,,Out for delivery,Springfield
+976287904731,5311297648,PO3146175,2026-09-16,Delivered,Warehouse,Delivered,Ashland
+905343557653,5660392726,PO0289627,2026-05-29,Shipment information sent to carrier,,Label created,Salem
+905343557653,5660392726,PO0289627,2026-05-31,Picked up,,Picked up,Madison
+905343557653,5660392726,PO0289627,2026-06-01,In transit,,In transit,Georgetown
+905343557653,5660392726,PO0289627,2026-06-02,On vehicle for delivery,,Out for delivery,Fairview
+905343557653,5660392726,PO0289627,2026-06-04,Delivered,,Delivered,Madison
+692904932215,5660392726,PO0289627,2026-05-31,Shipment information sent to carrier,,Label created,Clinton
+692904932215,5660392726,PO0289627,2026-06-02,Picked up,,Picked up,Georgetown
+692904932215,5660392726,PO0289627,2026-06-03,In transit,,In transit,Springfield
+692904932215,5660392726,PO0289627,2026-06-04,On vehicle for delivery,,Out for delivery,Riverton
+692904932215,5660392726,PO0289627,2026-06-05,Delivered,,Delivered,Fairview
+231564673996,5249609850,PO0905758,2026-06-06,Shipment information sent to carrier,,Label created,Salem
+231564673996,5249609850,PO0905758,2026-06-07,Picked up,,Picked up,Riverton
+231564673996,5249609850,PO0905758,2026-06-09,In transit,,In transit,Salem
+231564673996,5249609850,PO0905758,2026-06-10,On vehicle for delivery,,Out for delivery,Ashland
+231564673996,5249609850,PO0905758,2026-06-12,Delivered,,Delivered,Salem
+101990888749,5943124981,PO8527851,2026-10-11,Shipment information sent to carrier,,Label created,Salem
+101990888749,5943124981,PO8527851,2026-10-12,Picked up,,Picked up,Georgetown
+101990888749,5943124981,PO8527851,2026-10-14,In transit,,In transit,Fairview
+101990888749,5943124981,PO8527851,2026-10-16,On vehicle for delivery,,Out for delivery,Madison
+101990888749,5943124981,PO8527851,2026-10-17,Delivered,Warehouse,Delivered,Ashland
+901851858676,5414305625,PO4878382,2026-06-15,Shipment information sent to carrier,,Label created,Springfield
+901851858676,5414305625,PO4878382,2026-06-17,Picked up,,Picked up,Ashland
+901851858676,5414305625,PO4878382,2026-06-18,In transit,,In transit,Clinton
+901851858676,5414305625,PO4878382,2026-06-20,On vehicle for delivery,,Out for delivery,Riverton
+901851858676,5414305625,PO4878382,2026-06-21,Delivered,Warehouse,Delivered,Georgetown
+007191222186,5414305625,PO4878382,2026-06-15,Shipment information sent to carrier,,Label created,Georgetown
+007191222186,5414305625,PO4878382,2026-06-17,Picked up,,Picked up,Fairview
+007191222186,5414305625,PO4878382,2026-06-18,In transit,,In transit,Ashland
+007191222186,5414305625,PO4878382,2026-06-19,On vehicle for delivery,,Out for delivery,Riverton
+007191222186,5414305625,PO4878382,2026-06-21,Delivered,,Delivered,Fairview
+122686346948,5503375854,PO9624060,2026-06-25,Shipment information sent to carrier,,Label created,Clinton
+122686346948,5503375854,PO9624060,2026-06-26,Picked up,,Picked up,Clinton
+122686346948,5503375854,PO9624060,2026-06-27,In transit,,In transit,Madison
+122686346948,5503375854,PO9624060,2026-06-28,On vehicle for delivery,,Out for delivery,Salem
+122686346948,5503375854,PO9624060,2026-06-30,Delivered,Warehouse,Delivered,Fairview
+428771288489,5067618805,PO1263279,2026-07-10,Shipment information sent to carrier,,Label created,Ashland
+428771288489,5067618805,PO1263279,2026-07-11,Picked up,,Picked up,Fairview
+428771288489,5067618805,PO1263279,2026-07-13,In transit,,In transit,Georgetown
+428771288489,5067618805,PO1263279,2026-07-14,On vehicle for delivery,,Out for delivery,Georgetown
+428771288489,5067618805,PO1263279,2026-07-16,Delivered,,Delivered,Clinton
+527570452483,5709253967,PO6304843,2026-07-26,Shipment information sent to carrier,,Label created,Springfield
+527570452483,5709253967,PO6304843,2026-07-27,Picked up,,Picked up,Madison
+527570452483,5709253967,PO6304843,2026-07-29,In transit,,In transit,Fairview
+527570452483,5709253967,PO6304843,2026-07-30,On vehicle for delivery,,Out for delivery,Riverton
+527570452483,5709253967,PO6304843,2026-08-01,Delivered,Warehouse,Delivered,Fairview
+042008883213,5709253967,PO6304843,2026-07-27,Shipment information sent to carrier,,Label created,Georgetown
+042008883213,5709253967,PO6304843,2026-07-29,Picked up,,Picked up,Springfield
+042008883213,5709253967,PO6304843,2026-07-31,In transit,,In transit,Riverton
+042008883213,5709253967,PO6304843,2026-08-01,On vehicle for delivery,,Out for delivery,Riverton
+042008883213,5709253967,PO6304843,2026-08-03,Delivered,,Delivered,Madison
+928134408002,5769689556,PO7208973,2026-07-29,Shipment information sent to carrier,,Label created,Riverton
+928134408002,5769689556,PO7208973,2026-07-31,Picked up,,Picked up,Clinton
+928134408002,5769689556,PO7208973,2026-08-02,In transit,,In transit,Riverton
+928134408002,5769689556,PO7208973,2026-08-04,On vehicle for delivery,,Out for delivery,Salem
+928134408002,5769689556,PO7208973,2026-08-06,Delivered,,Delivered,Georgetown
+390644082216,5769689556,PO7208973,2026-07-30,Shipment information sent to carrier,,Label created,Fairview
+390644082216,5769689556,PO7208973,2026-07-31,Picked up,,Picked up,Riverton
+390644082216,5769689556,PO7208973,2026-08-01,In transit,,In transit,Madison
+390644082216,5769689556,PO7208973,2026-08-03,On vehicle for delivery,,Out for delivery,Madison
+390644082216,5769689556,PO7208973,2026-08-05,Delivered,Warehouse,Delivered,Fairview
+443428737919,5532617817,PO4584135,2026-07-09,Shipment information sent to carrier,,Label created,Madison
+443428737919,5532617817,PO4584135,2026-07-11,Picked up,,Picked up,Springfield
+443428737919,5532617817,PO4584135,2026-07-12,In transit,,In transit,Salem
+443428737919,5532617817,PO4584135,2026-07-13,On vehicle for delivery,,Out for delivery,Fairview
+443428737919,5532617817,PO4584135,2026-07-15,Delivered,Warehouse,Delivered,Springfield
+311289926942,5532617817,PO4584135,2026-07-10,Shipment information sent to carrier,,Label created,Ashland
+311289926942,5532617817,PO4584135,2026-07-12,Picked up,,Picked up,Georgetown
+311289926942,5532617817,PO4584135,2026-07-14,In transit,,In transit,Clinton
+311289926942,5532617817,PO4584135,2026-07-15,On vehicle for delivery,,Out for delivery,Madison
+311289926942,5532617817,PO4584135,2026-07-16,Delivered,,Delivered,Fairview
+599460375005,5313861739,PO8324093,2026-07-25,Shipment information sent to carrier,,Label created,Salem
+599460375005,5313861739,PO8324093,2026-07-27,Picked up,,Picked up,Clinton
+599460375005,5313861739,PO8324093,2026-07-28,In transit,,In transit,Georgetown
+599460375005,5313861739,PO8324093,2026-07-29,On vehicle for delivery,,Out for delivery,Georgetown
+599460375005,5313861739,PO8324093,2026-07-31,Delivered,,Delivered,Ashland
+933762413172,5313861739,PO8324093,2026-07-25,Shipment information sent to carrier,,Label created,Madison
+933762413172,5313861739,PO8324093,2026-07-26,Picked up,,Picked up,Springfield
+933762413172,5313861739,PO8324093,2026-07-27,In transit,,In transit,Madison
+933762413172,5313861739,PO8324093,2026-07-29,On vehicle for delivery,,Out for delivery,Springfield
+933762413172,5313861739,PO8324093,2026-07-31,Delivered,,Delivered,Salem
+624220772473,5491290936,PO3016178,2026-10-13,Shipment information sent to carrier,,Label created,Madison
+624220772473,5491290936,PO3016178,2026-10-15,Picked up,,Picked up,Fairview
+624220772473,5491290936,PO3016178,2026-10-16,In transit,,In transit,Ashland
+624220772473,5491290936,PO3016178,2026-10-17,On vehicle for delivery,,Out for delivery,Fairview
+624220772473,5491290936,PO3016178,2026-10-19,Delivered,,Delivered,Riverton
+703359516670,5491290936,PO3016178,2026-10-13,Shipment information sent to carrier,,Label created,Madison
+703359516670,5491290936,PO3016178,2026-10-14,Picked up,,Picked up,Springfield
+703359516670,5491290936,PO3016178,2026-10-15,In transit,,In transit,Ashland
+703359516670,5491290936,PO3016178,2026-10-16,On vehicle for delivery,,Out for delivery,Madison
+703359516670,5491290936,PO3016178,2026-10-17,Delivered,,Delivered,Ashland
+958569437495,5559468531,PO3275223,2026-10-06,Shipment information sent to carrier,,Label created,Salem
+958569437495,5559468531,PO3275223,2026-10-08,Picked up,,Picked up,Clinton
+958569437495,5559468531,PO3275223,2026-10-09,In transit,,In transit,Fairview
+958569437495,5559468531,PO3275223,2026-10-10,On vehicle for delivery,,Out for delivery,Riverton
+958569437495,5559468531,PO3275223,2026-10-12,Delivered,,Delivered,Riverton
+597652528952,5559468531,PO3275223,2026-10-04,Shipment information sent to carrier,,Label created,Ashland
+597652528952,5559468531,PO3275223,2026-10-05,Picked up,,Picked up,Georgetown
+597652528952,5559468531,PO3275223,2026-10-06,In transit,,In transit,Springfield
+597652528952,5559468531,PO3275223,2026-10-08,On vehicle for delivery,,Out for delivery,Fairview
+597652528952,5559468531,PO3275223,2026-10-10,Delivered,Warehouse,Delivered,Riverton
+877290402794,5449102884,PO6036517,2026-09-08,Shipment information sent to carrier,,Label created,Clinton
+877290402794,5449102884,PO6036517,2026-09-10,Picked up,,Picked up,Fairview
+877290402794,5449102884,PO6036517,2026-09-12,In transit,,In transit,Ashland
+877290402794,5449102884,PO6036517,2026-09-14,On vehicle for delivery,,Out for delivery,Clinton
+877290402794,5449102884,PO6036517,2026-09-16,Delivered,Warehouse,Delivered,Springfield
+102543352415,5449102884,PO6036517,2026-09-08,Shipment information sent to carrier,,Label created,Clinton
+102543352415,5449102884,PO6036517,2026-09-10,Picked up,,Picked up,Madison
+102543352415,5449102884,PO6036517,2026-09-12,In transit,,In transit,Springfield
+102543352415,5449102884,PO6036517,2026-09-13,On vehicle for delivery,,Out for delivery,Georgetown
+102543352415,5449102884,PO6036517,2026-09-15,Delivered,,Delivered,Clinton
+835356380573,5159367228,PO6838443,2026-07-11,Shipment information sent to carrier,,Label created,Salem
+835356380573,5159367228,PO6838443,2026-07-13,Picked up,,Picked up,Georgetown
+835356380573,5159367228,PO6838443,2026-07-14,In transit,,In transit,Fairview
+835356380573,5159367228,PO6838443,2026-07-15,On vehicle for delivery,,Out for delivery,Springfield
+835356380573,5159367228,PO6838443,2026-07-16,Delivered,Warehouse,Delivered,Ashland
+807447731510,5817740083,PO2521606,2026-06-10,Shipment information sent to carrier,,Label created,Georgetown
+807447731510,5817740083,PO2521606,2026-06-12,Picked up,,Picked up,Riverton
+807447731510,5817740083,PO2521606,2026-06-14,In transit,,In transit,Springfield
+807447731510,5817740083,PO2521606,2026-06-15,On vehicle for delivery,,Out for delivery,Fairview
+807447731510,5817740083,PO2521606,2026-06-17,Delivered,Warehouse,Delivered,Salem
+885382007483,5817740083,PO2521606,2026-06-10,Shipment information sent to carrier,,Label created,Ashland
+885382007483,5817740083,PO2521606,2026-06-12,Picked up,,Picked up,Fairview
+885382007483,5817740083,PO2521606,2026-06-14,In transit,,In transit,Ashland
+885382007483,5817740083,PO2521606,2026-06-16,On vehicle for delivery,,Out for delivery,Springfield
+885382007483,5817740083,PO2521606,2026-06-17,Delivered,,Delivered,Ashland
+498392890575,5132802499,PO8898106,2026-09-07,Shipment information sent to carrier,,Label created,Salem
+498392890575,5132802499,PO8898106,2026-09-08,Picked up,,Picked up,Riverton
+498392890575,5132802499,PO8898106,2026-09-10,In transit,,In transit,Fairview
+498392890575,5132802499,PO8898106,2026-09-12,On vehicle for delivery,,Out for delivery,Madison
+498392890575,5132802499,PO8898106,2026-09-13,Delivered,,Delivered,Springfield
+716820830571,5132802499,PO8898106,2026-09-07,Shipment information sent to carrier,,Label created,Ashland
+716820830571,5132802499,PO8898106,2026-09-09,Picked up,,Picked up,Fairview
+716820830571,5132802499,PO8898106,2026-09-11,In transit,,In transit,Ashland
+716820830571,5132802499,PO8898106,2026-09-13,On vehicle for delivery,,Out for delivery,Clinton
+716820830571,5132802499,PO8898106,2026-09-14,Delivered,,Delivered,Clinton
+361256136941,5760960089,PO0022031,2026-06-23,Shipment information sent to carrier,,Label created,Clinton
+361256136941,5760960089,PO0022031,2026-06-24,Picked up,,Picked up,Madison
+361256136941,5760960089,PO0022031,2026-06-25,In transit,,In transit,Ashland
+087192558051,5312945167,PO4136137,2026-09-13,Shipment information sent to carrier,,Label created,Clinton
+087192558051,5312945167,PO4136137,2026-09-15,Picked up,,Picked up,Springfield
+087192558051,5312945167,PO4136137,2026-09-17,In transit,,In transit,Fairview
+677972070011,5312945167,PO4136137,2026-09-14,Shipment information sent to carrier,,Label created,Fairview
+677972070011,5312945167,PO4136137,2026-09-16,Picked up,,Picked up,Clinton
+677972070011,5312945167,PO4136137,2026-09-17,In transit,,In transit,Clinton
+927021634348,5003976897,PO2558387,2026-10-09,Shipment information sent to carrier,,Label created,Georgetown
+927021634348,5003976897,PO2558387,2026-10-11,Picked up,,Picked up,Riverton
+927021634348,5003976897,PO2558387,2026-10-12,In transit,,In transit,Fairview
+281267920533,5003976897,PO2558387,2026-10-09,Shipment information sent to carrier,,Label created,Madison
+281267920533,5003976897,PO2558387,2026-10-10,Picked up,,Picked up,Georgetown
+281267920533,5003976897,PO2558387,2026-10-12,In transit,,In transit,Georgetown
+147951491881,5288015530,PO9726820,2026-10-23,Shipment information sent to carrier,,Label created,Fairview
+147951491881,5288015530,PO9726820,2026-10-23,Picked up,,Picked up,Clinton
+147951491881,5288015530,PO9726820,2026-10-23,In transit,,In transit,Madison
+344830562741,5939813564,PO2779379,2026-09-30,Shipment information sent to carrier,,Label created,Clinton
+344830562741,5939813564,PO2779379,2026-10-01,Picked up,,Picked up,Ashland
+344830562741,5939813564,PO2779379,2026-10-02,In transit,Carrier,In transit,Fairview
+489353054786,5939813564,PO2779379,2026-09-30,Shipment information sent to carrier,,Label created,Madison
+489353054786,5939813564,PO2779379,2026-10-01,Picked up,,Picked up,Ashland
+489353054786,5939813564,PO2779379,2026-10-02,In transit,,In transit,Georgetown
+887350971562,5695037437,PO4929009,2026-08-26,Shipment information sent to carrier,,Label created,Springfield
+887350971562,5695037437,PO4929009,2026-08-28,Picked up,,Picked up,Georgetown
+887350971562,5695037437,PO4929009,2026-08-30,In transit,Carrier,In transit,Salem
+652560563248,5695037437,PO4929009,2026-08-27,Shipment information sent to carrier,,Label created,Ashland
+652560563248,5695037437,PO4929009,2026-08-29,Picked up,,Picked up,Springfield
+652560563248,5695037437,PO4929009,2026-08-30,In transit,Carrier,In transit,Madison
+104716330761,5931816615,PO4215549,2026-06-28,Shipment information sent to carrier,Rep,Label created,Springfield
+882216566866,5931816615,PO4215549,2026-06-26,Shipment information sent to carrier,,Label created,Ashland
+174866545974,5183223012,PO4070474,2026-09-14,Shipment information sent to carrier,,Label created,Ashland
+310126994398,5183223012,PO4070474,2026-09-13,Shipment information sent to carrier,,Label created,Fairview
+567997961700,5248832652,PO0663126,2026-09-02,Shipment information sent to carrier,,Label created,Clinton
+128981437359,5274379059,PO7961642,2026-09-18,Shipment information sent to carrier,,Label created,Clinton
+254923072164,5274379059,PO7961642,2026-09-20,Shipment information sent to carrier,,Label created,Salem
+495314034417,5753396292,PO6441218,2026-08-15,Shipment information sent to carrier,,Label created,Riverton
+176280793284,5753396292,PO6441218,2026-08-16,Shipment information sent to carrier,,Label created,Ashland
+220674700025,5175939852,PO3148159,2026-10-13,Shipment information sent to carrier,,Label created,Salem
+900310716105,5653738700,PO1878789,2026-05-27,Shipment information sent to carrier,,Label created,Fairview
+893602859568,5378286230,PO2344154,2026-07-30,Shipment information sent to carrier,,Label created,Ashland
+491716991439,5401407292,PO6694639,2026-02-24,Shipment information sent to carrier,Rep,Label created,Madison
+839193008620,5781157647,PO6577601,2026-07-20,Shipment information sent to carrier,,Label created,Georgetown
+739622996357,5400701638,PO7506075,2026-08-12,Shipment information sent to carrier,,Label created,Springfield
+484093618710,5778782507,PO9539653,2026-04-02,Shipment information sent to carrier,,Label created,Clinton
+019444303751,5918521676,PO4512050,2026-05-26,Shipment information sent to carrier,,Label created,Springfield
+356502278223,5443246304,PO2470828,2026-08-26,Shipment information sent to carrier,,Label created,Springfield
+356502278223,5443246304,PO2470828,2026-08-28,Picked up,,Picked up,Ashland
+356502278223,5443246304,PO2470828,2026-08-29,In transit,,In transit,Georgetown
+630788208898,5046999849,PO5701626,2026-04-05,Shipment information sent to carrier,,Label created,Springfield
+630788208898,5046999849,PO5701626,2026-04-07,Picked up,,Picked up,Fairview
+630788208898,5046999849,PO5701626,2026-04-09,In transit,,In transit,Madison
+970480768835,5529665263,PO1731704,2026-03-31,Shipment information sent to carrier,,Label created,Springfield
+970480768835,5529665263,PO1731704,2026-04-02,Picked up,,Picked up,Riverton
+970480768835,5529665263,PO1731704,2026-04-04,In transit,,In transit,Springfield
+598293050380,5045054562,PO8444844,2026-08-25,Shipment information sent to carrier,,Label created,Clinton
+289500890679,5568862442,PO4924274,2026-05-21,Shipment information sent to carrier,,Label created,Clinton
+289500890679,5568862442,PO4924274,2026-05-23,Picked up,,Picked up,Clinton
+289500890679,5568862442,PO4924274,2026-05-25,In transit,,In transit,Riverton
+623537310382,5898753783,PO6790375,2026-03-04,Shipment information sent to carrier,,Label created,Clinton
+623537310382,5898753783,PO6790375,2026-03-05,Picked up,,Picked up,Riverton
+623537310382,5898753783,PO6790375,2026-03-07,In transit,,In transit,Fairview
+623537310382,5898753783,PO6790375,2026-03-09,On vehicle for delivery,,Out for delivery,Ashland
+623537310382,5898753783,PO6790375,2026-03-11,Delivered,Warehouse,Delivered,Salem
+318458856279,5271963390,PO4142973,2026-07-07,Shipment information sent to carrier,,Label created,Madison
+668973461613,5889767617,PO2760603,2026-09-13,Shipment information sent to carrier,,Label created,Riverton
+696830311568,5869500247,PO9364079,2026-06-15,Shipment information sent to carrier,,Label created,Ashland
+696830311568,5869500247,PO9364079,2026-06-16,Picked up,,Picked up,Madison
+696830311568,5869500247,PO9364079,2026-06-18,In transit,,In transit,Georgetown
+696830311568,5869500247,PO9364079,2026-06-20,On vehicle for delivery,,Out for delivery,Georgetown
+696830311568,5869500247,PO9364079,2026-06-21,Delivered,,Delivered,Fairview
+079285425839,5563715147,PO5391420,2026-07-09,Shipment information sent to carrier,,Label created,Springfield
+844048709197,5238386120,PO0633580,2026-04-21,Shipment information sent to carrier,,Label created,Georgetown
+471929263133,5622419073,PO0935592,2026-05-13,Shipment information sent to carrier,,Label created,Fairview
+674857381583,5075748184,PO0656307,2026-09-09,Shipment information sent to carrier,Rep,Label created,Springfield
+098090232226,5783505554,PO5365210,2026-02-24,Shipment information sent to carrier,,Label created,Fairview
+658136210226,5037128472,PO5725249,2026-09-02,Shipment information sent to carrier,,Label created,Fairview
+658136210226,5037128472,PO5725249,2026-09-04,Picked up,,Picked up,Springfield
+658136210226,5037128472,PO5725249,2026-09-06,In transit,,In transit,Salem
+658136210226,5037128472,PO5725249,2026-09-07,On vehicle for delivery,,Out for delivery,Clinton
+658136210226,5037128472,PO5725249,2026-09-09,Delivered,,Delivered,Fairview
+608524357642,5486602077,PO9620991,2026-03-19,Shipment information sent to carrier,,Label created,Clinton
+734558260793,5687832002,PO8215563,2026-09-10,Shipment information sent to carrier,,Label created,Georgetown
+734558260793,5687832002,PO8215563,2026-09-12,Picked up,,Picked up,Ashland
+734558260793,5687832002,PO8215563,2026-09-13,In transit,Carrier,In transit,Riverton
+523377383215,5100449036,PO1665352,2026-08-28,Shipment information sent to carrier,,Label created,Springfield
+523377383215,5100449036,PO1665352,2026-08-29,Picked up,,Picked up,Clinton
+523377383215,5100449036,PO1665352,2026-08-30,In transit,,In transit,Madison
+523377383215,5100449036,PO1665352,2026-09-01,On vehicle for delivery,,Out for delivery,Springfield
+523377383215,5100449036,PO1665352,2026-09-03,Delivered,Warehouse,Delivered,Clinton
+223263927430,5640785383,PO0061941,2026-09-29,Shipment information sent to carrier,Rep,Label created,Clinton
+054527422065,5819154002,PO7108239,2026-10-06,Shipment information sent to carrier,Rep,Label created,Riverton
+492390475613,5322926120,PO0413381,2026-03-12,Shipment information sent to carrier,,Label created,Fairview
+793111215147,5914300068,PO4320888,2026-07-14,Shipment information sent to carrier,,Label created,Springfield
+793111215147,5914300068,PO4320888,2026-07-15,Picked up,,Picked up,Salem
+793111215147,5914300068,PO4320888,2026-07-17,In transit,,In transit,Fairview
+793111215147,5914300068,PO4320888,2026-07-19,On vehicle for delivery,,Out for delivery,Springfield
+793111215147,5914300068,PO4320888,2026-07-21,Delivered,,Delivered,Madison
+898433798792,5128395494,PO2844868,2026-09-19,Shipment information sent to carrier,,Label created,Clinton
+672059529557,5796070963,PO2062432,2026-03-09,Shipment information sent to carrier,,Label created,Riverton
+672059529557,5796070963,PO2062432,2026-03-10,Picked up,,Picked up,Riverton
+672059529557,5796070963,PO2062432,2026-03-12,In transit,,In transit,Fairview
+672059529557,5796070963,PO2062432,2026-03-14,On vehicle for delivery,,Out for delivery,Fairview
+672059529557,5796070963,PO2062432,2026-03-15,Delivered,,Delivered,Ashland
+663274389624,5788737267,PO7095922,2026-06-14,Shipment information sent to carrier,,Label created,Salem
+783078755549,5395098260,PO3181555,2026-09-26,Shipment information sent to carrier,,Label created,Madison
+262326518402,5045410056,PO1110259,2026-06-07,Shipment information sent to carrier,,Label created,Springfield
+262326518402,5045410056,PO1110259,2026-06-08,Picked up,,Picked up,Ashland
+262326518402,5045410056,PO1110259,2026-06-10,In transit,,In transit,Clinton
+262326518402,5045410056,PO1110259,2026-06-11,On vehicle for delivery,,Out for delivery,Springfield
+262326518402,5045410056,PO1110259,2026-06-12,Delivered,Warehouse,Delivered,Madison
+160622559630,5199065588,PO7358522,2026-09-08,Shipment information sent to carrier,,Label created,Clinton
+160622559630,5199065588,PO7358522,2026-09-09,Picked up,,Picked up,Springfield
+160622559630,5199065588,PO7358522,2026-09-11,In transit,Carrier,In transit,Madison
+181434620222,5190275149,PO5241595,2026-09-15,Shipment information sent to carrier,,Label created,Georgetown
+202665003409,5917934447,PO8058894,2026-08-28,Shipment information sent to carrier,,Label created,Riverton
+202665003409,5917934447,PO8058894,2026-08-29,Picked up,,Picked up,Clinton
+202665003409,5917934447,PO8058894,2026-08-30,In transit,,In transit,Georgetown
+202665003409,5917934447,PO8058894,2026-09-01,On vehicle for delivery,,Out for delivery,Fairview
+202665003409,5917934447,PO8058894,2026-09-02,Delivered,Warehouse,Delivered,Springfield
+665752479296,5197167128,PO7754563,2026-03-26,Shipment information sent to carrier,,Label created,Madison
+041053025142,5779161223,PO4086900,2026-10-08,Shipment information sent to carrier,,Label created,Georgetown
+041053025142,5779161223,PO4086900,2026-10-09,Picked up,,Picked up,Georgetown
+041053025142,5779161223,PO4086900,2026-10-11,In transit,,In transit,Madison
+041053025142,5779161223,PO4086900,2026-10-12,On vehicle for delivery,,Out for delivery,Riverton
+041053025142,5779161223,PO4086900,2026-10-13,Delivered,Warehouse,Delivered,Georgetown
+689138467629,5692624512,PO4854542,2026-03-19,Shipment information sent to carrier,,Label created,Fairview
+689138467629,5692624512,PO4854542,2026-03-21,Picked up,,Picked up,Madison
+689138467629,5692624512,PO4854542,2026-03-22,In transit,,In transit,Riverton
+689138467629,5692624512,PO4854542,2026-03-23,On vehicle for delivery,,Out for delivery,Clinton
+689138467629,5692624512,PO4854542,2026-03-24,Delivered,,Delivered,Clinton
+665895036051,5835941244,PO8775007,2026-06-16,Shipment information sent to carrier,,Label created,Riverton
+520845452229,5826313111,PO0811426,2026-02-20,Shipment information sent to carrier,,Label created,Springfield
+520845452229,5826313111,PO0811426,2026-02-22,Picked up,,Picked up,Salem
+520845452229,5826313111,PO0811426,2026-02-24,In transit,,In transit,Springfield
+520845452229,5826313111,PO0811426,2026-02-26,On vehicle for delivery,,Out for delivery,Fairview
+520845452229,5826313111,PO0811426,2026-02-28,Delivered,Warehouse,Delivered,Georgetown
+922458105811,5616137947,PO9149614,2026-04-01,Shipment information sent to carrier,,Label created,Clinton
+589734515838,5056337599,PO3276619,2026-06-07,Shipment information sent to carrier,,Label created,Ashland
+589734515838,5056337599,PO3276619,2026-06-08,Picked up,,Picked up,Georgetown
+589734515838,5056337599,PO3276619,2026-06-10,In transit,,In transit,Ashland
+589734515838,5056337599,PO3276619,2026-06-12,On vehicle for delivery,,Out for delivery,Georgetown
+589734515838,5056337599,PO3276619,2026-06-13,Delivered,,Delivered,Georgetown
+013397491004,5782287833,PO3342207,2026-09-01,Shipment information sent to carrier,,Label created,Georgetown
+953171776674,5081664649,PO2908844,2026-05-16,Shipment information sent to carrier,Rep,Label created,Fairview
+240514388131,5751429433,PO6943370,2026-07-16,Shipment information sent to carrier,,Label created,Clinton
+240514388131,5751429433,PO6943370,2026-07-18,Picked up,,Picked up,Clinton
+240514388131,5751429433,PO6943370,2026-07-20,In transit,,In transit,Madison
+594903459276,5434059472,PO5191526,2026-04-09,Shipment information sent to carrier,,Label created,Fairview
+594903459276,5434059472,PO5191526,2026-04-11,Picked up,,Picked up,Georgetown
+594903459276,5434059472,PO5191526,2026-04-13,In transit,Carrier,In transit,Salem
+151857931386,5829227835,PO6179050,2026-05-23,Shipment information sent to carrier,,Label created,Ashland
+151857931386,5829227835,PO6179050,2026-05-24,Picked up,,Picked up,Clinton
+151857931386,5829227835,PO6179050,2026-05-25,In transit,,In transit,Clinton
+151857931386,5829227835,PO6179050,2026-05-26,On vehicle for delivery,,Out for delivery,Clinton
+151857931386,5829227835,PO6179050,2026-05-28,Delivered,,Delivered,Ashland
+135577509297,5342769363,PO1305743,2026-07-24,Shipment information sent to carrier,Rep,Label created,Fairview
+881940187077,5840070498,PO8982945,2026-07-26,Shipment information sent to carrier,Rep,Label created,Fairview
+368010613253,5470651864,PO1578394,2026-09-29,Shipment information sent to carrier,,Label created,Riverton
+368010613253,5470651864,PO1578394,2026-09-30,Picked up,,Picked up,Georgetown
+368010613253,5470651864,PO1578394,2026-10-02,In transit,,In transit,Springfield
+368010613253,5470651864,PO1578394,2026-10-03,On vehicle for delivery,,Out for delivery,Riverton
+368010613253,5470651864,PO1578394,2026-10-04,Delivered,,Delivered,Georgetown
+831969693496,5629025549,PO7818655,2026-04-25,Shipment information sent to carrier,Rep,Label created,Ashland
+569258242837,5008585573,PO4384731,2026-07-26,Shipment information sent to carrier,,Label created,Riverton
+569258242837,5008585573,PO4384731,2026-07-28,Picked up,,Picked up,Salem
+569258242837,5008585573,PO4384731,2026-07-29,In transit,,In transit,Madison
+569258242837,5008585573,PO4384731,2026-07-31,On vehicle for delivery,,Out for delivery,Georgetown
+569258242837,5008585573,PO4384731,2026-08-02,Delivered,,Delivered,Clinton
+526341706080,5674573114,PO4892953,2026-10-14,Shipment information sent to carrier,,Label created,Springfield
+249379647785,5391367409,PO8247657,2026-04-05,Shipment information sent to carrier,,Label created,Ashland
+249379647785,5391367409,PO8247657,2026-04-07,Picked up,,Picked up,Ashland
+249379647785,5391367409,PO8247657,2026-04-08,In transit,,In transit,Springfield
+699110491582,5543647645,PO1753300,2026-04-21,Shipment information sent to carrier,,Label created,Madison
+157057385284,5992653682,PO7769895,2026-07-18,Shipment information sent to carrier,,Label created,Springfield
+157057385284,5992653682,PO7769895,2026-07-20,Picked up,,Picked up,Madison
+157057385284,5992653682,PO7769895,2026-07-22,In transit,,In transit,Salem
+103898524455,5133003288,PO5592040,2026-05-06,Shipment information sent to carrier,,Label created,Salem
+633690776657,5736337683,PO6335208,2026-09-13,Shipment information sent to carrier,,Label created,Springfield
+633690776657,5736337683,PO6335208,2026-09-14,Picked up,,Picked up,Riverton
+633690776657,5736337683,PO6335208,2026-09-15,In transit,Carrier,In transit,Madison
+991811610881,5634729968,PO3709591,2026-08-03,Shipment information sent to carrier,,Label created,Clinton
+991811610881,5634729968,PO3709591,2026-08-05,Picked up,,Picked up,Fairview
+991811610881,5634729968,PO3709591,2026-08-06,In transit,,In transit,Fairview
+991811610881,5634729968,PO3709591,2026-08-08,On vehicle for delivery,,Out for delivery,Salem
+991811610881,5634729968,PO3709591,2026-08-10,Delivered,,Delivered,Ashland
+069585348370,5039230247,PO1646124,2026-02-18,Shipment information sent to carrier,,Label created,Georgetown
+069585348370,5039230247,PO1646124,2026-02-19,Picked up,,Picked up,Fairview
+069585348370,5039230247,PO1646124,2026-02-20,In transit,,In transit,Georgetown
+069585348370,5039230247,PO1646124,2026-02-22,On vehicle for delivery,,Out for delivery,Fairview
+069585348370,5039230247,PO1646124,2026-02-23,Delivered,,Delivered,Georgetown
+635459057685,5988216070,PO7153784,2026-04-11,Shipment information sent to carrier,,Label created,Ashland
+635459057685,5988216070,PO7153784,2026-04-13,Picked up,,Picked up,Salem
+635459057685,5988216070,PO7153784,2026-04-15,In transit,,In transit,Fairview
+460772268688,5506359798,PO4345012,2026-04-28,Shipment information sent to carrier,,Label created,Salem
+460772268688,5506359798,PO4345012,2026-04-29,Picked up,,Picked up,Clinton
+460772268688,5506359798,PO4345012,2026-04-30,In transit,,In transit,Fairview
+460772268688,5506359798,PO4345012,2026-05-01,On vehicle for delivery,,Out for delivery,Georgetown
+460772268688,5506359798,PO4345012,2026-05-02,Delivered,,Delivered,Springfield
+972983688133,5199733785,PO5160217,2026-03-25,Shipment information sent to carrier,,Label created,Madison
+972983688133,5199733785,PO5160217,2026-03-26,Picked up,,Picked up,Springfield
+972983688133,5199733785,PO5160217,2026-03-28,In transit,,In transit,Springfield
+673433853692,5925652764,PO4209493,2026-08-24,Shipment information sent to carrier,,Label created,Fairview
+673433853692,5925652764,PO4209493,2026-08-26,Picked up,,Picked up,Fairview
+673433853692,5925652764,PO4209493,2026-08-27,In transit,,In transit,Clinton
+673433853692,5925652764,PO4209493,2026-08-29,On vehicle for delivery,,Out for delivery,Fairview
+673433853692,5925652764,PO4209493,2026-08-31,Delivered,,Delivered,Clinton
+954572555132,5765514143,PO5869040,2026-10-06,Shipment information sent to carrier,,Label created,Clinton
+954572555132,5765514143,PO5869040,2026-10-07,Picked up,,Picked up,Springfield
+954572555132,5765514143,PO5869040,2026-10-09,In transit,,In transit,Clinton
+875520752099,5599754015,PO4316187,2026-05-11,Shipment information sent to carrier,,Label created,Georgetown
+699019559031,5889708363,PO3279623,2026-08-21,Shipment information sent to carrier,,Label created,Clinton
+699019559031,5889708363,PO3279623,2026-08-23,Picked up,,Picked up,Salem
+699019559031,5889708363,PO3279623,2026-08-25,In transit,,In transit,Madison
+699019559031,5889708363,PO3279623,2026-08-26,On vehicle for delivery,,Out for delivery,Clinton
+699019559031,5889708363,PO3279623,2026-08-28,Delivered,,Delivered,Ashland
+975107923851,5415342779,PO8278771,2026-07-13,Shipment information sent to carrier,,Label created,Fairview
+975107923851,5415342779,PO8278771,2026-07-14,Picked up,,Picked up,Salem
+975107923851,5415342779,PO8278771,2026-07-16,In transit,,In transit,Ashland
+975107923851,5415342779,PO8278771,2026-07-17,On vehicle for delivery,,Out for delivery,Clinton
+975107923851,5415342779,PO8278771,2026-07-18,Delivered,,Delivered,Salem
+062122264118,5608600359,PO2674276,2026-07-28,Shipment information sent to carrier,,Label created,Fairview
+062122264118,5608600359,PO2674276,2026-07-29,Picked up,,Picked up,Georgetown
+062122264118,5608600359,PO2674276,2026-07-30,In transit,,In transit,Springfield
+062122264118,5608600359,PO2674276,2026-08-01,On vehicle for delivery,,Out for delivery,Clinton
+062122264118,5608600359,PO2674276,2026-08-03,Delivered,,Delivered,Ashland
+797095508051,5218351350,PO7406921,2026-07-10,Shipment information sent to carrier,,Label created,Georgetown
+630769922650,5666631669,PO2608452,2026-04-15,Shipment information sent to carrier,,Label created,Riverton
+945737233236,5196502965,PO8093178,2026-09-28,Shipment information sent to carrier,,Label created,Georgetown
+945737233236,5196502965,PO8093178,2026-09-29,Picked up,,Picked up,Springfield
+945737233236,5196502965,PO8093178,2026-09-30,In transit,,In transit,Clinton
+945737233236,5196502965,PO8093178,2026-10-01,On vehicle for delivery,,Out for delivery,Ashland
+945737233236,5196502965,PO8093178,2026-10-03,Delivered,,Delivered,Riverton
+913737445302,5073491775,PO0348992,2026-09-09,Shipment information sent to carrier,,Label created,Springfield
+361394843409,5105624458,PO2875007,2026-05-09,Shipment information sent to carrier,,Label created,Riverton
+361394843409,5105624458,PO2875007,2026-05-11,Picked up,,Picked up,Clinton
+361394843409,5105624458,PO2875007,2026-05-12,In transit,,In transit,Fairview
+044558574031,5637276380,PO8647166,2026-07-29,Shipment information sent to carrier,,Label created,Springfield
+044558574031,5637276380,PO8647166,2026-07-30,Picked up,,Picked up,Riverton
+044558574031,5637276380,PO8647166,2026-07-31,In transit,,In transit,Georgetown
+044558574031,5637276380,PO8647166,2026-08-02,On vehicle for delivery,,Out for delivery,Ashland
+044558574031,5637276380,PO8647166,2026-08-03,Delivered,,Delivered,Ashland
+303789755705,5881307104,PO8896901,2026-06-09,Shipment information sent to carrier,,Label created,Clinton
+303789755705,5881307104,PO8896901,2026-06-10,Picked up,,Picked up,Georgetown
+303789755705,5881307104,PO8896901,2026-06-12,In transit,Carrier,In transit,Madison
+228512415536,5686790407,PO2268121,2026-05-20,Shipment information sent to carrier,,Label created,Fairview
+228512415536,5686790407,PO2268121,2026-05-22,Picked up,,Picked up,Georgetown
+228512415536,5686790407,PO2268121,2026-05-24,In transit,,In transit,Clinton
+999505543496,5355065771,PO0804893,2026-03-10,Shipment information sent to carrier,,Label created,Springfield
+999505543496,5355065771,PO0804893,2026-03-11,Picked up,,Picked up,Fairview
+999505543496,5355065771,PO0804893,2026-03-13,In transit,,In transit,Madison
+999505543496,5355065771,PO0804893,2026-03-14,On vehicle for delivery,,Out for delivery,Ashland
+999505543496,5355065771,PO0804893,2026-03-16,Delivered,,Delivered,Riverton
+583080535958,5838643817,PO4192720,2026-09-12,Shipment information sent to carrier,,Label created,Springfield
+583080535958,5838643817,PO4192720,2026-09-13,Picked up,,Picked up,Salem
+583080535958,5838643817,PO4192720,2026-09-14,In transit,Carrier,In transit,Clinton
+547597010128,5875420109,PO5895128,2026-06-25,Shipment information sent to carrier,,Label created,Springfield
+094069893863,5951686281,PO3389069,2026-08-11,Shipment information sent to carrier,,Label created,Springfield
+094069893863,5951686281,PO3389069,2026-08-12,Picked up,,Picked up,Riverton
+094069893863,5951686281,PO3389069,2026-08-13,In transit,,In transit,Riverton
+629177171054,5084891778,PO9798732,2026-09-21,Shipment information sent to carrier,,Label created,Salem
+629177171054,5084891778,PO9798732,2026-09-22,Picked up,,Picked up,Clinton
+629177171054,5084891778,PO9798732,2026-09-23,In transit,,In transit,Georgetown
+512260122356,5539326048,PO8248574,2026-04-07,Shipment information sent to carrier,Rep,Label created,Riverton
+900492024861,5250754241,PO3826097,2026-08-28,Shipment information sent to carrier,,Label created,Madison
+599966060961,5686898401,PO0208051,2026-08-04,Shipment information sent to carrier,,Label created,Madison
+599966060961,5686898401,PO0208051,2026-08-06,Picked up,,Picked up,Riverton
+599966060961,5686898401,PO0208051,2026-08-08,In transit,,In transit,Riverton
+703848630253,5167726304,PO2370847,2026-07-18,Shipment information sent to carrier,,Label created,Fairview
+703848630253,5167726304,PO2370847,2026-07-20,Picked up,,Picked up,Clinton
+703848630253,5167726304,PO2370847,2026-07-22,In transit,,In transit,Fairview
+703848630253,5167726304,PO2370847,2026-07-23,On vehicle for delivery,,Out for delivery,Riverton
+703848630253,5167726304,PO2370847,2026-07-25,Delivered,,Delivered,Fairview
+230494027726,5620165888,PO9230697,2026-03-25,Shipment information sent to carrier,,Label created,Salem
+230494027726,5620165888,PO9230697,2026-03-26,Picked up,,Picked up,Springfield
+230494027726,5620165888,PO9230697,2026-03-27,In transit,,In transit,Springfield
+230494027726,5620165888,PO9230697,2026-03-29,On vehicle for delivery,,Out for delivery,Salem
+230494027726,5620165888,PO9230697,2026-03-30,Delivered,,Delivered,Salem
+162909478258,5105899539,PO9490615,2026-04-25,Shipment information sent to carrier,,Label created,Madison
+162909478258,5105899539,PO9490615,2026-04-27,Picked up,,Picked up,Fairview
+162909478258,5105899539,PO9490615,2026-04-29,In transit,,In transit,Fairview
+162909478258,5105899539,PO9490615,2026-04-30,On vehicle for delivery,,Out for delivery,Salem
+162909478258,5105899539,PO9490615,2026-05-02,Delivered,Warehouse,Delivered,Georgetown
+234966298806,5944813290,PO3477487,2026-09-29,Shipment information sent to carrier,,Label created,Ashland
+203583697998,5899563465,PO9326254,2026-09-11,Shipment information sent to carrier,,Label created,Riverton
+196580288592,5973791180,PO6195332,2026-05-24,Shipment information sent to carrier,,Label created,Fairview
+196580288592,5973791180,PO6195332,2026-05-25,Picked up,,Picked up,Madison
+196580288592,5973791180,PO6195332,2026-05-26,In transit,,In transit,Madison
+004167426498,5273399312,PO0434300,2026-03-03,Shipment information sent to carrier,,Label created,Madison
+004167426498,5273399312,PO0434300,2026-03-05,Picked up,,Picked up,Salem
+004167426498,5273399312,PO0434300,2026-03-07,In transit,,In transit,Georgetown
+004167426498,5273399312,PO0434300,2026-03-09,On vehicle for delivery,,Out for delivery,Clinton
+004167426498,5273399312,PO0434300,2026-03-11,Delivered,Warehouse,Delivered,Riverton
+356555230093,5475594239,PO2745610,2026-07-03,Shipment information sent to carrier,,Label created,Clinton
+410609221469,5633735696,PO2880810,2026-04-03,Shipment information sent to carrier,,Label created,Ashland
+410609221469,5633735696,PO2880810,2026-04-05,Picked up,,Picked up,Georgetown
+410609221469,5633735696,PO2880810,2026-04-07,In transit,,In transit,Salem
+086578058719,5143941492,PO0749242,2026-06-12,Shipment information sent to carrier,Rep,Label created,Fairview
+942532479316,5757997358,PO5494521,2026-06-14,Shipment information sent to carrier,,Label created,Clinton
+942532479316,5757997358,PO5494521,2026-06-16,Picked up,,Picked up,Clinton
+942532479316,5757997358,PO5494521,2026-06-17,In transit,,In transit,Georgetown
+405101136472,5539306070,PO2898952,2026-07-28,Shipment information sent to carrier,Rep,Label created,Ashland
+281185042535,5466606251,PO9832096,2026-07-16,Shipment information sent to carrier,,Label created,Fairview
+211055327397,5541239595,PO1986329,2026-09-13,Shipment information sent to carrier,,Label created,Clinton
+211055327397,5541239595,PO1986329,2026-09-15,Picked up,,Picked up,Fairview
+211055327397,5541239595,PO1986329,2026-09-17,In transit,,In transit,Clinton
+178181413827,5253332694,PO1660894,2026-05-19,Shipment information sent to carrier,,Label created,Madison
+178181413827,5253332694,PO1660894,2026-05-20,Picked up,,Picked up,Springfield
+178181413827,5253332694,PO1660894,2026-05-21,In transit,,In transit,Springfield
+371335772719,5942846870,PO7288100,2026-09-04,Shipment information sent to carrier,,Label created,Georgetown
+371335772719,5942846870,PO7288100,2026-09-06,Picked up,,Picked up,Clinton
+371335772719,5942846870,PO7288100,2026-09-08,In transit,,In transit,Springfield
+384266518730,5101503552,PO5205103,2026-08-10,Shipment information sent to carrier,,Label created,Fairview
+384266518730,5101503552,PO5205103,2026-08-12,Picked up,,Picked up,Fairview
+384266518730,5101503552,PO5205103,2026-08-14,In transit,Carrier,In transit,Riverton
+218650060641,5019503578,PO0348495,2026-07-30,Shipment information sent to carrier,Rep,Label created,Springfield
+778521442026,5684196560,PO8695869,2026-04-08,Shipment information sent to carrier,,Label created,Ashland
+509252413167,5679343922,PO3200025,2026-07-06,Shipment information sent to carrier,,Label created,Springfield
+841585839961,5541029308,PO5851768,2026-07-04,Shipment information sent to carrier,,Label created,Springfield
+012881140528,5086040207,PO9348168,2026-05-13,Shipment information sent to carrier,,Label created,Springfield
+766075457749,5795924659,PO9374731,2026-04-10,Shipment information sent to carrier,,Label created,Springfield
+766075457749,5795924659,PO9374731,2026-04-11,Picked up,,Picked up,Clinton
+766075457749,5795924659,PO9374731,2026-04-13,In transit,,In transit,Georgetown
+449089544054,5392629478,PO7748627,2026-08-17,Shipment information sent to carrier,,Label created,Ashland
+449089544054,5392629478,PO7748627,2026-08-19,Picked up,,Picked up,Salem
+449089544054,5392629478,PO7748627,2026-08-21,In transit,,In transit,Georgetown
+449089544054,5392629478,PO7748627,2026-08-23,On vehicle for delivery,,Out for delivery,Springfield
+449089544054,5392629478,PO7748627,2026-08-24,Delivered,,Delivered,Clinton
+589946155566,5277434604,PO9644832,2026-08-22,Shipment information sent to carrier,,Label created,Fairview
+886196454738,5625701720,PO4342848,2026-07-10,Shipment information sent to carrier,,Label created,Ashland
+886196454738,5625701720,PO4342848,2026-07-11,Picked up,,Picked up,Springfield
+886196454738,5625701720,PO4342848,2026-07-13,In transit,Carrier,In transit,Salem
+372630198785,5093457153,PO4781470,2026-06-23,Shipment information sent to carrier,,Label created,Madison
+372630198785,5093457153,PO4781470,2026-06-25,Picked up,,Picked up,Madison
+372630198785,5093457153,PO4781470,2026-06-26,In transit,,In transit,Ashland
+370076411960,5949383061,PO7436686,2026-05-15,Shipment information sent to carrier,,Label created,Ashland
+370076411960,5949383061,PO7436686,2026-05-17,Picked up,,Picked up,Madison
+370076411960,5949383061,PO7436686,2026-05-18,In transit,,In transit,Madison
+370076411960,5949383061,PO7436686,2026-05-20,On vehicle for delivery,,Out for delivery,Clinton
+370076411960,5949383061,PO7436686,2026-05-22,Delivered,,Delivered,Georgetown
+702723747511,5227746823,PO6691839,2026-08-10,Shipment information sent to carrier,,Label created,Ashland
+702723747511,5227746823,PO6691839,2026-08-12,Picked up,,Picked up,Madison
+702723747511,5227746823,PO6691839,2026-08-13,In transit,,In transit,Clinton
+733935033801,5970026377,PO4536793,2026-04-13,Shipment information sent to carrier,,Label created,Madison
+733935033801,5970026377,PO4536793,2026-04-15,Picked up,,Picked up,Salem
+733935033801,5970026377,PO4536793,2026-04-17,In transit,,In transit,Salem
+733935033801,5970026377,PO4536793,2026-04-19,On vehicle for delivery,,Out for delivery,Clinton
+733935033801,5970026377,PO4536793,2026-04-21,Delivered,,Delivered,Georgetown
+861265411486,5848802406,PO6367155,2026-09-28,Shipment information sent to carrier,Rep,Label created,Springfield
+293320499069,5758056979,PO8258356,2026-05-27,Shipment information sent to carrier,,Label created,Ashland
+293320499069,5758056979,PO8258356,2026-05-28,Picked up,,Picked up,Ashland
+293320499069,5758056979,PO8258356,2026-05-29,In transit,,In transit,Salem
+293320499069,5758056979,PO8258356,2026-05-30,On vehicle for delivery,,Out for delivery,Georgetown
+293320499069,5758056979,PO8258356,2026-06-01,Delivered,Warehouse,Delivered,Madison
+459733990122,5667721521,PO0084955,2026-03-15,Shipment information sent to carrier,,Label created,Georgetown
+468044357981,5326808688,PO9689590,2026-05-29,Shipment information sent to carrier,Rep,Label created,Springfield
+283147756325,5412970673,PO2259439,2026-08-03,Shipment information sent to carrier,Rep,Label created,Salem
+236844149856,5721513504,PO0762916,2026-06-11,Shipment information sent to carrier,,Label created,Ashland
+236844149856,5721513504,PO0762916,2026-06-12,Picked up,,Picked up,Clinton
+236844149856,5721513504,PO0762916,2026-06-14,In transit,,In transit,Georgetown
+236844149856,5721513504,PO0762916,2026-06-15,On vehicle for delivery,,Out for delivery,Ashland
+236844149856,5721513504,PO0762916,2026-06-17,Delivered,,Delivered,Georgetown
+262157117986,5448406012,PO3794250,2026-05-03,Shipment information sent to carrier,,Label created,Fairview
+262157117986,5448406012,PO3794250,2026-05-05,Picked up,,Picked up,Salem
+262157117986,5448406012,PO3794250,2026-05-07,In transit,,In transit,Salem
+262157117986,5448406012,PO3794250,2026-05-09,On vehicle for delivery,,Out for delivery,Ashland
+262157117986,5448406012,PO3794250,2026-05-10,Delivered,,Delivered,Georgetown
+045522183852,5549313943,PO4078684,2026-06-16,Shipment information sent to carrier,,Label created,Georgetown
+576541424662,5104806795,PO5644598,2026-08-01,Shipment information sent to carrier,,Label created,Ashland
+576541424662,5104806795,PO5644598,2026-08-02,Picked up,,Picked up,Riverton
+576541424662,5104806795,PO5644598,2026-08-04,In transit,,In transit,Madison
+929879116746,5621005418,PO8588206,2026-06-21,Shipment information sent to carrier,,Label created,Clinton
+929879116746,5621005418,PO8588206,2026-06-23,Picked up,,Picked up,Madison
+929879116746,5621005418,PO8588206,2026-06-25,In transit,,In transit,Ashland
+929879116746,5621005418,PO8588206,2026-06-26,On vehicle for delivery,,Out for delivery,Riverton
+929879116746,5621005418,PO8588206,2026-06-27,Delivered,Warehouse,Delivered,Georgetown
+395519333849,5000523307,PO0173800,2026-08-07,Shipment information sent to carrier,,Label created,Clinton
+902503111209,5744634309,PO5078134,2026-10-07,Shipment information sent to carrier,,Label created,Riverton
+902503111209,5744634309,PO5078134,2026-10-09,Picked up,,Picked up,Salem
+902503111209,5744634309,PO5078134,2026-10-10,In transit,,In transit,Georgetown
+902503111209,5744634309,PO5078134,2026-10-11,On vehicle for delivery,,Out for delivery,Riverton
+902503111209,5744634309,PO5078134,2026-10-12,Delivered,,Delivered,Madison
+586273661924,5014925014,PO8648015,2026-09-30,Shipment information sent to carrier,,Label created,Springfield
+586273661924,5014925014,PO8648015,2026-10-02,Picked up,,Picked up,Clinton
+586273661924,5014925014,PO8648015,2026-10-03,In transit,,In transit,Salem
+586273661924,5014925014,PO8648015,2026-10-05,On vehicle for delivery,,Out for delivery,Ashland
+586273661924,5014925014,PO8648015,2026-10-07,Delivered,,Delivered,Salem
+157718608253,5480376636,PO8155637,2026-05-24,Shipment information sent to carrier,,Label created,Salem
+157718608253,5480376636,PO8155637,2026-05-26,Picked up,,Picked up,Springfield
+157718608253,5480376636,PO8155637,2026-05-27,In transit,,In transit,Riverton
+344177381566,5404419595,PO1410885,2026-06-17,Shipment information sent to carrier,,Label created,Fairview
+344177381566,5404419595,PO1410885,2026-06-19,Picked up,,Picked up,Salem
+344177381566,5404419595,PO1410885,2026-06-20,In transit,,In transit,Clinton
+415681006034,5692997341,PO1053145,2026-05-17,Shipment information sent to carrier,,Label created,Springfield
+415681006034,5692997341,PO1053145,2026-05-18,Picked up,,Picked up,Ashland
+415681006034,5692997341,PO1053145,2026-05-20,In transit,,In transit,Ashland
+103438879808,5682883086,PO2668292,2026-08-09,Shipment information sent to carrier,,Label created,Salem
+103438879808,5682883086,PO2668292,2026-08-10,Picked up,,Picked up,Springfield
+103438879808,5682883086,PO2668292,2026-08-11,In transit,,In transit,Springfield
+103438879808,5682883086,PO2668292,2026-08-12,On vehicle for delivery,,Out for delivery,Springfield
+103438879808,5682883086,PO2668292,2026-08-13,Delivered,,Delivered,Riverton
+789584310901,5621223731,PO3202554,2026-07-16,Shipment information sent to carrier,,Label created,Springfield
+563652285978,5891401658,PO7339735,2026-07-21,Shipment information sent to carrier,,Label created,Ashland
+563652285978,5891401658,PO7339735,2026-07-22,Picked up,,Picked up,Fairview
+563652285978,5891401658,PO7339735,2026-07-24,In transit,,In transit,Madison
+563652285978,5891401658,PO7339735,2026-07-25,On vehicle for delivery,,Out for delivery,Springfield
+563652285978,5891401658,PO7339735,2026-07-26,Delivered,,Delivered,Riverton
+426216830838,5402973724,PO9269701,2026-03-10,Shipment information sent to carrier,,Label created,Riverton
+426216830838,5402973724,PO9269701,2026-03-12,Picked up,,Picked up,Salem
+426216830838,5402973724,PO9269701,2026-03-14,In transit,,In transit,Georgetown
+426216830838,5402973724,PO9269701,2026-03-15,On vehicle for delivery,,Out for delivery,Fairview
+426216830838,5402973724,PO9269701,2026-03-17,Delivered,,Delivered,Madison
+695250713619,5611883553,PO7185728,2026-04-18,Shipment information sent to carrier,,Label created,Clinton
+695250713619,5611883553,PO7185728,2026-04-19,Picked up,,Picked up,Salem
+695250713619,5611883553,PO7185728,2026-04-21,In transit,,In transit,Fairview
+695250713619,5611883553,PO7185728,2026-04-23,On vehicle for delivery,,Out for delivery,Springfield
+695250713619,5611883553,PO7185728,2026-04-25,Delivered,,Delivered,Salem
+821744418633,5340168124,PO0273045,2026-07-29,Shipment information sent to carrier,,Label created,Georgetown
+821744418633,5340168124,PO0273045,2026-07-31,Picked up,,Picked up,Riverton
+821744418633,5340168124,PO0273045,2026-08-02,In transit,,In transit,Ashland
+727893578409,5582931091,PO1183914,2026-05-16,Shipment information sent to carrier,,Label created,Riverton
+727893578409,5582931091,PO1183914,2026-05-17,Picked up,,Picked up,Riverton
+727893578409,5582931091,PO1183914,2026-05-19,In transit,Carrier,In transit,Springfield
+894736853436,5094666542,PO8557497,2026-02-22,Shipment information sent to carrier,,Label created,Madison
+101357089470,5972940722,PO8567560,2026-09-16,Shipment information sent to carrier,,Label created,Fairview
+101357089470,5972940722,PO8567560,2026-09-18,Picked up,,Picked up,Riverton
+101357089470,5972940722,PO8567560,2026-09-19,In transit,,In transit,Riverton
+101357089470,5972940722,PO8567560,2026-09-20,On vehicle for delivery,,Out for delivery,Clinton
+101357089470,5972940722,PO8567560,2026-09-21,Delivered,,Delivered,Georgetown

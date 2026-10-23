@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Returns Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "180965a6-2cea-4ed0-8111-9bfbfaa2d0f4"
+  }
+}

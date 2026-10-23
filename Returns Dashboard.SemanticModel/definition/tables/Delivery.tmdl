@@ -1,0 +1,1493 @@
+/// Field return order lines with delivery details. One row per order line; the calculated columns classify each open line and pick the next action. Synthetic demo data.
+table Delivery
+	lineageTag: 610888c8-df4f-40da-a461-940618bfc49f
+
+	measure 'Open Returns' = COALESCE(CALCULATE(COUNTROWS(Delivery), Delivery[is_in_scope] = TRUE()), 0)
+		formatString: #,0
+		displayFolder: Returns KPIs
+		lineageTag: 60c75281-4f59-4986-bff6-ba94d2463ada
+
+	measure 'Delivery-backed Open Returns' = COALESCE(CALCULATE(COUNTROWS(Delivery), Delivery[is_delivery_backed] = TRUE(), Delivery[is_in_scope] = TRUE()), 0)
+		formatString: #,0
+		displayFolder: Returns KPIs
+		lineageTag: 7c7d4d8c-e655-4272-b6b2-430a690357f1
+
+	measure 'Expired Items' = COALESCE(CALCULATE(COUNTROWS(Delivery), Delivery[expiry_status] = "EXPIRED", Delivery[is_in_scope] = TRUE()), 0)
+		formatString: #,0
+		displayFolder: Returns KPIs
+		lineageTag: 967a0ec9-1810-499d-a98c-d6ad9b5dff91
+
+	measure 'Aging Threshold Days' = 1
+		formatString: 0
+		displayFolder: Returns KPIs
+		lineageTag: 33d2f3cf-005d-4634-b50c-6fa0031dcb5d
+
+	measure 'Over Threshold' =
+			VAR thr = [Aging Threshold Days]
+			RETURN COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && Delivery[aging_days] > thr)), 0)
+		formatString: #,0
+		displayFolder: Returns KPIs
+		lineageTag: b05bbde8-ab98-4514-be0f-93488ccb8a52
+
+	measure 'Oldest Item (days)' = CALCULATE(MAX(Delivery[aging_days]), Delivery[is_in_scope] = TRUE())
+		formatString: #,0
+		displayFolder: Aging
+		lineageTag: d0c38b75-c79d-404c-b135-6f17e0326fc8
+
+	measure 'Avg Aging Days' = CALCULATE(AVERAGE(Delivery[aging_days]), Delivery[is_in_scope] = TRUE())
+		formatString: 0.0
+		displayFolder: Aging
+		lineageTag: 3aabb993-8431-49db-8932-eb4739ec3121
+
+	measure 'Bucket % of Open' = DIVIDE([Open Returns], CALCULATE([Open Returns], REMOVEFILTERS(Delivery[aging_bucket], Delivery[aging_bucket_order])))
+		formatString: 0.0%
+		displayFolder: Aging
+		lineageTag: 8f684ac2-ade0-43d4-94b6-a02101889842
+
+	measure 'Aging As Of' = MAX(Delivery[aging_asof])
+		formatString: Long Date
+		displayFolder: Aging
+		lineageTag: 19cf837c-0c0a-4236-94da-aeb5badc94f0
+
+	measure 'Aging Data Age (days)' = DATEDIFF([Aging As Of], TODAY(), DAY)
+		formatString: 0
+		displayFolder: Aging
+		lineageTag: 7ce9d527-0180-4624-91da-53bb4346ba1b
+
+	measure 'Expiring in 30 Days' = COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && Delivery[expiry_days] > 0 && Delivery[expiry_days] <= 30)), 0)
+		formatString: #,0
+		displayFolder: Expiry
+		lineageTag: 4f229a69-a275-4c45-b91d-9ca81e61adf4
+
+	measure 'Expiring in 31-60 Days' = COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && Delivery[expiry_days] > 30 && Delivery[expiry_days] <= 60)), 0)
+		formatString: #,0
+		displayFolder: Expiry
+		lineageTag: cf093de5-6df2-4ed8-b3ce-5a2ac8bf1d9a
+
+	measure 'Expiring in 61-90 Days' = COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && Delivery[expiry_days] > 60 && Delivery[expiry_days] <= 90)), 0)
+		formatString: #,0
+		displayFolder: Expiry
+		lineageTag: 83fb90bb-5c5d-4a3d-a64c-37d944709fc6
+
+	measure 'Open Returns (All Time)' = COALESCE(CALCULATE(COUNTROWS(Delivery), Delivery[computed_order_status] = "Open"), 0)
+		formatString: #,0
+		displayFolder: Returns KPIs
+		lineageTag: c49c0a9f-7986-403a-8499-5cdb4d6ce7c0
+
+	/// Orders logged on/after this date are in scope. Must equal the literal in Delivery[is_in_scope] - change both together.
+	measure 'Report Start Date' = DATE(2026, 1, 1)
+		formatString: Long Date
+		displayFolder: Returns KPIs
+		lineageTag: 35b969ac-e8b3-48b5-a63f-cb618fd28725
+
+	measure 'Exception Count' = COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && NOT ISBLANK(Delivery[exception_issue]))), 0)
+		formatString: #,0
+		displayFolder: Exceptions
+		lineageTag: 700a45ac-568f-460e-865f-0225a36d24da
+
+	measure 'Critical Exceptions' = COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && Delivery[exception_severity] = "CRITICAL")), 0)
+		formatString: #,0
+		displayFolder: Exceptions
+		lineageTag: 61af76ff-6000-4c94-828a-f98f35679666
+
+	measure 'High Exceptions' = COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && Delivery[exception_severity] = "HIGH")), 0)
+		formatString: #,0
+		displayFolder: Exceptions
+		lineageTag: 18743fd9-6427-4774-a7e1-b444eef4853c
+
+	measure 'Medium Exceptions' = COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && Delivery[exception_severity] = "MEDIUM")), 0)
+		formatString: #,0
+		displayFolder: Exceptions
+		lineageTag: e1bfa41f-bc21-4d29-a041-7c343db48803
+
+	measure 'Top Exception Priority' = CALCULATE(MAX(Delivery[exception_priority]), Delivery[is_in_scope] = TRUE())
+		formatString: 0
+		displayFolder: Exceptions
+		lineageTag: dd7640e4-a57d-47c0-9cf6-b6c17b96c731
+
+	measure 'Inventory Queue Items' = COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && Delivery[action_owner] = "Inventory")), 0)
+		formatString: #,0
+		displayFolder: Exceptions
+		lineageTag: d246aa97-7ce3-4efb-abd1-49a0a408852c
+
+	measure 'Tracking %' =
+			VAR n = [Open Returns]
+			RETURN IF(n = 0, BLANK(), DIVIDE(COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && NOT(ISBLANK(Delivery[tracking])) && TRIM(Delivery[tracking]) <> "")), 0), n) * 100)
+		formatString: 0.0
+		displayFolder: Inventory Scoring
+		lineageTag: dcebe78c-f71c-4675-a04a-098879552469
+
+	measure 'Over Threshold %' =
+			VAR n = [Open Returns]
+			RETURN IF(n = 0, BLANK(), DIVIDE([Over Threshold], n) * 100)
+		formatString: 0.0
+		displayFolder: Inventory Scoring
+		lineageTag: 574f4e01-4615-46b8-abe6-52b630491ead
+
+	measure 'Expired %' =
+			VAR n = [Open Returns]
+			RETURN IF(n = 0, BLANK(), DIVIDE([Expired Items], n) * 100)
+		formatString: 0.0
+		displayFolder: Inventory Scoring
+		lineageTag: 26ac9361-f1d8-4c6b-a758-65a1f3abe881
+
+	measure 'Weighted Exceptions' = [Critical Exceptions] * 3 + [High Exceptions] * 2 + [Medium Exceptions]
+		formatString: #,0
+		displayFolder: Inventory Scoring
+		lineageTag: 628045b4-78ac-472d-9c54-009bec90879c
+
+	measure 'Weighted Exception Rate' =
+			VAR n = [Open Returns]
+			RETURN IF(n = 0, BLANK(), DIVIDE([Weighted Exceptions], n) * 100)
+		formatString: 0.0
+		displayFolder: Inventory Scoring
+		lineageTag: e10ff8e6-7586-45f7-ae7f-38f93e7807a4
+
+	measure 'Aging Score' = IF([Open Returns] = 0, BLANK(), MAX(0, 100 - [Avg Aging Days] / MAX([Aging Threshold Days], 1) * 50))
+		formatString: 0.0
+		displayFolder: Inventory Scoring
+		lineageTag: 1be23c3d-17ba-4284-958a-79aa62e4f6b2
+
+	measure 'Tracking Score' = [Tracking %]
+		formatString: 0.0
+		displayFolder: Inventory Scoring
+		lineageTag: 193d3212-d357-4f27-af87-e57cfe3e353b
+
+	measure 'Exception Score' = IF([Open Returns] = 0, BLANK(), MAX(0, 100 - [Weighted Exception Rate] * 2))
+		formatString: 0.0
+		displayFolder: Inventory Scoring
+		lineageTag: 42238351-c4ce-49ea-a9e0-3f81a037f0fc
+
+	measure 'Overdue Score' = IF([Open Returns] = 0, BLANK(), MAX(0, 100 - [Over Threshold %] * 2))
+		formatString: 0.0
+		displayFolder: Inventory Scoring
+		lineageTag: 79a07d72-25ba-452a-b97b-1f57719712d6
+
+	measure 'Expiry Score' = IF([Open Returns] = 0, BLANK(), MAX(0, 100 - [Expired %] * 3))
+		formatString: 0.0
+		displayFolder: Inventory Scoring
+		lineageTag: ec8a400e-831d-46b6-ba41-009af166f8a2
+
+	measure 'Inventory Score' =
+			IF([Open Returns] = 0, BLANK(),
+			    ROUND([Aging Score] * 0.30 + [Tracking Score] * 0.20 + [Exception Score] * 0.25 + [Overdue Score] * 0.15 + [Expiry Score] * 0.10, 1))
+		formatString: 0.0
+		displayFolder: Inventory Scoring
+		lineageTag: 901ea133-c785-4597-a260-4dcb2c1a5c85
+
+	measure 'To Create or Drop Delivery' = COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && (LEFT(Delivery[action_group], 1) = "1" || LEFT(Delivery[action_group], 1) = "2"))), 0)
+		formatString: #,0
+		displayFolder: Inventory Actions
+		lineageTag: 971d6c42-b092-437c-bf30-ff442a355a12
+
+	measure 'To Review or Chase' = COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && (LEFT(Delivery[action_group], 1) = "3" || LEFT(Delivery[action_group], 1) = "4" || LEFT(Delivery[action_group], 1) = "5" || LEFT(Delivery[action_group], 1) = "6"))), 0)
+		formatString: #,0
+		displayFolder: Inventory Actions
+		lineageTag: 9dc40ac1-d4bc-4300-83da-8a208180e302
+
+	measure 'Ready to Close' = COALESCE(COUNTROWS(FILTER(Delivery, Delivery[is_in_scope] = TRUE() && LEFT(Delivery[action_group], 1) = "7")), 0)
+		formatString: #,0
+		displayFolder: Inventory Actions
+		lineageTag: 0bfac1aa-5e47-422f-8978-1e2609c5deeb
+
+	measure 'Returns Raised' = COUNTROWS(Delivery)
+		formatString: #,0
+		displayFolder: Inventory Monthly
+		lineageTag: ca680ffb-91fe-42cb-af30-785eb9b37141
+
+	measure 'Closed Without Delivery' = COALESCE(COUNTROWS(FILTER(Delivery, NOT(Delivery[date] > DATE(1900,1,2)) && Delivery[computed_order_status] = "Closed")), 0)
+		formatString: #,0
+		displayFolder: Inventory Monthly
+		lineageTag: fc80be1a-e9d4-4f18-8897-af3579b7560e
+
+	measure 'Still Open (Cohort)' = COALESCE(COUNTROWS(FILTER(Delivery, Delivery[computed_order_status] = "Open")), 0)
+		formatString: #,0
+		displayFolder: Inventory Monthly
+		lineageTag: 65acc9e9-024b-4d40-ae1d-6a7c02471ff5
+
+	measure 'Avg Days to Delivery' = AVERAGEX(FILTER(Delivery, Delivery[date] > DATE(1900,1,2)), DATEDIFF(Delivery[order_date], Delivery[date], DAY))
+		formatString: 0.0
+		displayFolder: Inventory Monthly
+		lineageTag: 33ac9b78-b0a0-4bd2-a85e-757baf6c14d4
+
+	measure 'Created Within Threshold %' = DIVIDE(COUNTROWS(FILTER(Delivery, Delivery[date] > DATE(1900,1,2) && DATEDIFF(Delivery[order_date], Delivery[date], DAY) <= [Aging Threshold Days])), [Returns Raised] - [Closed Without Delivery])
+		formatString: 0.0%
+		displayFolder: Inventory Monthly
+		lineageTag: 14c2b565-f7d5-4c93-80cf-07c6897a2fa1
+
+	column order_status
+		dataType: string
+		lineageTag: 6f2bb8ba-aba4-447e-acf2-8f0f1580f796
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: dd mmm yyyy
+		lineageTag: 63f38a4e-c204-4eb2-a03e-c8cd5f09ef35
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+	column so_overall_delivery_status
+		dataType: string
+		lineageTag: 2861b40f-b19a-4d58-a72a-52da54cd3bc4
+		summarizeBy: none
+		sourceColumn: so_overall_delivery_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: dateTime
+		formatString: dd mmm yyyy
+		lineageTag: 4b7e8081-98bf-49ce-b750-f55ba7243acc
+		summarizeBy: none
+		sourceColumn: order_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_organization
+		dataType: string
+		lineageTag: fd55b046-1621-411b-a683-7b277b2f73c3
+		summarizeBy: none
+		sourceColumn: sales_organization
+
+		annotation SummarizationSetBy = Automatic
+
+	column branch
+		dataType: string
+		lineageTag: 5f4615ad-9ad3-416b-892a-77eaca940edc
+		summarizeBy: none
+		sourceColumn: branch
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_division
+		dataType: string
+		lineageTag: a7c34fe6-e73e-4141-bdb2-ecda14b68bb2
+		summarizeBy: none
+		sourceColumn: product_division
+
+		annotation SummarizationSetBy = Automatic
+
+	column po_type_desc
+		dataType: string
+		lineageTag: a26e0e79-2b56-4b43-aab2-3e8defe1f0a7
+		summarizeBy: none
+		sourceColumn: po_type_desc
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_order
+		dataType: string
+		lineageTag: 828a043b-c36e-4082-978c-6aaa754b1882
+		summarizeBy: none
+		sourceColumn: sales_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column so_line
+		dataType: double
+		formatString: 0
+		lineageTag: 474b6d3a-5450-4c82-966f-428a80c892b3
+		summarizeBy: none
+		sourceColumn: so_line
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column sales_order_type_desc
+		dataType: string
+		lineageTag: 30c15f09-bbd9-4ccf-9cca-7a633c063b5f
+		summarizeBy: none
+		sourceColumn: sales_order_type_desc
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_no
+		dataType: string
+		lineageTag: 0a1ec68c-bd6a-4cff-b90e-109b399e692e
+		summarizeBy: none
+		sourceColumn: delivery_no
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_line
+		dataType: double
+		formatString: 0
+		lineageTag: 056ae9a2-08bc-4f9f-bc3d-5f012893066a
+		summarizeBy: none
+		sourceColumn: delivery_line
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column expiry
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cf9e545a-29e6-49dd-8dfb-e4ed5407e519
+		summarizeBy: none
+		sourceColumn: expiry
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column batch
+		dataType: string
+		lineageTag: dacdf413-cf29-4e3a-b14f-6181dd1f0a80
+		summarizeBy: none
+		sourceColumn: batch
+
+		annotation SummarizationSetBy = Automatic
+
+	column serial
+		dataType: string
+		lineageTag: 68d5855d-8741-4999-a285-b1bf8d1fa55c
+		summarizeBy: none
+		sourceColumn: serial
+
+		annotation SummarizationSetBy = Automatic
+
+	column po_no
+		dataType: string
+		lineageTag: 3905f4a9-f31c-4826-b74b-132a9676304c
+		summarizeBy: none
+		sourceColumn: po_no
+
+		annotation SummarizationSetBy = Automatic
+
+	column shipping_plant
+		dataType: string
+		lineageTag: 9f4e3c42-dc43-410c-88eb-850d514b1b8c
+		summarizeBy: none
+		sourceColumn: shipping_plant
+
+		annotation SummarizationSetBy = Automatic
+
+	column ship_to_no
+		dataType: string
+		lineageTag: 0dbaf804-86ac-49bc-aad3-8b7aaa04f745
+		summarizeBy: none
+		sourceColumn: ship_to_no
+
+		annotation SummarizationSetBy = Automatic
+
+	column ship_to
+		dataType: string
+		lineageTag: 8f82ec43-f184-440d-a035-f59424fddf50
+		summarizeBy: none
+		sourceColumn: ship_to
+
+		annotation SummarizationSetBy = Automatic
+
+	column sold_to
+		dataType: string
+		lineageTag: 8c873ce1-ef74-4d17-b581-82f0215e7bd9
+		summarizeBy: none
+		sourceColumn: sold_to
+
+		annotation SummarizationSetBy = Automatic
+
+	column sku
+		dataType: string
+		lineageTag: a4721631-0af0-4fb3-8b1f-ff1382aed9ec
+		summarizeBy: none
+		sourceColumn: sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 35a7a5a7-b6ad-4318-8b90-61844c01f807
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_a
+		dataType: string
+		lineageTag: f5d19792-89c9-443c-95c6-910e31098740
+		summarizeBy: none
+		sourceColumn: area_a
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_b
+		dataType: string
+		lineageTag: 7d6fa00d-f899-48f7-8caa-a617ae4dc964
+		summarizeBy: none
+		sourceColumn: area_b
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_a
+		dataType: string
+		lineageTag: a772c133-b225-4556-87d6-9ddc07ef426e
+		summarizeBy: none
+		sourceColumn: region_a
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_b
+		dataType: string
+		lineageTag: bbc3f5b8-0c61-4a80-aa85-2ff198748095
+		summarizeBy: none
+		sourceColumn: region_b
+
+		annotation SummarizationSetBy = Automatic
+
+	column territory_a
+		dataType: string
+		lineageTag: 8f2c2b33-1953-461f-bd96-cf2d036f2117
+		summarizeBy: none
+		sourceColumn: territory_a
+
+		annotation SummarizationSetBy = Automatic
+
+	column territory_b
+		dataType: string
+		lineageTag: 87f89d3f-6e4f-41f9-9315-7d1844f058b4
+		summarizeBy: none
+		sourceColumn: territory_b
+
+		annotation SummarizationSetBy = Automatic
+
+	column tracking
+		dataType: string
+		lineageTag: fd565698-d8cf-46c6-ab12-bf14a32610ce
+		summarizeBy: none
+		sourceColumn: tracking
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_id
+		dataType: string
+		lineageTag: 8d84fcc3-638c-4297-b5f2-594da53d36d7
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column territory_id
+		dataType: string
+		lineageTag: 9daa9da8-22e8-4b67-830d-9654e3d31cf0
+		summarizeBy: none
+		sourceColumn: territory_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column computed_order_status
+		dataType: string
+		lineageTag: d7aededa-ce37-48af-92c2-bfe36eca2336
+		summarizeBy: none
+		sourceColumn: computed_order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column plant_code
+		dataType: string
+		lineageTag: e5499e80-0bf3-48a6-a2cf-6b63ccb86f5c
+		summarizeBy: none
+		sourceColumn: plant_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column bu
+		dataType: string
+		lineageTag: 5a51b32c-617c-419d-845b-d9ca2783d717
+		summarizeBy: none
+		sourceColumn: bu
+
+		annotation SummarizationSetBy = Automatic
+
+	column bu_routing_status
+		dataType: string
+		lineageTag: 36218db7-8e1a-49fd-b773-33e222c93c50
+		summarizeBy: none
+		sourceColumn: bu_routing_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: db3a98f9-047b-4b4a-b3d5-769b63cab928
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolved_expiry
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4e88cfd2-1013-4191-8ca2-7c74870cf307
+		summarizeBy: none
+		sourceColumn: resolved_expiry
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column owner_record_idx =
+			VAR buKey = UPPER(TRIM(Delivery[bu]))
+			VAR regionRaw = UPPER(TRIM(Delivery[region_id]))
+			VAR terrRaw = UPPER(TRIM(Delivery[territory_id]))
+			VAR shipTo = UPPER(TRIM(Delivery[ship_to_no]))
+			VAR soldTo = UPPER(TRIM(Delivery[sold_to]))
+			VAR regionKey = IF(buKey <> "" && regionRaw <> "", buKey & "|" & regionRaw)
+			VAR shipKey = IF(buKey <> "" && shipTo <> "", buKey & "|" & shipTo)
+			VAR soldKey = IF(buKey <> "" && soldTo <> "", buKey & "|" & soldTo)
+			VAR byRegion = IF(ISBLANK(regionKey), BLANK(), LOOKUPVALUE(OwnerAlignment[src_idx], OwnerAlignment[region_lookup_key], regionKey))
+			VAR byTerr = IF(terrRaw = "", BLANK(), LOOKUPVALUE(OwnerAlignment[src_idx], OwnerAlignment[territory_lookup_key], terrRaw))
+			VAR byShip = IF(ISBLANK(shipKey), BLANK(), LOOKUPVALUE(OwnerAlignment[src_idx], OwnerAlignment[acct_lookup_key], shipKey))
+			VAR bySold = IF(ISBLANK(soldKey), BLANK(), LOOKUPVALUE(OwnerAlignment[src_idx], OwnerAlignment[acct_lookup_key], soldKey))
+			RETURN IF(buKey = "", BLANK(), COALESCE(byRegion, byTerr, byShip, bySold))
+		dataType: int64
+		formatString: 0
+		lineageTag: 16d039d2-bc8e-4001-92ee-e627ac3c4c47
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column owner_tier =
+			VAR buKey = UPPER(TRIM(Delivery[bu]))
+			VAR regionRaw = UPPER(TRIM(Delivery[region_id]))
+			VAR terrRaw = UPPER(TRIM(Delivery[territory_id]))
+			VAR shipTo = UPPER(TRIM(Delivery[ship_to_no]))
+			VAR soldTo = UPPER(TRIM(Delivery[sold_to]))
+			VAR regionKey = IF(buKey <> "" && regionRaw <> "", buKey & "|" & regionRaw)
+			VAR shipKey = IF(buKey <> "" && shipTo <> "", buKey & "|" & shipTo)
+			VAR soldKey = IF(buKey <> "" && soldTo <> "", buKey & "|" & soldTo)
+			VAR byRegion = IF(ISBLANK(regionKey), BLANK(), LOOKUPVALUE(OwnerAlignment[src_idx], OwnerAlignment[region_lookup_key], regionKey))
+			VAR byTerr = IF(terrRaw = "", BLANK(), LOOKUPVALUE(OwnerAlignment[src_idx], OwnerAlignment[territory_lookup_key], terrRaw))
+			VAR byShip = IF(ISBLANK(shipKey), BLANK(), LOOKUPVALUE(OwnerAlignment[src_idx], OwnerAlignment[acct_lookup_key], shipKey))
+			VAR bySold = IF(ISBLANK(soldKey), BLANK(), LOOKUPVALUE(OwnerAlignment[src_idx], OwnerAlignment[acct_lookup_key], soldKey))
+			RETURN
+			    IF(buKey = "", "default_no_bu",
+			    IF(NOT ISBLANK(byRegion), "region",
+			    IF(NOT ISBLANK(byTerr), "territory",
+			    IF(NOT ISBLANK(byShip), "account_ship_to",
+			    IF(NOT ISBLANK(bySold), "account_sold_to", "default_no_match")))))
+		dataType: string
+		lineageTag: 55a60e9b-2598-4f98-a943-85908847e7e4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column inventory_owner =
+			VAR idx = Delivery[owner_record_idx]
+			VAR useRep = LEFT(UPPER(TRIM(Delivery[ship_to_no])), 5) = "80000"
+			VAR rep = IF(ISBLANK(idx), BLANK(), LOOKUPVALUE(OwnerAlignment[owner_rep], OwnerAlignment[src_idx], idx))
+			VAR consign = IF(ISBLANK(idx), BLANK(), LOOKUPVALUE(OwnerAlignment[owner_consign], OwnerAlignment[src_idx], idx))
+			VAR picked = UPPER(TRIM(IF(useRep, rep, consign)))
+			RETURN IF(picked = "", "DEFAULT OWNER", picked)
+		dataType: string
+		lineageTag: 2390cd12-c650-4e6b-8928-55655f0e4e84
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column mv_pick =
+			VAR isOpen = Delivery[computed_order_status] = "Open"
+			VAR dn = Delivery[delivery_no]
+			VAR sk = Delivery[sku]
+			VAR bt = Delivery[batch]
+			VAR ok = isOpen && NOT ISBLANK(dn) && dn <> "" && NOT ISBLANK(sk) && sk <> ""
+			RETURN
+			    IF(NOT isOpen, BLANK(),
+			    IF(NOT ok, "none||",
+			        VAR hasBatch = NOT ISBLANK(bt) && bt <> ""
+			        VAR candRefSku = FILTER(Movement, Movement[reference] = dn && Movement[sku] = sk)
+			        VAR candExact = FILTER(candRefSku, Movement[batch] = bt)
+			        VAR useExact = hasBatch && COUNTROWS(candExact) > 0
+			        VAR nAny = COUNTROWS(candRefSku)
+			        VAR maxB = IF(useExact, MAXX(FILTER(candExact, Movement[movement_type] = "WHR"), Movement[posting_date]), MAXX(FILTER(candRefSku, Movement[movement_type] = "WHR"), Movement[posting_date]))
+			        VAR maxD = IF(useExact, MAXX(FILTER(candExact, Movement[movement_type] = "RET"), Movement[posting_date]), MAXX(FILTER(candRefSku, Movement[movement_type] = "RET"), Movement[posting_date]))
+			        VAR pickType = IF(NOT ISBLANK(maxD) && (ISBLANK(maxB) || maxD >= maxB), "RET", IF(NOT ISBLANK(maxB), "WHR", BLANK()))
+			        VAR pickDate = IF(pickType = "RET", maxD, maxB)
+			        VAR basis = IF(useExact, "Reference+Material+Batch", IF(nAny > 0, IF(hasBatch, "Reference+Material (batch-fallback)", "Reference+Material"), BLANK()))
+			        RETURN IF(ISBLANK(basis) || ISBLANK(pickType), "none||", basis & "|" & pickType & "|" & FORMAT(pickDate, "yyyy-MM-dd"))
+			    ))
+		dataType: string
+		isHidden
+		lineageTag: 67ef21f9-8650-4504-a0b4-37d3fd00904d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column mv_type =
+			VAR p = Delivery[mv_pick]
+			VAR ty = IF(ISBLANK(p), "", PATHITEM(p, 2))
+			RETURN IF(ty = "", BLANK(), ty)
+		dataType: string
+		lineageTag: 2db413e3-1da6-4ecb-be5d-ea0546e36124
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column mv_label = SWITCH(Delivery[mv_type], "WHR", "Movement by Distribution Center", "RET", "Delivery Dropped", BLANK())
+		dataType: string
+		lineageTag: e83ecc9d-66de-420d-8ddd-961e40f6dc58
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column mv_date =
+			VAR p = Delivery[mv_pick]
+			VAR s = IF(ISBLANK(p), "", PATHITEM(p, 3))
+			RETURN IF(s = "", BLANK(), DATE(VALUE(LEFT(s, 4)), VALUE(MID(s, 6, 2)), VALUE(RIGHT(s, 2))))
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1fc729e0-6fda-4edd-8c48-5861904c7ec2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column mv_match_basis =
+			VAR p = Delivery[mv_pick]
+			VAR b = IF(ISBLANK(p), "", PATHITEM(p, 1))
+			RETURN IF(b = "" || b = "none", BLANK(), b)
+		dataType: string
+		lineageTag: 066e4779-620c-460a-9e7c-20d246906d4e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column mv_validation_key =
+			VAR isOpen = Delivery[computed_order_status] = "Open"
+			VAR dn = Delivery[delivery_no]
+			VAR sk = Delivery[sku]
+			VAR so = Delivery[sales_order]
+			VAR hasDn = NOT ISBLANK(dn) && dn <> "" && NOT ISBLANK(sk) && sk <> ""
+			VAR hasSo = NOT ISBLANK(so) && so <> "" && NOT ISBLANK(sk) && sk <> ""
+			RETURN
+			    IF(NOT isOpen, BLANK(),
+			    IF(NOT hasDn && NOT hasSo, "",
+			        VAR rawD = TRIM(dn)
+			        VAR rawO = TRIM(so)
+			        VAR rawS = TRIM(sk)
+			        VAR rawB = TRIM(COALESCE(Delivery[batch], ""))
+			        VAR nD = IF(IFERROR(rawD = FORMAT(VALUE(rawD), REPT("0", LEN(rawD))), FALSE), FORMAT(VALUE(rawD), "0"), rawD)
+			        VAR nO = IF(IFERROR(rawO = FORMAT(VALUE(rawO), REPT("0", LEN(rawO))), FALSE), FORMAT(VALUE(rawO), "0"), rawO)
+			        VAR nS = IF(IFERROR(rawS = FORMAT(VALUE(rawS), REPT("0", LEN(rawS))), FALSE), FORMAT(VALUE(rawS), "0"), rawS)
+			        VAR nB = IF(IFERROR(rawB = FORMAT(VALUE(rawB), REPT("0", LEN(rawB))), FALSE), FORMAT(VALUE(rawB), "0"), rawB)
+			        RETURN IF(hasDn, nD & "|" & nS & "|" & nB, "SO:" & nO & "|" & nS & "|" & nB)
+			    ))
+		dataType: string
+		lineageTag: 8959d16c-85a2-4289-bc18-fd6aa22261b3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column mv_status =
+			VAR isOpen = Delivery[computed_order_status] = "Open"
+			VAR t = Delivery[mv_type]
+			RETURN
+			    IF(NOT isOpen, BLANK(),
+			    IF(ISBLANK(t), "No Movement",
+			    IF(t = "WHR", "Inbounded",
+			        VAR dn = Delivery[delivery_no]
+			        VAR sk = Delivery[sku]
+			        VAR bt = Delivery[batch]
+			        VAR hasBatch = NOT ISBLANK(bt) && bt <> ""
+			        VAR hasWhr = IF(hasBatch, COUNTROWS(FILTER(Movement, Movement[reference] = dn && Movement[sku] = sk && Movement[batch] = bt && Movement[movement_type] = "WHR")) > 0, COUNTROWS(FILTER(Movement, Movement[reference] = dn && Movement[sku] = sk && Movement[movement_type] = "WHR")) > 0)
+			        RETURN IF(hasWhr, "Dropped-After-Inbound", "Dropped-Never-Inbounded")
+			    )))
+		dataType: string
+		lineageTag: 54f74b1e-0fe2-4040-bd8f-54e71faa3901
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column carrier_status =
+			VAR isOpen = Delivery[computed_order_status] = "Open"
+			VAR raw = Delivery[tracking]
+			RETURN
+			    IF(NOT isOpen, BLANK(),
+			    IF(ISBLANK(raw) || TRIM(raw) = "", "",
+			        VAR s0 = SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(raw, ",", " "), ";", " "), "/", " "), "|", " "), "-", " "), UNICHAR(9), " "), UNICHAR(10), " "), UNICHAR(13), " ")
+			        VAR pth = SUBSTITUTE(TRIM(s0), " ", "|")
+			        VAR ids = ADDCOLUMNS(GENERATESERIES(1, PATHLENGTH(pth)), "id", PATHITEM(pth, [Value]))
+			        VAR sts = ADDCOLUMNS(ids, "st", LOOKUPVALUE(CarrierStatus[status_text], CarrierStatus[latest_key], [id]))
+			        RETURN COALESCE(CONCATENATEX(FILTER(DISTINCT(SELECTCOLUMNS(sts, "s", [st])), NOT ISBLANK([s]) && [s] <> ""), [s], ", ", [s], ASC), "")
+			    ))
+		dataType: string
+		lineageTag: 33bb902a-5355-4307-b27d-baaea23048d4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column carrier_label_count =
+			VAR isOpen = Delivery[computed_order_status] = "Open"
+			VAR so = TRIM(Delivery[sales_order])
+			RETURN
+			    IF(NOT isOpen, BLANK(),
+			    IF(so = "", 0,
+			        COUNTROWS(FILTER(CarrierStatus, CarrierStatus[is_latest] = TRUE() && CarrierStatus[so_key] = so))
+			    ))
+		dataType: int64
+		formatString: 0
+		lineageTag: 78b7fd5e-6e9d-49b1-b4a7-7c3eacc3a2ce
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column carrier_order_status =
+			VAR isOpen = Delivery[computed_order_status] = "Open"
+			VAR so = TRIM(Delivery[sales_order])
+			RETURN
+			    IF(NOT isOpen, BLANK(),
+			    IF(so = "", "",
+			        COALESCE(CONCATENATEX(FILTER(DISTINCT(SELECTCOLUMNS(FILTER(CarrierStatus, CarrierStatus[is_latest] = TRUE() && CarrierStatus[so_key] = so), "s", CarrierStatus[status_text])), NOT ISBLANK([s]) && [s] <> ""), [s], ", ", [s], ASC), "")
+			    ))
+		dataType: string
+		lineageTag: f1cfc71c-3e28-4beb-8bf7-8809b13574d0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column carrier_conflict =
+			VAR isOpen = Delivery[computed_order_status] = "Open"
+			RETURN
+			    IF(NOT isOpen, BLANK(),
+			    IF(SEARCH("DELIVER", Delivery[carrier_status], 1, 0) > 0, "CONFLICT: Carrier DELIVERED but record still open — verify receipt", ""))
+		dataType: string
+		lineageTag: ac9768cd-0a9b-4bbd-b033-b18899d0373c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column aging_date =
+			IF(NOT (Delivery[computed_order_status] = "Open"), BLANK(),
+			    IF(Delivery[order_date] > DATE(1900, 1, 2), Delivery[order_date],
+			    IF(Delivery[date] > DATE(1900, 1, 2), Delivery[date], BLANK())))
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 02dd39c8-87a1-471d-a802-da582e134807
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column aging_days =
+			IF(NOT (Delivery[computed_order_status] = "Open"), BLANK(),
+			    IF(ISBLANK(Delivery[aging_date]), 0, DATEDIFF(Delivery[aging_date], TODAY(), DAY)))
+		dataType: int64
+		formatString: 0
+		lineageTag: e6b254e3-7d8a-4e50-8db2-3a066d939c3d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column aging_bucket_order =
+			VAR d = Delivery[aging_days]
+			RETURN IF(ISBLANK(d), BLANK(), SWITCH(TRUE(), d <= 7, 1, d <= 14, 2, d <= 30, 3, d <= 45, 4, 5))
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 023c0f3b-5da8-4620-a7b3-c807cfb05695
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column aging_bucket = SWITCH(Delivery[aging_bucket_order], 1, "0-7 (Healthy)", 2, "8-14 (Watch)", 3, "15-30 (Follow-up)", 4, "31-45 (Escalation)", 5, "46+ (Management visibility)", BLANK())
+		dataType: string
+		lineageTag: ba5e003f-14e6-4532-afbd-e2c9f5a42319
+		summarizeBy: none
+		sortByColumn: aging_bucket_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column expiry_days =
+			VAR e = IF(Delivery[resolved_expiry] > DATE(1900, 1, 2), Delivery[resolved_expiry], BLANK())
+			RETURN IF(NOT (Delivery[computed_order_status] = "Open") || ISBLANK(e), BLANK(), DATEDIFF(TODAY(), e, DAY))
+		dataType: int64
+		formatString: 0
+		lineageTag: 087d5246-09db-4c76-8c91-822fedcadf21
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column expiry_status =
+			VAR d = Delivery[expiry_days]
+			RETURN
+			    IF(NOT (Delivery[computed_order_status] = "Open"), BLANK(),
+			    IF(ISBLANK(d), "",
+			    IF(d < 0, "EXPIRED",
+			    IF(d <= 30, "30 DAYS",
+			    IF(d <= 60, "60 DAYS",
+			    IF(d <= 90, "90 DAYS", ""))))))
+		dataType: string
+		lineageTag: 6d4241db-9348-42bc-bd14-89871a0e765a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_delivery_backed =
+			IF(NOT (Delivery[computed_order_status] = "Open"), BLANK(),
+			    (NOT ISBLANK(Delivery[delivery_no]) && Delivery[delivery_no] <> "") || UPPER(TRIM(Delivery[so_overall_delivery_status])) = "B")
+		dataType: boolean
+		lineageTag: 8fcfbbe9-9732-426f-81ad-ebddb028e639
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column aging_asof = IF(Delivery[computed_order_status] = "Open", TODAY(), BLANK())
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 862077b8-b6a3-4a7f-b9fd-17a292108e8a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column owner_clean =
+			VAR o = Delivery[inventory_owner]
+			VAR n = SWITCH(TRUE(), RIGHT(o, 5) = "_OPEN", 5, RIGHT(o, 7) = "_CLOSED", 7, RIGHT(o, 5) = "_TEMP", 5, 0)
+			RETURN TRIM(LEFT(o, LEN(o) - n))
+		dataType: string
+		lineageTag: d928b70d-2edc-4430-ac70-6d603d006cda
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_in_scope = Delivery[computed_order_status] = "Open" && Delivery[order_date] >= DATE(2026, 1, 1)
+		dataType: boolean
+		lineageTag: b88d69ab-5a6e-4d14-8842-634a4b0569bf
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column return_type =
+			IF(NOT (Delivery[computed_order_status] = "Open"), BLANK(),
+			    IF(LEFT(TRIM(Delivery[ship_to_no]), 5) = "80000", "Field Associate Return", "Consignment Return"))
+		dataType: string
+		lineageTag: 1932dbdd-2601-4fbc-b666-6940aa44166f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column return_order_qty
+		dataType: double
+		lineageTag: 1e776a89-f6d3-46f4-b74b-a6a2c39d76e4
+		summarizeBy: sum
+		sourceColumn: return_order_qty
+
+		annotation SummarizationSetBy = Automatic
+
+	column cls_blank3 = Delivery[computed_order_status] = "Open" && TRIM(COALESCE(Delivery[branch], "")) = "" && TRIM(COALESCE(Delivery[batch], "")) = "" && TRIM(COALESCE(Delivery[serial], "")) = ""
+		dataType: boolean
+		isHidden
+		lineageTag: 4b6bf0b9-6fa3-4715-be9b-621ad9dbbc75
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column inv_pack =
+			VAR isOpen = Delivery[computed_order_status] = "Open"
+			RETURN
+			    IF(NOT isOpen || Delivery[cls_blank3], BLANK(),
+			        VAR rawS = TRIM(COALESCE(Delivery[sku], ""))
+			        VAR rawB = TRIM(COALESCE(Delivery[batch], ""))
+			        VAR rawC = TRIM(COALESCE(Delivery[ship_to_no], ""))
+			        VAR qs = UPPER(IF(IFERROR(rawS = FORMAT(VALUE(rawS), REPT("0", LEN(rawS))), FALSE), FORMAT(VALUE(rawS), "0"), rawS))
+			        VAR qb = UPPER(IF(IFERROR(rawB = FORMAT(VALUE(rawB), REPT("0", LEN(rawB))), FALSE), FORMAT(VALUE(rawB), "0"), rawB))
+			        VAR qc = UPPER(IF(IFERROR(rawC = FORMAT(VALUE(rawC), REPT("0", LEN(rawC))), FALSE), FORMAT(VALUE(rawC), "0"), rawC))
+			        VAR mv = COALESCE(Delivery[mv_status], "")
+			        RETURN
+			            IF(qs = "", "Unknown (Cockpit Unavailable)|Unknown",
+			                VAR rowsSB = FILTER(Cockpit, Cockpit[ck_active] = TRUE() && Cockpit[ck_sku] = qs && Cockpit[ck_batch] = qb)
+			                VAR hasEx = qc <> "" && COUNTROWS(FILTER(rowsSB, Cockpit[ck_cust] = qc)) > 0
+			                VAR src = FILTER(rowsSB, NOT(hasEx) || Cockpit[ck_cust] = qc)
+			                VAR found = COUNTROWS(src) > 0
+			                VAR hasOther = NOT(hasEx) && COUNTROWS(FILTER(rowsSB, Cockpit[ck_cust] <> qc)) > 0
+			                VAR onh = COALESCE(SUMX(src, Cockpit[qty_on_hand]), 0)
+			                VAR inTr = COALESCE(SUMX(src, Cockpit[qty_in_transit]), 0)
+			                VAR rst = COALESCE(SUMX(src, Cockpit[qty_restricted]), 0)
+			                VAR tot = COALESCE(SUMX(src, Cockpit[qty_total]), 0)
+			                VAR inv0 = IF(NOT(found), "Not in Inventory",
+			                    IF(inTr > 0, "Unresolved Return Dispatch (In-Transit >0)",
+			                    IF(onh > 0 || tot > 0, "Active in Inventory (On-Hand >0)",
+			                    IF(rst > 0, "Restricted Only (Expiry Flag)", "Not in Inventory"))))
+			                VAR fld0 = IF(NOT(found), "No Longer In Field",
+			                    IF(inTr > 0, "In Transit (Return Not Received)",
+			                    IF(onh > 0 || tot > 0, IF(hasOther, "Back In Field — Different Customer", "Still In Field — Original Customer"),
+			                    IF(rst > 0, "No Longer In Field (Expiry-Restricted)", "No Longer In Field"))))
+			                VAR fld1 = IF(Delivery[bu] = "DIV-B" && fld0 = "Back In Field — Different Customer", "No Longer In Field", fld0)
+			                VAR residue = inv0 = "Unresolved Return Dispatch (In-Transit >0)" && (mv = "Inbounded" || mv = "Dropped-After-Inbound") && hasEx && inTr > 0 && onh <= 0 && rst <= 0 && tot <= 0
+			                RETURN IF(residue, "Not in Inventory|No Longer In Field", inv0 & "|" & fld1)
+			            )
+			    )
+		dataType: string
+		isHidden
+		lineageTag: 31df5db5-39a4-4a39-b566-29d3d7289d42
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column cls_inventory_status =
+			IF(NOT (Delivery[computed_order_status] = "Open"), BLANK(),
+			    IF(Delivery[cls_blank3], "Unknown (Cockpit Unavailable)", PATHITEM(Delivery[inv_pack], 1)))
+		dataType: string
+		lineageTag: 024a8587-2453-4618-bccc-2a12f4218e68
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column cls_field_status =
+			IF(NOT (Delivery[computed_order_status] = "Open"), BLANK(),
+			    IF(Delivery[cls_blank3], "Unknown", PATHITEM(Delivery[inv_pack], 2)))
+		dataType: string
+		lineageTag: 15575c44-4c60-477a-b689-68155c455637
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column rcpt_received =
+			VAR ok = Delivery[computed_order_status] = "Open" && NOT(Delivery[cls_blank3]) && TRIM(COALESCE(Delivery[delivery_no], "")) <> "" && TRIM(COALESCE(Delivery[sku], "")) <> ""
+			RETURN
+			    IF(NOT ok, BLANK(),
+			        VAR dn = Delivery[delivery_no]
+			        VAR sk = Delivery[sku]
+			        VAR bt = COALESCE(Delivery[batch], "")
+			        RETURN COALESCE(SUMX(FILTER(Movement, Movement[movement_type] = "WHR" && Movement[reference] = dn && Movement[sku] = sk && COALESCE(Movement[batch], "") = bt), ABS(Movement[quantity])), 0)
+			    )
+		dataType: double
+		formatString: 0.##
+		lineageTag: 36f43536-632a-4fb4-a859-9ac7d031231f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column carrier_action =
+			VAR so = TRIM(COALESCE(Delivery[sales_order], ""))
+			RETURN
+			    IF(NOT (Delivery[computed_order_status] = "Open") || Delivery[cls_blank3] || so = "", BLANK(),
+			        VAR lat = FILTER(CarrierStatus, CarrierStatus[is_latest] = TRUE() && CarrierStatus[so_key] = so)
+			        VAR nLab = COUNTROWS(lat)
+			        RETURN IF(nLab = 0, "",
+			            VAR st = ADDCOLUMNS(lat,
+			                "isDel", SEARCH("DELIVERED", CarrierStatus[status_text], 1, 0) > 0,
+			                "isShp", SEARCH("TRANSIT", CarrierStatus[status_text], 1, 0) > 0 || SEARCH("DELIVER", CarrierStatus[status_text], 1, 0) > 0 || SEARCH("PICKED UP", CarrierStatus[status_text], 1, 0) > 0 || SEARCH("SHIPPED", CarrierStatus[status_text], 1, 0) > 0 || SEARCH("OUT FOR DELIVERY", CarrierStatus[status_text], 1, 0) > 0 || SEARCH("AT DESTINATION", CarrierStatus[status_text], 1, 0) > 0,
+			                "party", IF(TRIM(CarrierStatus[responsible_party]) = "" || UPPER(TRIM(CarrierStatus[responsible_party])) = "NAN", "",
+			                    SWITCH(UPPER(TRIM(CarrierStatus[responsible_party])), "REP", "Rep", "CARRIER", "Carrier", "WAREHOUSE", "Warehouse", "CANCELLED", "Cancelled", "ERROR", "Error", TRIM(CarrierStatus[responsible_party]))))
+			            VAR nDel = COUNTROWS(FILTER(st, [isDel]))
+			            VAR nShp = COUNTROWS(FILTER(st, [isShp]))
+			            VAR delDate = MAXX(FILTER(st, [isDel]), CarrierStatus[event_date])
+			            VAR whText = "Follow up with Warehouse" & IF(ISBLANK(delDate), "", " (delivered " & FORMAT(delDate, "yyyy-MM-dd") & ")")
+			            VAR parties = FILTER(DISTINCT(SELECTCOLUMNS(st, "p", [party])), [p] <> "")
+			            VAR onlyP = MINX(parties, [p])
+			            VAR direct = IF(COUNTROWS(parties) = 1, SWITCH(onlyP, "Rep", "Follow up with Rep", "Carrier", "Follow up with Carrier", "Warehouse", whText, ""), "")
+			            RETURN IF(direct <> "", direct,
+			                IF(nShp < nLab, "Follow up with Rep",
+			                IF(nShp = nLab && nDel < nLab, "Follow up with Carrier",
+			                IF(nDel >= nLab, whText, "Follow up with Rep"))))
+			        )
+			    )
+		dataType: string
+		lineageTag: 9afc2dcf-efaa-42c2-935c-c8b8b401482a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column cls_pack =
+			IF(NOT (Delivery[computed_order_status] = "Open"), BLANK(),
+			IF(Delivery[cls_blank3], "Inventory Review Return|HIGH: No Delivery on RMA - Inventory Review|0|No Confirmed Warehouse Receipt",
+			    VAR mv = COALESCE(Delivery[mv_status], "")
+			    VAR inv = Delivery[cls_inventory_status]
+			    VAR fld = Delivery[cls_field_status]
+			    VAR expQty = COALESCE(Delivery[return_order_qty], 0)
+			    VAR rcv = COALESCE(Delivery[rcpt_received], 0)
+			    VAR thr = [Aging Threshold Days]
+			    VAR age = COALESCE(Delivery[aging_days], 0)
+			    VAR ds = UPPER(TRIM(COALESCE(Delivery[so_overall_delivery_status], "")))
+			    VAR ca = COALESCE(Delivery[carrier_action], "")
+			    VAR conflict = TRIM(COALESCE(Delivery[carrier_conflict], "")) <> ""
+			    VAR mvIn = mv = "Inbounded" || mv = "Dropped-After-Inbound"
+			    VAR noLonger = fld = "No Longer In Field" || fld = "No Longer In Field (Expiry-Restricted)"
+			    VAR partialHit = mvIn && expQty > 0 && rcv > 0 && rcv < expQty
+			    VAR confirmed = mvIn && expQty > 0 && rcv >= expQty
+			    VAR brUp = UPPER(TRIM(COALESCE(Delivery[branch], "")))
+			    VAR isCons = brUp = "CON1" || brUp = "CON2" || SEARCH("CONSIGN", UPPER(COALESCE(Delivery[category], "")), 1, 0) > 0
+			    VAR isRepPlant = brUp = "FLD3" || brUp = "FLD1" || brUp = "FLD2"
+			    VAR lbl = COALESCE(Delivery[carrier_label_count], 0)
+			    VAR crs = UPPER(COALESCE(Delivery[carrier_order_status], ""))
+			    VAR shipped = SEARCH("TRANSIT", crs, 1, 0) > 0 || SEARCH("DELIVER", crs, 1, 0) > 0 || SEARCH("PICKED UP", crs, 1, 0) > 0 || SEARCH("SHIPPED", crs, 1, 0) > 0 || SEARCH("OUT FOR DELIVERY", crs, 1, 0) > 0 || SEARCH("AT DESTINATION", crs, 1, 0) > 0
+			    VAR caWh = SEARCH("Warehouse", ca, 1, 0) > 0
+			    VAR caCarrier = ca = "Follow up with Carrier"
+			    VAR existingDrop = mv = "Dropped-Never-Inbounded" || mv = "Dropped-After-Inbound" || inv = "Unresolved Return Dispatch (In-Transit >0)"
+			    VAR res =
+			        IF(partialHit, "Inventory Review Return|HIGH: Partial Receipt by Warehouse — Inventory Review",
+			        IF(confirmed && noLonger, "Inventory user to close the return|Inventory Closure Eligible: Full Warehouse Receipt Confirmed",
+			        IF(confirmed, "Inventory Review Return|HIGH: Full Receipt by Warehouse - Reconcile Open Return",
+			        IF(ds = "A" && isCons && shipped, "Inventory Review Return|HIGH: Consignment Shipment Shipped but Delivery Not Dropped",
+			        IF(ds = "A" && isRepPlant && lbl > 0, "Inventory Review Return|HIGH: Carrier Label Exists but Delivery Not Dropped",
+			        IF(ds = "A" && age > 30, "Inventory Review Return|HIGH: Delivery Not Dropped >30 Days - Inventory Review",
+			        IF(ds <> "" && inv = "Active in Inventory (On-Hand >0)" && ca <> "",
+			            IF(conflict && caWh && NOT(existingDrop), "Inventory Review Return|HIGH: Carrier Delivered but Delivery Not Dropped - Inventory Review", ca & "|Carrier: " & ca),
+			        IF(mv = "Dropped-Never-Inbounded",
+			            IF(caWh, "Follow up with Warehouse|CRITICAL: Return Dispatched — Carrier Confirmed Delivered, Warehouse to Process Inbound",
+			            IF(caCarrier, "Follow up with Carrier|HIGH: Return Dispatched — Shipment In Transit, Follow Up with Carrier",
+			            "Follow up with Rep|HIGH: Return Dispatched — Unit Still With Customer, Follow Up with Rep to Ship")),
+			        IF(inv = "Unresolved Return Dispatch (In-Transit >0)",
+			            IF(caWh, "Follow up with Warehouse|HIGH: Unresolved Return — Carrier Confirmed Delivered, Warehouse to Clear In-Transit",
+			            IF(caCarrier, "Follow up with Carrier|HIGH: Unresolved Return — Shipment In Transit, Follow Up with Carrier",
+			            "Follow up with Rep|HIGH: Unresolved Return — Unit Still With Customer or Not Yet Shipped")),
+			        IF(conflict,
+			            IF(existingDrop, "Follow up with Warehouse|HIGH: Carrier Delivered - Warehouse to Inbound Return (Dispatch Pending)", "Inventory Review Return|HIGH: Carrier Delivered but Delivery Not Dropped - Inventory Review"),
+			        IF(fld = "Back In Field — Different Customer", "Inventory Review Return|HIGH: Unit Back In Field Under Different Customer — Inventory Review",
+			        IF(fld = "Still In Field — Original Customer", "Follow up with Rep|MEDIUM: Unit Still In Field With Original Customer",
+			        IF(mvIn && noLonger, "Inventory user to close the return|Inventory Closure Eligible: Inbounded and No Longer In Field",
+			        IF(mv = "No Movement" && age > thr, "Follow up with Rep|MEDIUM: No Warehouse Movement, Aged >" & thr & "d",
+			        IF(fld = "Unknown" || inv = "Unknown (Cockpit Unavailable)", "Follow up with Rep|MEDIUM: Unknown Inventory State — Verify Manually",
+			        "Follow up with Rep|MEDIUM: Open Return — Verify With Rep")))))))))))))))
+			    VAR recStatus = IF(partialHit, "Partial Warehouse Receipt", IF(confirmed, "Warehouse Receipt Confirmed", "No Confirmed Warehouse Receipt"))
+			    VAR recQty = IF(partialHit || confirmed, rcv, 0)
+			    RETURN res & "|" & recQty & "|" & recStatus
+			))
+		dataType: string
+		isHidden
+		lineageTag: 5f3d6bc4-9afd-4852-91fe-ff217548db0b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column recommended_action = IF(ISBLANK(Delivery[cls_pack]), BLANK(), PATHITEM(Delivery[cls_pack], 1))
+		dataType: string
+		lineageTag: a3dbcb4f-d533-4984-bb09-75045ae723a0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column issue_name = IF(ISBLANK(Delivery[cls_pack]), BLANK(), PATHITEM(Delivery[cls_pack], 2))
+		dataType: string
+		lineageTag: ee602da4-f119-4e49-a2dc-12e4d21fc5f5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column receipt_evidence_qty = IF(ISBLANK(Delivery[cls_pack]), BLANK(), VALUE(PATHITEM(Delivery[cls_pack], 3)))
+		dataType: double
+		formatString: 0.##
+		lineageTag: daad1360-980b-4a1c-846f-3429d2c9fd9e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column receipt_evidence_status = IF(ISBLANK(Delivery[cls_pack]), BLANK(), PATHITEM(Delivery[cls_pack], 4))
+		dataType: string
+		lineageTag: a01eb31a-0b73-4ce8-a786-df13f8d41b14
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column action_owner =
+			VAR a = Delivery[recommended_action]
+			RETURN
+			    IF(ISBLANK(a), BLANK(),
+			    IF(LEFT(a, LEN("Inventory Review Return")) = "Inventory Review Return", "Inventory",
+			    IF(LEFT(a, LEN("Inventory user to close the return")) = "Inventory user to close the return", "Inventory",
+			    IF(LEFT(a, LEN("Follow up with Warehouse")) = "Follow up with Warehouse", "Warehouse",
+			    IF(LEFT(a, LEN("Follow up with Carrier")) = "Follow up with Carrier", "Carrier",
+			    IF(LEFT(a, LEN("Follow up with Rep")) = "Follow up with Rep", "Rep", ""))))))
+		dataType: string
+		lineageTag: 367a5bdf-e755-4f2f-b52e-dc9fc9429311
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column action_type =
+			VAR o = Delivery[action_owner]
+			VAR a = Delivery[recommended_action]
+			RETURN
+			    IF(ISBLANK(o), BLANK(),
+			    IF(o = "Inventory", IF(LEFT(a, LEN("Inventory Review Return")) = "Inventory Review Return", "Review", "Close"),
+			    IF(o = "Warehouse", "Inbound",
+			    IF(o = "Carrier", "Investigate",
+			    IF(o = "Rep", "Follow-up", "")))))
+		dataType: string
+		lineageTag: d15b2e96-8211-4f26-a4fb-9b8f6a76b8f8
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column action_priority =
+			VAR o = Delivery[action_owner]
+			VAR a = Delivery[recommended_action]
+			RETURN
+			    IF(ISBLANK(o), BLANK(),
+			    IF(o = "Inventory", IF(LEFT(a, LEN("Inventory Review Return")) = "Inventory Review Return", "High", "Normal"), ""))
+		dataType: string
+		lineageTag: 1af07476-454b-4faf-ad34-9b4d18ea4cd4
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column exception_issue =
+			IF(NOT (Delivery[computed_order_status] = "Open") || Delivery[action_owner] = "Inventory", BLANK(),
+			    VAR thr = [Aging Threshold Days]
+			    VAR age = COALESCE(Delivery[aging_days], 0)
+			    VAR mv = COALESCE(Delivery[mv_status], "")
+			    VAR crs = UPPER(COALESCE(Delivery[carrier_order_status], ""))
+			    VAR delivered = SEARCH("DELIVERED", crs, 1, 0) > 0
+			    VAR inTransit = SEARCH("TRANSIT", crs, 1, 0) > 0 || SEARCH("PICKED UP", crs, 1, 0) > 0 || SEARCH("SHIPPED", crs, 1, 0) > 0 || SEARCH("OUT FOR DELIVERY", crs, 1, 0) > 0 || SEARCH("AT DESTINATION", crs, 1, 0) > 0 || SEARCH("AT CARRIER", crs, 1, 0) > 0 || SEARCH("ARRIVED", crs, 1, 0) > 0
+			    VAR lost = age > thr && Delivery[recommended_action] = "Follow up with Carrier" && inTransit && NOT(delivered)
+			    VAR sev = IF(Delivery[action_owner] = "Warehouse", "CRITICAL", "HIGH")
+			    VAR conflict = TRIM(COALESCE(Delivery[carrier_conflict], "")) <> ""
+			    RETURN
+			        IF(lost, "HIGH: Shipment Lost in Transit (>" & thr & "d, no Carrier delivery)",
+			        IF(mv = "Dropped-Never-Inbounded", sev & ": Return Never Received at Warehouse",
+			        IF(mv = "Dropped-After-Inbound", sev & ": Return Dropped After Inbound",
+			        IF(mv = "No Movement" && age > thr, "MEDIUM: Return No Warehouse Movement",
+			        IF(conflict, sev & ": Return Carrier Delivered but Open in System", BLANK())))))
+			)
+		dataType: string
+		lineageTag: 20f9aed2-ddc5-4598-9ef2-7fad18a8e123
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column exception_severity =
+			VAR i = Delivery[exception_issue]
+			RETURN
+			    IF(ISBLANK(i), BLANK(),
+			    IF(LEFT(i, 8) = "CRITICAL", "CRITICAL",
+			    IF(LEFT(i, 4) = "HIGH", "HIGH",
+			    IF(LEFT(i, 6) = "MEDIUM", "MEDIUM", ""))))
+		dataType: string
+		lineageTag: fbf6f0d0-c8c1-43f9-b408-fe5b7ab4d185
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column exception_priority =
+			IF(ISBLANK(Delivery[exception_issue]), BLANK(),
+			    VAR thr = [Aging Threshold Days]
+			    VAR age = COALESCE(Delivery[aging_days], 0)
+			    VAR mv = COALESCE(Delivery[mv_status], "")
+			    VAR hasTr = NOT(ISBLANK(Delivery[tracking])) && TRIM(Delivery[tracking]) <> ""
+			    VAR agePts = IF(age > 45, IF(hasTr, 70, 90), IF(age > thr, IF(hasTr, 60, 80), 0))
+			    VAR mvPts = IF(mv = "Dropped-Never-Inbounded", 95, IF(mv = "Dropped-After-Inbound", 75, 0))
+			    VAR cfPts = IF(TRIM(COALESCE(Delivery[carrier_conflict], "")) <> "", 70, 0)
+			    RETURN MIN(agePts + mvPts + cfPts, 200)
+			)
+		dataType: int64
+		formatString: 0
+		lineageTag: 227ae861-43ab-40c9-a3bb-602ff7286f8f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column nodel_case =
+			VAR i = Delivery[issue_name]
+			RETURN
+			    IF(ISBLANK(i) || SEARCH("No Delivery on RMA", i, 1, 0) = 0, BLANK(),
+			        VAR hasTr = NOT(ISBLANK(Delivery[tracking])) && TRIM(Delivery[tracking]) <> ""
+			        VAR crs = UPPER(COALESCE(Delivery[carrier_status], ""))
+			        VAR delivered = SEARCH("DELIVER", crs, 1, 0) > 0
+			        VAR moving = SEARCH("TRANSIT", crs, 1, 0) > 0 || SEARCH("PICKED UP", crs, 1, 0) > 0 || SEARCH("SHIPPED", crs, 1, 0) > 0 || SEARCH("OUT FOR DELIVERY", crs, 1, 0) > 0 || SEARCH("AT DESTINATION", crs, 1, 0) > 0 || SEARCH("AT CARRIER", crs, 1, 0) > 0 || SEARCH("ARRIVED", crs, 1, 0) > 0
+			        RETURN
+			            IF(NOT(hasTr), "NOTRACK",
+			            IF(delivered, "DELIVERED",
+			            IF(moving, "MOVING",
+			            IF(Delivery[return_type] = "Field Associate Return", "LABEL_FAR", "LABEL_CONS"))))
+			    )
+		dataType: string
+		isHidden
+		lineageTag: 30c19df0-7b1c-404a-997d-8cb7e24b561b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column action_group =
+			VAR i = Delivery[issue_name]
+			VAR o = Delivery[action_owner]
+			VAR a = Delivery[recommended_action]
+				VAR c = Delivery[nodel_case]
+			RETURN
+			    IF(ISBLANK(i), BLANK(),
+			    IF(o = "Inventory",
+			        IF(SEARCH("No Delivery on RMA", i, 1, 0) > 0, IF(c = "NOTRACK", "2 Create delivery / send label", IF(c = "LABEL_CONS", "4 Chase the Rep", "1 Drop the delivery")),
+			        IF(SEARCH("Delivery Not Dropped", i, 1, 0) > 0, "1 Drop the delivery",
+			        IF(LEFT(a, LEN("Inventory user to close the return")) = "Inventory user to close the return", "7 Close the return",
+			        "3 Review and reconcile"))),
+			    IF(o = "Rep", "4 Chase the Rep",
+			    IF(o = "Carrier", "5 Chase Carrier",
+			    IF(o = "Warehouse", "6 Chase the Warehouse", "3 Review and reconcile")))))
+		dataType: string
+		lineageTag: 2a462e0b-65fd-4694-bd35-2bfb0f222aad
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column next_step =
+			VAR i = Delivery[issue_name]
+			VAR o = Delivery[action_owner]
+			VAR rt = Delivery[return_type]
+				VAR c = Delivery[nodel_case]
+			VAR expQty = FORMAT(COALESCE(Delivery[return_order_qty], 0), "General Number")
+			VAR rcvQty = FORMAT(COALESCE(Delivery[receipt_evidence_qty], 0), "General Number")
+			RETURN
+			    IF(ISBLANK(i), BLANK(),
+			    SWITCH(TRUE(),
+			        SEARCH("No Delivery on RMA", i, 1, 0) > 0,
+			            SWITCH(c, "NOTRACK", IF(rt = "Field Associate Return",
+			                "Create the RMA copy and give the field associate the Carrier label. Drop the delivery when the label is provided.",
+			                "Create the RMA copy and give the customer the Carrier label. Drop the delivery once the label shows Carrier movement."),
+				                "DELIVERED", "Carrier shows the package delivered but no delivery exists, so the warehouse cannot inbound it. Drop the delivery now.",
+				                "MOVING", "Carrier shows the package moving. Drop the delivery now.",
+				                "LABEL_FAR", "The Carrier label has been provided (tracking number on the return). Drop the delivery now.",
+				                "A Carrier label exists but Carrier shows no movement yet. Follow up with the Rep to get the unit shipped; drop the delivery once it moves."),
+			        SEARCH("Consignment Shipment Shipped", i, 1, 0) > 0,
+			            "Carrier shows the consignment shipment moving but no delivery has been dropped. Drop the delivery in ERP.",
+			        SEARCH("Label Exists but Delivery Not Dropped", i, 1, 0) > 0,
+			            "A Carrier label already exists but no delivery has been dropped. Drop the delivery in ERP.",
+			        SEARCH("Not Dropped >30", i, 1, 0) > 0,
+			            "No delivery has been dropped after more than 30 days. Check with the field, then drop the delivery or close the return.",
+			        SEARCH("Delivered but Delivery Not Dropped", i, 1, 0) > 0,
+			            "Carrier shows the package delivered but no delivery was dropped. Drop the delivery so the warehouse can inbound it.",
+			        SEARCH("Partial Receipt", i, 1, 0) > 0,
+			            "The warehouse received only part of the quantity (" & rcvQty & " of " & expQty & "). Confirm with the warehouse, then reconcile or close the return.",
+			        SEARCH("Receipt by Warehouse - Reconcile", i, 1, 0) > 0 || SEARCH("Warehouse Receipt Confirmed - Reconcile", i, 1, 0) > 0,
+			            "The warehouse has received the full quantity but the return is still open and the unit still shows in the field. Reconcile with the warehouse, then close the return.",
+			        SEARCH("Possible Warehouse Receipt", i, 1, 0) > 0,
+			            "A warehouse receipt may match this return. Validate the match in ERP.",
+			        SEARCH("Different Customer", i, 1, 0) > 0,
+			            "The unit shows in field stock under a different customer. Verify the location in ERP before closing.",
+			        SEARCH("Closure Eligible", i, 1, 0) > 0,
+			            "The warehouse has received the unit and it is no longer in the field. Close the return in ERP, or note why it is blocked.",
+			        o = "Warehouse",
+			            "Carrier shows the package delivered. Ask the warehouse to process the inbound and clear the in-transit stock.",
+			        o = "Carrier",
+			            "The package is with Carrier and not yet delivered. Follow up with Carrier on the delivery.",
+			        SEARCH("Still In Field With Original", i, 1, 0) > 0,
+			            "The unit is still in the field with the original customer. Follow up with the Rep to return it.",
+			        SEARCH("No Warehouse Movement", i, 1, 0) > 0,
+			            "There is no warehouse movement yet. Follow up with the Rep to ship the unit.",
+			        SEARCH("Unknown Inventory", i, 1, 0) > 0,
+			            "The inventory state is unknown. Verify the return manually in ERP.",
+			        SEARCH("Verify With Rep", i, 1, 0) > 0,
+			            "Verify this return with the Rep.",
+			        o = "Rep",
+			            "The unit is still with the customer or not shipped yet. Follow up with the Rep to ship it.",
+			        "Follow up with " & o & ": " & i))
+		dataType: string
+		lineageTag: d8576a4f-4ffb-4093-a765-0ceb622b3f17
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column work_order =
+			IF(ISBLANK(Delivery[action_group]), BLANK(),
+			    VALUE(LEFT(Delivery[action_group], 1)) * 100000 + (99999 - MIN(COALESCE(Delivery[aging_days], 0), 99999)))
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f1897086-2e59-4a4e-adec-df7f7c471e23
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column days_to_delivery =
+			VAR od = Delivery[order_date]
+			VAR dd = Delivery[date]
+			RETURN
+			    IF(ISBLANK(od) || od <= DATE(1900, 1, 2), BLANK(),
+			    IF(dd > DATE(1900, 1, 2), IF(dd >= od, DATEDIFF(od, dd, DAY), 0),
+			    IF(Delivery[computed_order_status] = "Open", IF(TODAY() >= od, DATEDIFF(od, TODAY(), DAY), 0), BLANK())))
+		dataType: int64
+		formatString: 0
+		lineageTag: 782c38da-1b2e-4759-b9bc-46fc73017cbe
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column line_outcome =
+			IF(Delivery[date] > DATE(1900, 1, 2),
+			    IF(Delivery[days_to_delivery] <= [Aging Threshold Days], "On time", "Late"),
+			    IF(Delivery[computed_order_status] = "Open", "Waiting", "Closed without delivery"))
+		dataType: string
+		lineageTag: b41750d8-71cf-4993-87f9-3eb2f73e968d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_reason
+		dataType: string
+		lineageTag: 4e2a9c71-8d36-4b05-a1f7-0c5b3e6d8a92
+		summarizeBy: none
+		sourceColumn: order_reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_class
+		dataType: string
+		lineageTag: 6c1d8e42-3b7a-4f0e-9a55-2e8f1b7c4d10
+		summarizeBy: none
+		sourceColumn: product_class
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_group
+		dataType: string
+		lineageTag: b93a7f16-5d2c-4e81-8c04-7a1e6d3f9b27
+		summarizeBy: none
+		sourceColumn: product_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column return_reason =
+			VAR c = UPPER(TRIM(COALESCE(Delivery[order_reason], "")))
+			RETURN
+			    SWITCH(c,
+			        "", "No reason recorded",
+			        "F01", "Return Inventory Removal",
+			        "F02", "Return Loaner",
+			        "F03", "Return Temp Increase",
+			        "F04", "Return Consign Close",
+			        "F05", "Return Consign Removal",
+			        "F06", "Return Damaged",
+			        "F07", "Return Expired",
+			        "F08", "Return Exiting Employee",
+			        "F09", "Return Overstocked",
+			        "F10", "Return Ship Error",
+			        "F11", "Return Study Complete",
+			        "F12", "Return Short Dated",
+			        "F13", "Return Recall",
+			        "R14", "Return Consignment Error",
+			        "R26", "Return Customer No Longer Uses/Needs",
+			        "Reason code " & c)
+		dataType: string
+		lineageTag: c3e81f5a-6b92-47d0-9a14-5d7e2b0f8c36
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column receipt_status =
+			VAR dn = TRIM(COALESCE(Delivery[delivery_no], ""))
+			VAR sk = Delivery[sku]
+			RETURN
+			    IF(Delivery[order_status] = "Not Closed" && UPPER(TRIM(COALESCE(Delivery[so_overall_delivery_status], ""))) = "C" && dn <> "",
+			        IF(CALCULATE(COUNTROWS(Movement), Movement[movement_type] = "WHR", Movement[reference] = dn, Movement[sku] = sk) > 0, "Received at DC", "Pending DC receipt"),
+			        BLANK())
+		dataType: string
+		lineageTag: 7a5c1e93-2f48-4d6b-b0a3-9e8d4c2f1b65
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Delivery = m
+		mode: import
+		source = ```
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "delivery.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    #"Renamed Columns" = Table.TransformColumnTypes(Promoted, {{"order_status", type text}, {"so_overall_delivery_status", type text}, {"sales_organization", type text}, {"branch", type text}, {"product_division", type text}, {"po_type_desc", type text}, {"sales_order", type text}, {"sales_order_type_desc", type text}, {"order_reason", type text}, {"delivery_no", type text}, {"batch", type text}, {"serial", type text}, {"po_no", type text}, {"shipping_plant", type text}, {"ship_to_no", type text}, {"ship_to", type text}, {"sold_to", type text}, {"sku", type text}, {"description", type text}, {"product_class", type text}, {"product_group", type text}, {"area_a", type text}, {"area_b", type text}, {"region_a", type text}, {"region_b", type text}, {"territory_a", type text}, {"territory_b", type text}, {"tracking", type text}, {"region_id", type text}, {"territory_id", type text}, {"date", type date}, {"order_date", type date}, {"expiry", type date}, {"so_line", type number}, {"delivery_line", type number}, {"return_order_qty", type number}}),
+				    #"Typed Expiry" = Table.TransformColumnTypes(#"Renamed Columns", {{"expiry", type date}, {"return_order_qty", type number}}),
+				
+				    #"Added Order Status" = Table.AddColumn(#"Typed Expiry", "computed_order_status", each
+				        let
+				            rawA = Text.Trim(Text.Upper(Text.From([order_status] ?? ""))),
+				            statusC = Text.Trim(Text.Upper(Text.From([so_overall_delivery_status] ?? ""))),
+				            isNotClosedA = rawA = "NOT CLOSED",
+				            isOpenC = List.Contains({"A","B",""}, statusC),
+				            isOpen = isNotClosedA and isOpenC
+				        in
+				            if isOpen then "Open" else "Closed",
+				        type text),
+				
+				    #"Added Plant Code" = Table.AddColumn(#"Added Order Status", "plant_code", each
+				        if [branch] = null then null else Text.Trim(Text.Upper(Text.BeforeDelimiter([branch], "_"))),
+				        type text),
+				
+				    #"Filtered Scope" = Table.SelectRows(#"Added Plant Code", each
+				        (List.Contains({"FLD1","FLD2","CON1","FLD3","CON2"}, [plant_code]) or [branch] = null or Text.Trim(Text.From([branch])) = "")
+				        and List.Contains({"A","B","C",""}, Text.Trim(Text.Upper(Text.From([so_overall_delivery_status] ?? ""))))
+				    ),
+				
+				    #"Deduped" = Table.Distinct(#"Filtered Scope", {"sales_order","so_line","delivery_no","delivery_line","sku","batch","serial"}),
+				
+				    PlantClassTable = #table(
+				        {"plant_code","plant_bu","plant_category"},
+				        {
+				            {"FLD1","DIV-A","Field Associate Returns"},
+				            {"FLD2","DIV-A","Field Associate Returns"},
+				            {"CON1","DIV-A","Consignment"},
+				            {"FLD3","DIV-B","Field Associate Returns"},
+				            {"CON2","DIV-B","Consignment"}
+				        }
+				    ),
+				    #"Merged Plant Class" = Table.NestedJoin(#"Deduped", {"plant_code"}, PlantClassTable, {"plant_code"}, "PlantClass", JoinKind.LeftOuter),
+				    #"Expanded Plant Class" = Table.ExpandTableColumn(#"Merged Plant Class", "PlantClass", {"plant_bu","plant_category"}, {"plant_bu","plant_category"}),
+				
+				    #"Added BU List" = Table.AddColumn(#"Expanded Plant Class", "bu_list", each
+				        if [plant_bu] <> null then {[plant_bu]}
+				        else if List.Contains({"20","30"}, [product_division]) then {"DIV-A"}
+				        else if [product_division] = "10" then {"DIV-B"}
+				        else {"DIV-A","DIV-B"},
+				        type list),
+				    #"Added Routing Status" = Table.AddColumn(#"Added BU List", "bu_routing_status", each
+				        if [plant_bu] <> null then "classified"
+				        else if List.Contains({"20","30","10"}, [product_division]) then "product_division_fallback"
+				        else "unresolved_product_division",
+				        type text),
+				    #"Expanded BU" = Table.ExpandListColumn(#"Added Routing Status", "bu_list"),
+				    #"Renamed BU" = Table.RemoveColumns(Table.RenameColumns(#"Expanded BU", {{"bu_list","bu"}}), {"plant_bu"}),
+				    #"Filled Category" = Table.ReplaceValue(#"Renamed BU", null, "Other", Replacer.ReplaceValue, {"plant_category"}),
+				    #"Renamed Category" = Table.RenameColumns(#"Filled Category", {{"plant_category","category"}}),
+				
+				    CockpitClean = Table.SelectRows(Cockpit, each [expiry] <> null and [expiry] >= #date(1901,1,1)),
+				    Lvl2 = Table.RenameColumns(
+				        Table.SelectColumns(
+				            Table.Distinct(Table.SelectRows(CockpitClean, each [sku] <> null and [serial] <> null), {"sku","serial"}),
+				            {"sku","serial","expiry"}),
+				        {"expiry","expiry_lvl2"}),
+				    Lvl3 = Table.RenameColumns(
+				        Table.SelectColumns(
+				            Table.Distinct(Table.SelectRows(CockpitClean, each [sku] <> null and [batch] <> null), {"sku","batch"}),
+				            {"sku","batch","expiry"}),
+				        {"expiry","expiry_lvl3"}),
+				    BatchGrouped = Table.Group(Table.SelectRows(CockpitClean, each [batch] <> null), {"batch"}, {
+				        {"DistinctSkuCount", each List.Count(List.Distinct([sku])), Int64.Type},
+				        {"expiry_lvl4", each List.First([expiry]), type nullable date}
+				    }),
+				    Lvl4 = Table.SelectColumns(Table.SelectRows(BatchGrouped, each [DistinctSkuCount] = 1), {"batch","expiry_lvl4"}),
+				    SerialGrouped = Table.Group(Table.SelectRows(CockpitClean, each [serial] <> null), {"serial"}, {
+				        {"DistinctSkuCount", each List.Count(List.Distinct([sku])), Int64.Type},
+				        {"expiry_lvl5", each List.First([expiry]), type nullable date}
+				    }),
+				    Lvl5 = Table.SelectColumns(Table.SelectRows(SerialGrouped, each [DistinctSkuCount] = 1), {"serial","expiry_lvl5"}),
+				
+				    #"Merged Lvl2" = Table.NestedJoin(#"Renamed Category", {"sku","serial"}, Lvl2, {"sku","serial"}, "Lvl2Match", JoinKind.LeftOuter),
+				    #"Expanded Lvl2" = Table.ExpandTableColumn(#"Merged Lvl2", "Lvl2Match", {"expiry_lvl2"}, {"expiry_lvl2"}),
+				    #"Merged Lvl3" = Table.NestedJoin(#"Expanded Lvl2", {"sku","batch"}, Lvl3, {"sku","batch"}, "Lvl3Match", JoinKind.LeftOuter),
+				    #"Expanded Lvl3" = Table.ExpandTableColumn(#"Merged Lvl3", "Lvl3Match", {"expiry_lvl3"}, {"expiry_lvl3"}),
+				    #"Merged Lvl4" = Table.NestedJoin(#"Expanded Lvl3", {"batch"}, Lvl4, {"batch"}, "Lvl4Match", JoinKind.LeftOuter),
+				    #"Expanded Lvl4" = Table.ExpandTableColumn(#"Merged Lvl4", "Lvl4Match", {"expiry_lvl4"}, {"expiry_lvl4"}),
+				    #"Merged Lvl5" = Table.NestedJoin(#"Expanded Lvl4", {"serial"}, Lvl5, {"serial"}, "Lvl5Match", JoinKind.LeftOuter),
+				    #"Expanded Lvl5" = Table.ExpandTableColumn(#"Merged Lvl5", "Lvl5Match", {"expiry_lvl5"}, {"expiry_lvl5"}),
+				
+				    #"Added Resolved Expiry" = Table.AddColumn(#"Expanded Lvl5", "resolved_expiry", each
+				        if [expiry] <> null and [expiry] >= #date(1901,1,1) then [expiry]
+				        else if [expiry_lvl2] <> null then [expiry_lvl2]
+				        else if [expiry_lvl3] <> null then [expiry_lvl3]
+				        else if [expiry_lvl4] <> null then [expiry_lvl4]
+				        else if [expiry_lvl5] <> null then [expiry_lvl5]
+				        else null,
+				        type nullable date),
+				    #"Removed Helper Cols" = Table.RemoveColumns(#"Added Resolved Expiry", {"expiry_lvl2","expiry_lvl3","expiry_lvl4","expiry_lvl5"})
+				in
+				    #"Removed Helper Cols"
+				```
+
+	annotation PBI_ResultType = Table
+

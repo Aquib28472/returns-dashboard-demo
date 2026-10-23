@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Returns Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c2c3e5eb-1865-4701-8d0b-f784dac2645e"
+  }
+}
